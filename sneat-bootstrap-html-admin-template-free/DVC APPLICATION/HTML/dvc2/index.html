@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prashant Patil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+ <style>
+      .profile_photo {
+            height: 150px;
+            width: 150px;
+            background-image: url(img/profile.png);
+            background-position: center;
+            background-size: cover;
+            border-radius: 50%;
+            position: relative;
+            margin: auto;
+            top: -70px;
+            border: 7px solid white;
+        }
+        .light-mode {
+            --bs-body-bg: white;
+            --bs-body-color: black;
+            --bs-card-bg: #f8f9fa;
+            --bs-card-color: black;
+            --bs-link-color: gray;
+            --bs-box-shadow: 2px 2px 10px gray;
+        }
+        .dark-mode {
+            --bs-body-bg: #121212;
+            --bs-body-color: white;
+            --bs-card-bg: #282828;
+            --bs-card-color: white;
+            --bs-link-color: white;
+            --bs-box-shadow: 2px 2px 10px #000;
+        }
+        .upper {
+            background-image: url(img/img1.jpeg);
+            background-size: cover;
+            height: 150px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .modal-img {
+            width: 100%;
+            height: auto;
+        }
+        a {
+            color: var(--bs-body-color);
+            text-decoration: none;
+        }
+        .shadow-box {
+            box-shadow: var(--bs-box-shadow);
+        }
+
+        .icons a{
+            font-size: 30px;
+        }
+
+        .icons a:hover:nth-child(1){
+            color: red;
+        }
+
+        .icons a:hover:nth-child(2){
+            color: gray;
+        }
+
+        .icons a:hover:nth-child(3){
+            color: royalblue;
+        }
+
+        #theme-button{
+            color: var(--bs-body-color);
+            background-color: transparent;
+            border: none;
+            /* border-radius: 50%;
+            height: 40px;
+            width: 40px; */
+            font-size: 20px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+
+        .bi-moon{
+            transform: rotate(-360deg);
+            transition: all 0.3s;
+        }
+
+        .bi-brightness-high{
+            transform: rotate(50deg);
+            transition: all 0.3s;
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <div class="container my-4 mt-5">
+        <div class="card mycard text-center">
+            <div class="upper"></div>
+            <div class="profile_photo"></div>
+            <div class="card-body">
+                <h1 class="card-title">Prashant Patil</h1>
+                <p class="card-text">Web Developer</p>
+                <div class="icons mb-3">
+                    <a href="#" class="me-2"><i class="fa fa-envelope"></i></a>
+                    <a href="#" class="me-2"><i class="fa fa-github"></i></a>
+                    <a href="#"><i class="fa fa-linkedin-square"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <section class="contact mb-4 mt-4 p-3 shadow rounded">
+            <div class="d-flex align-items-center">
+                <i class="bi bi-phone fs-2"></i>
+                <h1 class="mt-1 fs-2">Contact</h1>
+            </div>
+            <hr>
+            <h2 class="fs-4">Call Us</h2>
+            <a href="tel:9876543210" class="d-block mb-2">9876543210</a>
+
+            <h2 class="fs-4">Email</h2>
+            <a href="mailto:contact@email.com" class="d-block mb-2">contact@email.com</a>
+
+            <h2 class="fs-4">Address</h2>
+            <address class="mb-3">
+                Jalgaon, Maharashtra, 425001<br>
+                India
+            </address>
+            <button onclick="location.href='https://maps.app.goo.gl/pyqckC6eBdfJ8haq7'" class="btn btn-outline-primary shadow-lg">
+                <i class="fa fa-location-arrow"></i> Direction
+            </button>
+        </section>
+
+        <section class="map mb-4 p-3 shadow rounded">
+            <h1 class="fs-3 mb-3">Location</h1>
+            <div class="ratio ratio-16x9">
+                <iframe src="https://maps.google.com/maps?q=jalgaon&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <div id="carouselExampleCaptions" class="carousel slide mb-4 shadow p-1 rounded">
+            <h1 class="fs-3 m-3">Testimonials</h1>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/p1.jpeg" class="d-block w-100" alt="...">
+                    <div class="m-4">
+                        <h5>Jayesh Sawant</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, minus.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/p2.jpeg" class="d-block w-100" alt="...">
+                    <div class="m-4">
+                        <h5>Aashish Gore</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, minus.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/p3.jpeg" class="d-block w-100" alt="...">
+                    <div class="m-4">
+                        <h5>Vipul Girase</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, minus.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <section class="gallery mb-4 p-3 shadow rounded">
+            <h1 class="fs-3 m-3">Features</h1>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/image1.png">
+                        <img src="img/image1.png" class="img-fluid" alt="...">
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/image2.png">
+                        <img src="img/image2.png" class="img-fluid" alt="...">
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/image3.png">
+                        <img src="img/image3.png" class="img-fluid" alt="...">
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/image4.png">
+                        <img src="img/image4.png" class="img-fluid" alt="...">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="outer_card mb-4 p-3 shadow rounded">
+            <h1 class="fs-3 mb-3">Products</h1>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <div class="col">
+                    <div class="card">
+                        <img src="img/prod1.jpg" class="card-img-top gallery-img" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Fujifilm Instax MINI 99</h5>
+                            <p class="card-text">Automatic Flash, Auto Exposure</p>
+                            <a href="#" class="btn btn-primary">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="img/prod1.jpg" class="card-img-top gallery-img" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Fujifilm Instax MINI 99</h5>
+                            <p class="card-text">Automatic Flash, Auto Exposure</p>
+                            <a href="#" class="btn btn-primary">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="img/prod1.jpg" class="card-img-top gallery-img" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Fujifilm Instax MINI 99</h5>
+                            <p class="card-text">Automatic Flash, Auto Exposure</p>
+                            <a href="#" class="btn btn-primary">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="img/prod1.jpg" class="card-img-top gallery-img" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Fujifilm Instax MINI 99</h5>
+                            <p class="card-text">Automatic Flash, Auto Exposure</p>
+                            <a href="#" class="btn btn-primary">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-4">
+        <p>© Sitesoch.in All rights reserved</p>
+        <button id="theme-button" class="btn btn-secondary" onclick="toggleTheme()" title="Change Theme">
+            <i class="bi"></i>
+        </button>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Image</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="background-color: gray"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="" class="modal-img" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('.gallery a').forEach(link => {
+            link.addEventListener('click', function() {
+                const image = this.getAttribute('data-bs-image');
+                document.querySelector('.modal-img').src = image;
+            });
+        });
+    </script>
+</body>
+</html>
