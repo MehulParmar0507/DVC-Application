@@ -1,0 +1,49 @@
+.profile-containet
+{
+    /* border:1px solid red; */
+    display: flex;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+    gap:30px;
+    width:90%;
+}
+.profile-box
+{
+    /* border:1px solid blue; */
+}
+.profile-photo
+{
+    /* border:1px solid green; */
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap:10px;
+}
+.image-profile-photo
+{
+    /* border:1px solid green; */
+    display: flex;
+    justify-content:space-between;
+    width:150px;
+    margin-top: 10px;
+}
+.download-photo
+{
+    width: 64px;
+    height: 64px;
+    background-color: #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-container
+  {
+    display:flex;
+    justify-content:space-between;
+    width:100%;
+  }
