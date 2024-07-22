@@ -47,3 +47,65 @@
     justify-content:space-between;
     width:100%;
   }
+
+  .mymobile {
+    border: 1px solid black;
+    height: 600px;
+    scrollbar-width: 0px;
+    background-image: url(images/mobile.png);
+    background-size: 100% 100%;
+  }
+
+  .container .container {
+    float: left;
+  }
+
+  .carousel-item img {
+    width: 16%;
+    height: auto;
+    margin: 3%;
+  }
+
+  .container .container:first-child {
+    width: 70%;
+  }
+
+  .container .container:nth-child(2) {
+    width: 30%;
+  }
+
+  .mobile {
+    border: 7.5px solid #021d48;
+    border-radius: 30px;
+    width: 100%;
+    height: 570px;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+
+  iframe {
+    width: 105.9%;
+    height: 103%;
+    transform: translateY(-30px);
+  }
+
+  .notch {
+    height: 30px;
+    width: 100px;
+    background-color: #021d48;
+    margin: auto;
+    border-radius: 15px;
+    position: relative;
+    z-index: 200;
+    transform: translateY(-17px);
+  }
+
+  @media only screen and (max-width: 600px) {
+    .container .container:nth-child(1) {
+      width: 100%;
+    }
+
+    .container .container:nth-child(2) {
+      width: 100%;
+    }
+  }
