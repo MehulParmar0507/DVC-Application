@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DVC Card - SiteSoch</title>
- 
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,6 +33,70 @@
   
 
   <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+  <style>
+    .mymobile {
+      border: 1px solid black;
+      height: 600px;
+      scrollbar-width: 0px;
+      background-image: url(images/mobile.png);
+      background-size: 100% 100%;
+    }
+
+    .container .container {
+      float: left;
+    }
+
+    .carousel-item img {
+      width: 16%;
+      height: auto;
+      margin: 3%;
+    }
+
+    .container .container:first-child {
+      width: 70%;
+    }
+
+    .container .container:nth-child(2) {
+      width: 30%;
+    }
+
+    .mobile {
+      border: 7.5px solid #021d48;
+      border-radius: 30px;
+      width: 100%;
+      height: 570px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    iframe {
+      width: 105.9%;
+      height: 103%;
+      transform: translateY(-30px);
+    }
+
+    .notch {
+      height: 30px;
+      width: 100px;
+      background-color: #021d48;
+      margin: auto;
+      border-radius: 15px;
+      position: relative;
+      z-index: 200;
+      transform: translateY(-17px);
+    }
+
+    @media only screen and (max-width: 600px) {
+      .container .container:nth-child(1) {
+        width: 100%;
+      }
+
+      .container .container:nth-child(2) {
+        width: 100%;
+      }
+    }
+  </style>
+  
   <link rel="stylesheet" href="./button.css">
   <link rel="stylesheet" href="./MainDVC.css">
 </head>
@@ -634,22 +699,4 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-<script src="./assets/vendor/libs/jquery/jquery.js"></script>
-    <script src="./assets/vendor/libs/popper/popper.js"></script>
-    <script src="./assets/vendor/js/bootstrap.js"></script>
-    <script src="./assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-    <script src="./assets/vendor/js/menu.js"></script>
-
-    <!-- endbuild -->
-
-    <!-- Vendors JS -->
-
-    <!-- Main JS -->
-    <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/form-basic-inputs.js"></script>
-
-    <!-- Page JS -->
-
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
 </html>
