@@ -4063,7 +4063,7 @@ fieldset:disabled .btn {
   --bs-accordion-body-padding-x: 1.125rem;
   --bs-accordion-body-padding-y: 0.79rem;
   --bs-accordion-active-color: #566a7f;
-  --bs-accordion-active-bg: #fff;
+  --bs-accordion-active-bg: #f0f0ff;
 }
 
 .accordion-button {
