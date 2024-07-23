@@ -49,16 +49,17 @@
   }
 
   /*  */
-  .mymobile {
+  /* .mymobile {
     border: 1px solid black;
     height: 600px;
     scrollbar-width: 0px;
     background-image: url(images/mobile.png);
     background-size: 100% 100%;
-  }
+  } */
 
   .container .container {
     float: left;
+    height: 100%;
   }
 
   .carousel-item img {
@@ -78,8 +79,8 @@
   .mobile {
     border: 7.5px solid #021d48;
     border-radius: 30px;
-    width: 100%;
-    height: 570px;
+    width: 22rem;
+    height: 40rem;
     overflow: hidden;
     margin-top: 20px;
   }
