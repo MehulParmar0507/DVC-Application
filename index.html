@@ -1009,11 +1009,15 @@
         </div>
         <div class="tab-pane fade" id="myqrcode" role="tabpanel">
 
-          <!-- QR Code start -->
+          <div class="mb-3">
+            <label for="qrcodetext" class="form-label">URL</label>
+            <input type="text" class="form-control" id="qrcodetext" placeholder="Paste or Type URL here" aria-describedby="defaultFormControlHelp" />
+          </div>
+          <button type="button" class="btn btn-primary" onclick="generateQRCode()">Generate QRCoode</button>
 
-         <h1>qr code panel here</h1>
+          <div id="qrcode" class="m-4"></div>
 
-         <!-- QR Code end -->
+          <button type="button" class="btn btn-primary" onclick="downloadQRCode()" style="display: none;" id="downloadbtn">Download QRCoode</button>
 
         </div>
       </div>
@@ -1056,6 +1060,30 @@
 
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script>
+        function generateQRCode() {
+            var qrcode = new QRCode(document.getElementById("qrcode"), {
+                text: document.getElementById("qrcodetext").value,
+                width: 128,
+                height: 128,
+                colorDark : "#000000",
+                colorLight : "#ffffff",
+                correctLevel : QRCode.CorrectLevel.H
+            });
+
+            document.getElementById("downloadbtn").style.display="";
+        }
+
+        function downloadQRCode() {
+            var canvas = document.querySelector("#qrcode canvas");
+            var img = canvas.toDataURL("image/png");
+            var link = document.createElement("a");
+            link.href = img;
+            link.download = "qrcode.png";
+            link.click();
+        }
+    </script>
 </body>
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
