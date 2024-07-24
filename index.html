@@ -99,11 +99,8 @@
   
   <link rel="stylesheet" href="./button.css">
   <link rel="stylesheet" href="./MainDVC.css">
-  <style>
-    .dropdown-toggle::after {
-      display: none;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
 </head>
 
 <body>
@@ -252,7 +249,7 @@
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a href="Login.html" class="nav-link">
-                <button type="button" class="btn btn-primary">Sign In</button>
+                <button type="button" class="btn btn-outline-primary">Sign In</button>
               </a>
             </li>
             <li class="nav-item">
@@ -339,7 +336,7 @@
           </li>
           <li class="nav-item" role="presentation">
             <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-justified-messages" aria-controls="navs-pills-justified-messages" aria-selected="false" tabindex="-1">
-              <i class="tf-icons bx bx-message-square me-1"></i><span class="d-none d-sm-block"> QR Code</span><span class="badge rounded-pill badge-center h-px-20 w-px-20 bg-danger ms-1">3</span>
+              <i class="bi bi-qr-code-scan me-1"></i> <span class="d-none d-sm-block"> QR Code</span><span class="badge rounded-pill badge-center h-px-20 w-px-20 bg-danger ms-1">3</span>
             </button>
           </li>
         </ul>
@@ -376,7 +373,7 @@
       <!-- slider end -->
 
       <!-- dropdown start -->
-      <div class="accordion" id="accordionExample">
+      <div class="accordion" id="">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
@@ -395,11 +392,6 @@
           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <div class="mb-3">
-                <label for="formFile" class="form-label">Profile Photo</label>
-                <input class="form-control" type="file" id="formFile"/>
-              </div>
-
               <div class="profile-containet">
                 <div class="profile-box" id="profile-box-1">
                    <div class="profile-photo">
