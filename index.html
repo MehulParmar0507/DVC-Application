@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DVC Card - SiteSoch</title>
- 
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,6 +33,70 @@
   
 
   <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+  <style>
+    .mymobile {
+      border: 1px solid black;
+      height: 600px;
+      scrollbar-width: 0px;
+      background-image: url(images/mobile.png);
+      background-size: 100% 100%;
+    }
+
+    .container .container {
+      float: left;
+    }
+
+    .carousel-item img {
+      width: 16%;
+      height: auto;
+      margin: 3%;
+    }
+
+    .container .container:first-child {
+      width: 70%;
+    }
+
+    .container .container:nth-child(2) {
+      width: 30%;
+    }
+
+    .mobile {
+      border: 7.5px solid #021d48;
+      border-radius: 30px;
+      width: 100%;
+      height: 570px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    iframe {
+      width: 105.9%;
+      height: 103%;
+      transform: translateY(-30px);
+    }
+
+    .notch {
+      height: 30px;
+      width: 100px;
+      background-color: #021d48;
+      margin: auto;
+      border-radius: 15px;
+      position: relative;
+      z-index: 200;
+      transform: translateY(-17px);
+    }
+
+    @media only screen and (max-width: 600px) {
+      .container .container:nth-child(1) {
+        width: 100%;
+      }
+
+      .container .container:nth-child(2) {
+        width: 100%;
+      }
+    }
+  </style>
+  
   <link rel="stylesheet" href="./button.css">
   <link rel="stylesheet" href="./MainDVC.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -254,31 +319,33 @@
     
  
   </div>
+
   <div class="container">
     <div class="container left">
 
       <div class="nav-align-top mb-4 py-2">
         <ul class="nav nav-pills mb-3 nav-fill" role="tablist">
           <li class="nav-item" role="presentation">
-            <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-justified-home" aria-controls="navs-pills-justified-home" aria-selected="true">
+            <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#mycontent" aria-controls="navs-pills-justified-home" aria-selected="true">
               <i class="tf-icons bx bx-home me-1"></i> <span class="d-none d-sm-block">Content</span><span class="badge rounded-pill badge-center h-px-20 w-px-20 bg-danger ms-1">1</span>
             </button>
           </li>
           <li class="nav-item" role="presentation">
-            <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-justified-profile" aria-controls="navs-pills-justified-profile" aria-selected="false" tabindex="-1">
+            <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#mydesign" aria-controls="navs-pills-justified-profile" aria-selected="false" tabindex="-1">
               <i class="bx bxs-cog me-1"></i><span class="d-none d-sm-block"> Design / Settings</span><span class="badge rounded-pill badge-center h-px-20 w-px-20 bg-danger ms-1">2</span>
             </button>
           </li>
           <li class="nav-item" role="presentation">
-            <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-justified-messages" aria-controls="navs-pills-justified-messages" aria-selected="false" tabindex="-1">
+            <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#myqrcode" aria-controls="navs-pills-justified-messages" aria-selected="false" tabindex="-1">
               <i class="bi bi-qr-code-scan me-1"></i> <span class="d-none d-sm-block"> QR Code</span><span class="badge rounded-pill badge-center h-px-20 w-px-20 bg-danger ms-1">3</span>
             </button>
           </li>
         </ul>
-       
       </div>
-      
-      <!-- slider start -->
+
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="mycontent" role="tabpanel">
+          <!-- slider start -->
       <div id="carouselExampleControls" class="carousel slide">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -306,439 +373,464 @@
         </button>
       </div>
       <!-- slider end -->
-
-      <!-- dropdown start -->
-      <div class="accordion" id="">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-              aria-expanded="true" aria-controls="collapseOne">
-              <div class="btn-container">
-                <span class="d-flex align-items-center"><i class="bx bxs-user-rectangle me-1"></i> Profile</span>
-                <div class="form-check form-switch mb-2">
-                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
-                  <label class="form-check-label" for="flexSwitchCheckChecked"
-                    ></label
-                  >
+          <div class="accordion" id="">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  <div class="btn-container">
+                    <span class="d-flex align-items-center"><i class="bx bxs-user-rectangle me-1"></i> Profile</span>
+                    <div class="form-check form-switch mb-2">
+                      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
+                      <label class="form-check-label" for="flexSwitchCheckChecked"
+                        ></label
+                      >
+                    </div>
+                  </div>
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <div class="profile-containet">
+                    <div class="profile-box" id="profile-box-1">
+                       <div class="profile-photo">
+                        
+                          <span>Profile Photo</span>
+                          <div class="form-check form-switch mb-2">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
+                            <label class="form-check-label" for="flexSwitchCheckChecked"
+                              ></label
+                            >
+                          </div>
+                       </div>
+                       <label class="image-profile-photo" for="profile_upload">
+                          <div class="image-photo">
+                            <img src="./images/tem2.png" height="64px" width="64px">
+                          </div>
+                          <div class="download-photo">
+                            <box-icon name='upload'></box-icon>
+                          </div>
+                          <input type="file" name="" id="profile_upload" style="display: none;">
+                       </label>
+                    </div>
+                    <div class="profile-box" id="profile-box-2">
+                      <div class="profile-photo">
+                        <span>Brand Logo</span>
+                        <div class="form-check form-switch mb-2">
+                          <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
+                          <label class="form-check-label" for="flexSwitchCheckChecked"
+                            ></label
+                          >
+                        </div>
+                     </div>
+                     <label class="image-profile-photo" for="logo_upload">
+                        <div class="image-photo">
+                          <img src="./images/Sitesoch Logo.png" height="64px" width="64px">
+                        </div>
+                        <div class="download-photo">
+                          <box-icon name='upload'></box-icon>
+                        </div>
+                        <input type="file" name="" id="logo_upload" style="display: none;">
+                     </label>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name" />
+                  </div>
+    
+                  <hr>
+    
+                  <label class="form-label text-secondary">Company Details</label>
+    
+                  <div class="input-group">
+                    <div class="m-3">
+                      <label for="exampleFormControlInput2" class="form-label">Title</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Title" />
+                    </div>
+    
+                    <div class="m-3">
+                      <label for="exampleFormControlInput2" class="form-label">Company</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Company" />
+                    </div>
+                  </div>
+    
+                  <div class="row mx-0">
+                    <div class="mr-2 mb-2">
+                      <div class="profile-photo">
+                        <span>Profile Connect Icons</span>
+                        <div class="form-check form-switch mb-2">
+                          <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
+                          <label class="form-check-label" for="flexSwitchCheckChecked"
+                            ></label
+                          >
+                        </div>
+                     </div>
+                    </div>
+                    <div class="switchery d-inline">
+                      <div class="input-group mb-3">
+                        <span>
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected>Mobile</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Mobile Number" aria-label="Username"
+                          aria-describedby="basic-addon1" />
+                      </div>
+    
+                      <div class="input-group mb-3">
+                        <span>
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected>Email</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Email ID" aria-label="Username"
+                          aria-describedby="basic-addon1" />
+                      </div>
+    
+                      <div class="input-group mb-3">
+                        <span>
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected>SMS</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Contact Number" aria-label="Username"
+                          aria-describedby="basic-addon1" />
+                      </div>
+    
+                      <!-- Example single danger button -->
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown"
+                          aria-expanded="false">
+                          + Add More
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">SMS</a></li>
+                          <li>
+                            <a class="dropdown-item" href="#">Web Chat</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">Location</a>
+                          </li>
+                          <li><a class="dropdown-item" href="#">Email</a></li>
+                          <li>
+                            <a class="dropdown-item" href="#">WhatsApp</a>
+                          </li>
+                          <li><a class="dropdown-item" href="#">FAX</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <div class="profile-containet">
-                <div class="profile-box" id="profile-box-1">
-                   <div class="profile-photo">
-                    
-                      <span>Profile Photo</span>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <div class="btn-container">
+                      <span class="d-flex align-items-center"> <i class="bx bx-heading me-1"></i>Heading+Text</span>
                       <div class="form-check form-switch mb-2">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
-                        <label class="form-check-label" for="flexSwitchCheckChecked"
-                          ></label
-                        >
-                      </div>
-                   </div>
-                   <label class="image-profile-photo" for="profile_upload">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
+                            <label class="form-check-label" for="flexSwitchCheckChecked"
+                              ></label
+                            >
+                          </div>
+                    </div>
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Title</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="About me" />
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        placeholder="Description"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <div class="btn-container">
+                      <span class="d-flex align-items-center"> <i class="bx bxs-contact me-1"></i>Contact Us</span>
+                      <div class="form-check form-switch mb-2">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
+                            <label class="form-check-label" for="flexSwitchCheckChecked"
+                              ></label
+                            >
+                          </div>
+                    </div>
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+    
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Title</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Contact Us"/>
+                    </div>
+    
+                    <label class="image-profile-photo" for="icon_upload">
                       <div class="image-photo">
-                        <img src="./images/tem2.png" height="64px" width="64px">
+                        <img src="./images/pngwing.com (5).png" height="64px" width="64px">
                       </div>
                       <div class="download-photo">
                         <box-icon name='upload'></box-icon>
                       </div>
-                      <input type="file" name="" id="profile_upload" style="display: none;">
-                   </label>
-                </div>
-                <div class="profile-box" id="profile-box-2">
-                  <div class="profile-photo">
-                    <span>Brand Logo</span>
-                    <div class="form-check form-switch mb-2">
-                      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
-                      <label class="form-check-label" for="flexSwitchCheckChecked"
-                        ></label
-                      >
-                    </div>
-                 </div>
-                 <label class="image-profile-photo" for="logo_upload">
-                    <div class="image-photo">
-                      <img src="./images/Sitesoch Logo.png" height="64px" width="64px">
-                    </div>
-                    <div class="download-photo">
-                      <box-icon name='upload'></box-icon>
-                    </div>
-                    <input type="file" name="" id="logo_upload" style="display: none;">
-                 </label>
-                </div>
-              </div>
-              <br>
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Name</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name" />
-              </div>
-
-              <hr>
-
-              <label class="form-label text-secondary">Company Details</label>
-
-              <div class="input-group">
-                <div class="m-3">
-                  <label for="exampleFormControlInput2" class="form-label">Title</label>
-                  <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Title" />
-                </div>
-
-                <div class="m-3">
-                  <label for="exampleFormControlInput2" class="form-label">Company</label>
-                  <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Company" />
-                </div>
-              </div>
-
-              <div class="row mx-0">
-                <div class="mr-2 mb-2">
-                  <div class="profile-photo">
-                    <span>Profile Connect Icons</span>
-                    <div class="form-check form-switch mb-2">
-                      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
-                      <label class="form-check-label" for="flexSwitchCheckChecked"
-                        ></label
-                      >
-                    </div>
-                 </div>
-                </div>
-                <div class="switchery d-inline">
-                  <div class="input-group mb-3">
-                    <span>
-                      <select class="form-select" aria-label="Default select example">
-                        <option selected>Mobile</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-                    </span>
-                    <input type="text" class="form-control" placeholder="Mobile Number" aria-label="Username"
-                      aria-describedby="basic-addon1" />
-                  </div>
-
-                  <div class="input-group mb-3">
-                    <span>
-                      <select class="form-select" aria-label="Default select example">
-                        <option selected>Email</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-                    </span>
-                    <input type="text" class="form-control" placeholder="Email ID" aria-label="Username"
-                      aria-describedby="basic-addon1" />
-                  </div>
-
-                  <div class="input-group mb-3">
-                    <span>
-                      <select class="form-select" aria-label="Default select example">
-                        <option selected>SMS</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-                    </span>
-                    <input type="text" class="form-control" placeholder="Contact Number" aria-label="Username"
-                      aria-describedby="basic-addon1" />
-                  </div>
-
-                  <!-- Example single danger button -->
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown"
-                      aria-expanded="false">
-                      + Add More
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">SMS</a></li>
-                      <li>
-                        <a class="dropdown-item" href="#">Web Chat</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">Location</a>
-                      </li>
-                      <li><a class="dropdown-item" href="#">Email</a></li>
-                      <li>
-                        <a class="dropdown-item" href="#">WhatsApp</a>
-                      </li>
-                      <li><a class="dropdown-item" href="#">FAX</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                <div class="btn-container">
-                  <span class="d-flex align-items-center"> <i class="bx bx-heading me-1"></i>Heading+Text</span>
-                  <div class="form-check form-switch mb-2">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
-                        <label class="form-check-label" for="flexSwitchCheckChecked"
-                          ></label
-                        >
+                      <input type="file" name="" id="icon_upload" style="display: none;">
+                    </label>
+    
+                    <div class="row m-4">
+                      <label class="form-label text-secondary">Contact Number</label>
+                      <div class="col">
+                        <label for="" class="form-label">Label</label>
+                        <input type="text" class="form-control" placeholder="Call Us" aria-label="First name">
                       </div>
-                </div>
-              </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-              data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <div class="mb-3">
-                  <label for="exampleFormControlInput1" class="form-label">Title</label>
-                  <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="About me" />
-                </div>
-                <div class="mb-3">
-                  <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                    placeholder="Description"></textarea>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingThree">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                <div class="btn-container">
-                  <span class="d-flex align-items-center"> <i class="bx bxs-contact me-1"></i>Contact Us</span>
-                  <div class="form-check form-switch mb-2">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
-                        <label class="form-check-label" for="flexSwitchCheckChecked"
-                          ></label
-                        >
+                      <div class="col">
+                        <label for="" class="form-label">Contact Number</label>
+                        <input type="text" class="form-control" placeholder="0000000000" aria-label="Last name">
                       </div>
-                </div>
-              </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-              data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-
-                <div class="mb-3">
-                  <label for="exampleFormControlInput1" class="form-label">Title</label>
-                  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Contact Us"/>
-                </div>
-
-                <label class="image-profile-photo" for="icon_upload">
-                  <div class="image-photo">
-                    <img src="./images/pngwing.com (5).png" height="64px" width="64px">
-                  </div>
-                  <div class="download-photo">
-                    <box-icon name='upload'></box-icon>
-                  </div>
-                  <input type="file" name="" id="icon_upload" style="display: none;">
-                </label>
-
-                <div class="row m-4">
-                  <label class="form-label text-secondary">Contact Number</label>
-                  <div class="col">
-                    <label for="" class="form-label">Label</label>
-                    <input type="text" class="form-control" placeholder="Call Us" aria-label="First name">
-                  </div>
-                  <div class="col">
-                    <label for="" class="form-label">Contact Number</label>
-                    <input type="text" class="form-control" placeholder="0000000000" aria-label="Last name">
-                  </div>
-                </div>
-
-                <div class="row m-4">
-                  <label class="form-label text-secondary">Email</label>
-                  <div class="col">
-                    <label for="" class="form-label">Label</label>
-                    <input type="text" class="form-control" placeholder="Email" aria-label="First name">
-                  </div>
-                  <div class="col">
-                    <label for="" class="form-label">Email</label>
-                    <input type="text" class="form-control" placeholder="contact@mail.com" aria-label="Last name">
-                  </div>
-                </div>
-
-                <hr>
-
-                <div class="row m-4">
-                  <label class="form-label text-secondary">Address</label>
-                  <div class="col">
-                    <label for="" class="form-label">Label</label>
-                    <input type="text" class="form-control" placeholder="Address" aria-label="First name">
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col">
-                    <label for="" class="form-label">Address Line 1</label>
-                    <input type="text" class="form-control" placeholder="House" aria-label="First name">
-                  </div>
-                  <div class="col">
-                    <label for="" class="form-label">Address Line 2</label>
-                    <input type="text" class="form-control" placeholder="Street" aria-label="Last name">
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col">
-                    <label for="" class="form-label">City</label>
-                    <input type="text" class="form-control" placeholder="City" aria-label="First name">
-                  </div>
-                  <div class="col">
-                    <label for="" class="form-label">State</label>
-                    <input type="text" class="form-control" placeholder="State" aria-label="Last name">
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col">
-                    <label for="" class="form-label">Country</label>
-                    <input type="text" class="form-control" placeholder="Country" aria-label="First name">
-                  </div>
-                  <div class="col">
-                    <label for="" class="form-label">Zip Code</label>
-                    <input type="text" class="form-control" placeholder="Zip Code" aria-label="Last name">
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col">
-                    <label for="" class="form-label">Direction</label>
-                    <input type="text" class="form-control" placeholder="Direction" aria-label="First name">
-                  </div>
-                  <div class="col">
-                    <label for="" class="form-label">Google Map</label>
-                    <input type="text" class="form-control" placeholder="Map URL" aria-label="Last name">
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingFour">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-                <div class="btn-container">
-                  <span class="d-flex align-items-center"> <i class="bx bx-image-alt me-1"></i>Images</span>
-                  <div class="form-check form-switch mb-2">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
-                        <label class="form-check-label" for="flexSwitchCheckChecked"
-                          ></label
-                        >
-                      </div>
-                </div>
-              </button>
-            </h2>
-            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-              data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <div class="mb-3">
-                  <label class="image-profile-photo" for="images_upload">
-                    <div class="image-photo">
-                      <img src="./images/tem2.png" height="64px" width="64px">
                     </div>
-                    <div class="download-photo">
-                      <box-icon name='upload'></box-icon>
+    
+                    <div class="row m-4">
+                      <label class="form-label text-secondary">Email</label>
+                      <div class="col">
+                        <label for="" class="form-label">Label</label>
+                        <input type="text" class="form-control" placeholder="Email" aria-label="First name">
+                      </div>
+                      <div class="col">
+                        <label for="" class="form-label">Email</label>
+                        <input type="text" class="form-control" placeholder="contact@mail.com" aria-label="Last name">
+                      </div>
                     </div>
-                    <input type="file" name="" id="images_upload" style="display: none;">
-                 </label>
+    
+                    <hr>
+    
+                    <div class="row m-4">
+                      <label class="form-label text-secondary">Address</label>
+                      <div class="col">
+                        <label for="" class="form-label">Label</label>
+                        <input type="text" class="form-control" placeholder="Address" aria-label="First name">
+                      </div>
+                    </div>
+    
+                    <div class="row">
+                      <div class="col">
+                        <label for="" class="form-label">Address Line 1</label>
+                        <input type="text" class="form-control" placeholder="House" aria-label="First name">
+                      </div>
+                      <div class="col">
+                        <label for="" class="form-label">Address Line 2</label>
+                        <input type="text" class="form-control" placeholder="Street" aria-label="Last name">
+                      </div>
+                    </div>
+    
+                    <div class="row">
+                      <div class="col">
+                        <label for="" class="form-label">City</label>
+                        <input type="text" class="form-control" placeholder="City" aria-label="First name">
+                      </div>
+                      <div class="col">
+                        <label for="" class="form-label">State</label>
+                        <input type="text" class="form-control" placeholder="State" aria-label="Last name">
+                      </div>
+                    </div>
+    
+                    <div class="row">
+                      <div class="col">
+                        <label for="" class="form-label">Country</label>
+                        <input type="text" class="form-control" placeholder="Country" aria-label="First name">
+                      </div>
+                      <div class="col">
+                        <label for="" class="form-label">Zip Code</label>
+                        <input type="text" class="form-control" placeholder="Zip Code" aria-label="Last name">
+                      </div>
+                    </div>
+    
+                    <div class="row">
+                      <div class="col">
+                        <label for="" class="form-label">Direction</label>
+                        <input type="text" class="form-control" placeholder="Direction" aria-label="First name">
+                      </div>
+                      <div class="col">
+                        <label for="" class="form-label">Google Map</label>
+                        <input type="text" class="form-control" placeholder="Map URL" aria-label="Last name">
+                      </div>
+                    </div>
+    
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingFive">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                <div class="btn-container">
-                  <span><i class="bx bx-link-alt"></i></i> Social Link</span>
-                  <div class="form-check form-switch mb-2">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
-                        <label class="form-check-label" for="flexSwitchCheckChecked"
-                          ></label
-                        >
-                      </div>
-                </div>
-              </button>
-            </h2>
-            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-              data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <div class="mb-3">
-                  <label for="exampleFormControlInput1" class="form-label">Title</label>
-                  <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="About me" />
-                </div>
-                <div class="mb-3">
-                  <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                    placeholder="Description"></textarea>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingSix">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                <div class="btn-container">
-                  <span class="d-flex align-items-center"> <i class="bx bx-link me-1"></i></i>Links</span>
-                  <div class="form-check form-switch mb-2">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
-                        <label class="form-check-label" for="flexSwitchCheckChecked"
-                          ></label
-                        >
-                      </div>
-                </div>
-              </button>
-            </h2>
-            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
-              data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <div class="mb-3">
-                  <label for="exampleFormControlInput1" class="form-label">Title</label>
-                  <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Web Links" />
-                </div>
-                <div class="mb-3">
-                  <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                    placeholder="Description"></textarea>
-                </div>
-
-                <div class="mb-3">
-                  <label for="exampleFormControlInput1" class="form-label">Links</label>
-                  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Link" />
-                </div>
-
-                <label class="image-profile-photo" for="link_upload">
-                  <div class="image-photo" style="border:1px solid rgb(211, 211, 211)">
-                    <img src="./images/pngwing.com (11).png" height="64px" width="64px">
-                  </div>
-                  <div class="download-photo">
-                    <box-icon name='upload'></box-icon>
-                  </div>
-                  <input type="file" id="link_upload" style="display: none;">
-                </label>
-                   <br>
-                  <div class="row m-0 mt-10 last-container">
-                    <div class="col">
-                      <label for="" class="form-label">Title</label>
-                      <input type="text" class="form-control" placeholder="Title" aria-label="First name">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                    <div class="btn-container">
+                      <span class="d-flex align-items-center"> <i class="bx bx-image-alt me-1"></i>Images</span>
+                      <div class="form-check form-switch mb-2">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
+                            <label class="form-check-label" for="flexSwitchCheckChecked"
+                              ></label
+                            >
+                          </div>
                     </div>
-                    <div class="col">
-                      <label for="" class="form-label">Subtitle</label>
-                      <input type="text" class="form-control" placeholder="Subtitle" aria-label="Last name">
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <div class="mb-3">
+                      <label class="image-profile-photo" for="images_upload">
+                        <div class="image-photo">
+                          <img src="./images/tem2.png" height="64px" width="64px">
+                        </div>
+                        <div class="download-photo">
+                          <box-icon name='upload'></box-icon>
+                        </div>
+                        <input type="file" name="" id="images_upload" style="display: none;">
+                     </label>
                     </div>
                   </div>
-
-
+                </div>
+              </div>
+    
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    <div class="btn-container">
+                      <span><i class="bx bx-link-alt"></i></i> Social Link</span>
+                      <div class="form-check form-switch mb-2">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
+                            <label class="form-check-label" for="flexSwitchCheckChecked"
+                              ></label
+                            >
+                          </div>
+                    </div>
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Title</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="About me" />
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        placeholder="Description"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    <div class="btn-container">
+                      <span class="d-flex align-items-center"> <i class="bx bx-link me-1"></i></i>Links</span>
+                      <div class="form-check form-switch mb-2">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
+                            <label class="form-check-label" for="flexSwitchCheckChecked"
+                              ></label
+                            >
+                          </div>
+                    </div>
+                  </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Title</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Web Links" />
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        placeholder="Description"></textarea>
+                    </div>
+    
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Links</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Link" />
+                    </div>
+    
+                    <label class="image-profile-photo" for="link_upload">
+                      <div class="image-photo" style="border:1px solid rgb(211, 211, 211)">
+                        <img src="./images/pngwing.com (11).png" height="64px" width="64px">
+                      </div>
+                      <div class="download-photo">
+                        <box-icon name='upload'></box-icon>
+                      </div>
+                      <input type="file" id="link_upload" style="display: none;">
+                    </label>
+                       <br>
+                      <div class="row m-0 mt-10 last-container">
+                        <div class="col">
+                          <label for="" class="form-label">Title</label>
+                          <input type="text" class="form-control" placeholder="Title" aria-label="First name">
+                        </div>
+                        <div class="col">
+                          <label for="" class="form-label">Subtitle</label>
+                          <input type="text" class="form-control" placeholder="Subtitle" aria-label="Last name">
+                        </div>
+                      </div>
+    
+    
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+            <!-- dropdown end -->
         </div>
-        <!-- dropdown end -->
+        </div>
+
+        <div class="tab-pane fade" id="mydesign" role="tabpanel">
+
+          <!-- Design and Settings start -->
+
+          <h1>design panel here</h1>
+
+          <!-- Design and Settings end -->
+
+        </div>
+        <div class="tab-pane fade" id="myqrcode" role="tabpanel">
+
+          <!-- QR Code start -->
+
+         <h1>qr code panel here</h1>
+
+         <!-- QR Code end -->
+
+        </div>
       </div>
+    </div>
+      
+      
+
+      <!-- dropdown start -->
+      
 
 
    
