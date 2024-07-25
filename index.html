@@ -1007,22 +1007,30 @@
           <!-- Design and Settings end -->
 
         </div>
+
+        <!-- QR code start -->
         <div class="tab-pane fade" id="myqrcode" role="tabpanel">
 
           <div class="mb-3">
             <label for="qrcodetext" class="form-label">URL</label>
             <input type="text" class="form-control" id="url" placeholder="Paste or Type URL here" aria-describedby="defaultFormControlHelp" />
           </div>
+          
+          <center>
           <button type="button" class="btn btn-primary" onclick="generateQRCode()">Generate QRCoode</button>
 
-          <div id="qrcode" class="m-4"></div>
+          <div id="qrcode" class="my-4"></div>
 
           <button type="button" class="btn btn-primary" onclick="downloadQRCode()" style="display: none;" id="downloadbtn">Download QRCoode</button>
+          </center>
+
+          <div id="liveAlertPlaceholder"></div>
 
         </div>
       </div>
     </div>
-      
+
+    <!-- QR code ends -->
       
 
       <!-- dropdown start -->
@@ -1061,25 +1069,7 @@
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
-    <script>
-        function generateQRCode() {
-            var text = document.getElementById("url").value;
-            var qrcodeContainer = document.getElementById("qrcode");
-            qrcodeContainer.innerHTML = ""; // Clear previous QR code
-            new QRCode(qrcodeContainer, {text:text, width:200, height:200});
-
-            document.getElementById("downloadbtn").style.display="";
-        }
-
-        function downloadQRCode() {
-            var qrcodeContainer = document.getElementById("qrcode").getElementsByTagName("img")[0];
-            var link = document.createElement("a");
-            link.href = qrcodeContainer.src;
-            link.download = "qrcode.png";
-            link.click();
-        }
-
-    </script>
+    <script src="index.js"></script>
 </body>
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
