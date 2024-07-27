@@ -16,8 +16,10 @@
     /* border:1px solid green; */
     display:flex;
     flex-direction: row;
-    align-items: center;
+    /* align-items: center; */
     gap:10px;
+    padding-top:20px;
+    padding-bottom: 10px;
 }
 .image-profile-photo
 {
