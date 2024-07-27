@@ -57,23 +57,13 @@
     background-size: 100% 100%;
   } */
 
-  .container .container {
-    float: left;
-    height: 100%;
-  }
-
   .carousel-item img {
     width: 16%;
-    height: auto;
-    margin: 3%;
+    margin: 2%;
   }
 
-  .container .container:first-child {
-    width: 70%;
-  }
-
-  .container .container:nth-child(2) {
-    width: 30%;
+  .accordion-body{
+    padding: 20px;
   }
 
   .mobile {
@@ -103,13 +93,6 @@
   }
 
   @media only screen and (max-width: 600px) {
-    .container .container:nth-child(1) {
-      width: 100%;
-    }
-
-    .container .container:nth-child(2) {
-      width: 100%;
-    }
 
     .mobile{
       width: 100%;
