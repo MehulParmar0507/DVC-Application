@@ -275,7 +275,7 @@
             </li>
             <li class="nav-item" role="presentation">
               <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#myqrcode" aria-controls="navs-pills-justified-messages" aria-selected="false" tabindex="-1">
-                <i class="bi bi-qr-code-scan me-1"></i> <span class="d-none d-sm-block">QR Code</span>
+                <i class="bi bi-qr-code-scan me-1"></i> <span class="d-none d-sm-block">Publish</span>
               </button>
             </li>
           </ul>
@@ -1209,21 +1209,28 @@
           <!-- QR code start -->
           <div class="tab-pane fade" id="myqrcode" role="tabpanel">
 
-            <div class="alert alert-secondary " role="alert">IMPORTANT: <br>
-              Please make sure to test scan your QR before printing for production
+            <div class="alert alert-secondary " role="alert" style="display:flex; gap:30px; align-content:baseline; ">
+              <div class="icon">
+                <i class="bi bi-info-circle"></i>
+              </div>
+              <p>IMPORTANT<br>Please make sure to test scan your QR before printing for production.</p>
             </div>
             <p class="mb-2">
               Share this QR code on social media
             </p>
-            <div class="col-lg-8 col-sm-12 mb-3">
-              <button type="button" class="btn btn-secondary me-2 ">
-                <i class="bx bxl-facebook me-1"></i> Facebook
+            <div class="col-lg-8 col-md-8 col-sm-12 mb-3" style="display:flex; flex-wrap:wrap; gap:15px;">
+              <button type="button" class="btn btn-secondary me-2 " style="background-color:#316FF6; display:flex; justify-content:center; align-items:center">
+                <i class="bx bxl-facebook me-1"></i>
+                <span class="qr-sharing-btn">Facebook</span>
               </button>
-              <button type="button" class="btn btn-secondary me-2">
-                <i class="bx bxl-twitter me-1"></i> Twitter
+              <button type="button" class="btn btn-secondary me-2"style="background-color:black; display:flex; justify-content:center; align-items:center">
+                <i class="bi bi-twitter-x"></i>
+                <span class="qr-sharing-btn">Twitter</span>
               </button>
-              <button type="button" class="btn btn-secondary me-2">
-                <i class="bx bxl-linkedin me-1"></i> Linkdlin
+              <button type="button" class="btn btn-secondary me-2
+              "style="background-color:#0077B5; display:flex; justify-content:center; align-items:center">
+                <i class="bx bxl-linkedin me-1"></i>
+                <span class="qr-sharing-btn">LinkedIn</span>
               </button>
   
             </div>
@@ -1241,7 +1248,7 @@
               <button type="button" class="btn btn-outline-none"> <i class="bx bx-copy"></i></button>
             </div>
 
-            <button type="button" class="btn btn-secondary me-2">Cancel</button>
+            <button type="button" class="btn btn-secondary me-2" style="">Cancel</button>
             <!-- <div class="mb-3">
               <label for="qrcodetext" class="form-label">URL</label>
               <input type="text" class="form-control" id="url" placeholder="<iframe src= //linko.page/sg50vypiencz"aria-describedby="defaultFormControlHelp" />

@@ -114,4 +114,9 @@
       width: 100%;
       height: 560px;
     }
+
+    .qr-sharing-btn{
+      display: none;
+    }
   }
+
