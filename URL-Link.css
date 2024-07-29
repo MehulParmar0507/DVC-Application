@@ -1,7 +1,20 @@
+.input-group
+{
+    
+}
+
+.input-group-prepend
+{
+    height: 40px;
+}
+
+
 
 .input-group button{
     border-color: rgb(173, 173, 173);
     height: 60px;
+    padding: 0px 17px;
+    height: 40px;
     /* display: flex;
     flex-direction: column; */
    

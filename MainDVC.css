@@ -45,6 +45,21 @@
     width:100%;
   }
 
+  .delete-box
+  {
+    background-color: white;
+    height: 25px;
+    width:25px;
+    border-radius: 100px;
+    position: relative;
+    right:15px;
+    bottom:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+  }
+
   /*  */
   /* .mymobile {
     border: 1px solid black;
