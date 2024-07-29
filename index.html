@@ -1208,13 +1208,46 @@
   
           <!-- QR code start -->
           <div class="tab-pane fade" id="myqrcode" role="tabpanel">
-  
-            <div class="mb-3">
-              <label for="qrcodetext" class="form-label">URL</label>
-              <input type="text" class="form-control" id="url" placeholder="Paste or Type URL here" aria-describedby="defaultFormControlHelp" />
+
+            <div class="alert alert-secondary " role="alert">IMPORTANT: <br>
+              Please make sure to test scan your QR before printing for production
             </div>
+            <p class="mb-2">
+              Share this QR code on social media
+            </p>
+            <div class="col-lg-8 col-sm-12 mb-3">
+              <button type="button" class="btn btn-secondary me-2 ">
+                <i class="bx bxl-facebook me-1"></i> Facebook
+              </button>
+              <button type="button" class="btn btn-secondary me-2">
+                <i class="bx bxl-twitter me-1"></i> Twitter
+              </button>
+              <button type="button" class="btn btn-secondary me-2">
+                <i class="bx bxl-linkedin me-1"></i> Linkdlin
+              </button>
+  
+            </div>
+
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="http://linko.page/sg50vypiencz" aria-label="Username" aria-describedby="basic-addon1">
+              <button type="button" class="btn btn-outline-none"> <i class="bx bx-copy"></i></button>
+            </div>
+
+            <p class="mb-2">
+              Embed code
+            </p>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="<iframe src= //linko.page/sg50vypiencz" aria-label="Username" aria-describedby="basic-addon1">
+              <button type="button" class="btn btn-outline-none"> <i class="bx bx-copy"></i></button>
+            </div>
+
+            <button type="button" class="btn btn-secondary me-2">Cancel</button>
+            <!-- <div class="mb-3">
+              <label for="qrcodetext" class="form-label">URL</label>
+              <input type="text" class="form-control" id="url" placeholder="<iframe src= //linko.page/sg50vypiencz"aria-describedby="defaultFormControlHelp" />
+            </div> -->
             
-           <div class="text-center">
+           <!-- <div class="text-center">
             <button type="button" class="btn btn-primary" onclick="generateQRCode()">Publish QRCode</button>
   
             <div id="liveAlertPlaceholder" class="p-3"></div>
@@ -1223,7 +1256,7 @@
   
             <button type="button" class="btn btn-primary" onclick="downloadQRCode()" style="display: none;" id="downloadbtn">Download QRCode</button>
   
-           </div>
+           </div> -->
   
           </div>
       </div>
