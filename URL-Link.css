@@ -25,11 +25,13 @@
 .input-group button:hover{
     border-color: rgb(164, 164, 164);
     background-color: rgb(229, 229, 229);
+    
    
 }
 
 .form-control:hover{
     border-color: rgb(226, 226, 226);
+    
 }
 
 .position-absolute {
@@ -41,6 +43,8 @@
     color: red;
     top: 0;
     right: 0;
+    cursor: pointer;
+    
 }
 
 .position{
