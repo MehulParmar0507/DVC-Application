@@ -64,3 +64,8 @@ function addContact(type){
 contactDiv.appendChild(sms);
   console.log(type);
 }
+
+function deleteContact(t){
+    let c = document.getElementById(t);
+    c.remove();
+}
