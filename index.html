@@ -275,7 +275,7 @@
             </li>
             <li class="nav-item" role="presentation">
               <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#myqrcode" aria-controls="navs-pills-justified-messages" aria-selected="false" tabindex="-1">
-                <i class="bi bi-qr-code-scan me-1"></i> <span class="d-none d-sm-block">QR Code</span>
+                <i class="bi bi-qr-code-scan me-1"></i> <span class="d-none d-sm-block">Publish</span>
               </button>
             </li>
           </ul>
@@ -418,7 +418,7 @@
                   </div>
                   <div class="switchery d-inline">
                     <div id="contactDiv">
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3" id="imobile">
                       <span>
                         <select class="form-select" aria-label="Default select example">
                           <option selected>Mobile</option>
@@ -429,12 +429,12 @@
                       </span>
                       <input type="text" class="form-control" placeholder="Mobile Number" aria-label="Username"
                         aria-describedby="basic-addon1" />
-                        <span class="position-absolute   translate-middle badge badge-center rounded-pill"><svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                        <span onclick="deleteContact('imobile')" class="position-absolute   translate-middle badge badge-center rounded-pill"><svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
                           <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
                         </svg></span>
                     </div>
   
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3" id="iemail">
                       <span>
                         <select class="form-select" aria-label="Default select example">
                           <option selected>Email</option>
@@ -445,13 +445,12 @@
                       </span>
                       <input type="text" class="form-control" placeholder="Email ID" aria-label="Username"
                         aria-describedby="basic-addon1" />
-                        
-                        <span class="position-absolute   translate-middle badge badge-center rounded-pill  text-"><svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                        <span onclick="deleteContact('iemail')" class="position-absolute   translate-middle badge badge-center rounded-pill  text-"><svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
                           <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
                         </svg></span>
                     </div>
   
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3" id="isms">
                       <span>
                         <select class="form-select" aria-label="Default select example">
                           <option selected>SMS</option>
@@ -462,7 +461,7 @@
                       </span>
                       <input type="text" class="form-control" placeholder="Contact Number" aria-label="Username"
                         aria-describedby="basic-addon1" />
-                        <span class="position-absolute   translate-middle badge badge-center rounded-pill  text-"><svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                        <span onclick="deleteContact('isms')" class="position-absolute translate-middle badge badge-center rounded-pill  text-"><svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
                           <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
                         </svg></span>
                     </div>
@@ -476,18 +475,10 @@
                         + Add More
                       </button>
                       <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" onclick="addContact('SMS')">SMS</a></li>
-                        <li>
-                          <a class="dropdown-item" onclick="addContact('Web Chat')">Web Chat</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" onclick="addContact('Location')">Location</a>
-                        </li>
+                        <li><a class="dropdown-item" onclick="addContact('WhatsApp')">WhatsApp</a></li>
                         <li><a class="dropdown-item" onclick="addContact('Email')">Email</a></li>
-                        <li>
-                          <a class="dropdown-item" onclick="addContact('WhatsApp')">WhatsApp</a>
-                        </li>
-                        <li><a class="dropdown-item" onclick="addContact('FAX')">FAX</a></li>
+                        <li><a class="dropdown-item" onclick="addContact('Mobile')">Mobile</a></li>
+                        <li><a class="dropdown-item" onclick="addContact('Telephone')">Telephone</a></li>
                       </ul>
                     </div>
                   </div>
@@ -921,15 +912,11 @@
             </div>
 
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingsix">
+              <h2 class="accordion-header" id="headingSeven">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
-
-                  
+                  data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
                   <div class="btn-container">
-                    
-                    <span><i class="bi bi-microsoft-teams"></i></i> Team</span>
-                    
+                    <span class="d-flex align-items-center"><i class="bi bi-people-fill"></i>&nbsp;Testimonials</span>
                     <div class="form-check form-switch mb-2">
                           <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
                           <label class="form-check-label" for="flexSwitchCheckChecked"
@@ -939,12 +926,148 @@
                   </div>
                 </button>
               </h2>
-              <div id="collapsesix" class="accordion-collapse collapse" aria-labelledby="headingsix"
+              <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body py-3">
+
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Upload Testimonial Image:</label>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="image-profile-photo" for="images_upload">
+                      <div class="image-photo">
+                        <img src="./images/pexels-italo-melo-881954-2379004.jpg" height="64px" width="64px">
+                      </div>
+                      <div class="delete-box">
+                        <i class="bi bi-trash3" style="color:red"></i>
+                      </div>
+                      <div class="download-photo">
+                        <box-icon name='upload'></box-icon>
+                      </div>
+                      <input type="file" name="" id="images_upload" style="display: none;">
+                   </label>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Testimonial Name:</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Testimonial Name" />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Review:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                      placeholder="Add Their Review"></textarea>
+                  </div>
+
+                  <button type="button" class="btn btn-primary">Add New Testimonial</button>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingEight">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                  <div class="btn-container">
+                    <span class="d-flex align-items-center"><i class="bi bi-cart2"></i>&nbsp;Products</span>
+                    <div class="form-check form-switch mb-2">
+                          <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
+                          <label class="form-check-label" for="flexSwitchCheckChecked"
+                            ></label
+                          >
+                        </div>
+                  </div>
+                </button>
+              </h2>
+              <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body py-3">
                   <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Upload Product Image:</label>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="image-profile-photo" for="images_upload">
+                      <div class="image-photo">
+                        <img src="./images/oneplus9-1-500x500.webp" height="64px" width="64px">
+                      </div>
+                      <div class="delete-box">
+                        <i class="bi bi-trash3" style="color:red"></i>
+                      </div>
+                      <div class="download-photo">
+                        <box-icon name='upload'></box-icon>
+                      </div>
+                      <input type="file" name="" id="images_upload" style="display: none;">
+                   </label>
+                  </div>
+
+                  <div class="mb-3 col-lg-6 col-md-12 col-sm-12">
+                    <label for="exampleFormControlInput1" class="form-label">Product Name:</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Name" />
+                  </div>
+
+                  <label class="form-label text-secondary">Product Information:</label>
+
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Product Feature 1:</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Features" />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Product Feature 2:</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Features(Place it Empty if you have Not Enough Features)" />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Product Feature 3:</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Features(Place it Empty if you have Not Enough Features)" />
+                  </div>
+
+                  <div class="mb-4 row">
+                    <label for="html5-number-input" class="col-md-0 col-form-label">Product Price:</label>
+                    <div class="col-md-4">
+                      <input class="form-control" type="number" value="" placeholder="Enter only Numbers" id="html5-number-input" />
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn btn-primary">Add New Product</button>
+
+
+
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingNine">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                  <div class="btn-container">
+                    <span class="d-flex align-items-center"> <i class="bx bx-video me-1"></i>Video</span>
+                    <div class="form-check form-switch mb-2">
+                          <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
+                          <label class="form-check-label" for="flexSwitchCheckChecked"
+                            ></label
+                          >
+                        </div>
+                  </div>
+                </button>
+              </h2>
+              <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body py-3">
+                  <div class="profile-photo">
+                    <span>Title, Description</span>
+                    <div class="form-check form-switch mb-2">
+                      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked="">
+                      <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                    </div>
+                 </div>
+                  <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Title</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Title" />
+                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="About me" />
                   </div>
                   <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Description</label>
@@ -952,56 +1075,276 @@
                       placeholder="Description"></textarea>
                   </div>
 
-                <div class="py-2">
-                  <div class="py-3">
-                    <p>Profile (250x250px, 1:1 Ratio)</p>
-                    <label class="image-profile-photo" for="profile_upload">
-                      <div class="image-photo">
-                        <img src="images/image.png" height="64px" width="64px" style="border-radius: 5px;">
-                      </div>
-                      <div class="download-photo">
-                        <box-icon name='upload'></box-icon>
-                      </div>
-                      <input type="file" name="" id="profile_upload" style="display: none;">
-                   </label>
-        
-                   <div class="input-group py-2">
-                    <div class="me-3 col-sm-12 col-md-12 col-lg-5">
-                      <label for="exampleFormControlInput2" class="form-label">Name</label>
-                      <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Name">
-                    </div>
-    
-                    <div class="col-sm-12 col-md-12 col-lg-6">
-                      <!-- <label for="exampleFormControlInput2" class="form-label">Subtitle</label> -->
-                      <div class="profile-photo d-flex align-items-center">
-                        <label for="exampleFormControlInput2" class="form-label">Designation</label>
-                        <div class="form-check form-switch mb-2">
-                          <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked="">
-                          <label class="form-check-label" for="flexSwitchCheckChecked"></label>
-                        </div>
-                     </div>
-                      
-                      <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Designation">
-                    </div>
-                  </div>
-                  </div>
+                  <!-- <a href="#"><button type="button" class="btn btn-secondary mb-3">Youtube</button></a> -->
+                  <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" checked>
+                    <label class="btn btn-outline-primary" for="btnradio1">Youtube</label>
                   
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2">
+                    <label class="btn btn-outline-primary" for="btnradio2">Vimeo</label>
+                  </div>
+                  <br><br>
                   <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Profile Description</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                      placeholder="Description"></textarea>
+                    <label for="exampleFormControlInput1" class="form-label">video link</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput3" />
                   </div>
-                  
-          
-                  
-                </div>
-                  
                 </div>
               </div>
             </div>
 
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingNine">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseNine">
+                  <div class="btn-container">
+                    <span class="d-flex align-items-center"> <i class="bx bx-video me-1"></i>Bussiness Hours</span>
+                    <div class="form-check form-switch mb-2">
+                          <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
+                          <label class="form-check-label" for="flexSwitchCheckChecked"
+                            ></label
+                          >
+                    </div>
+                  </div>
+                </button>
+              </h2>
+              <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingNine"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body py-3">
+                  Hello
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Bussiness Hours" />
+                  </div>
 
+                  <div class="mb-3">
+                    <label class="image-profile-photo" for="images_upload">
+                      <div class="image-photo">
+                        <img src="./images/oneplus9-1-500x500.webp" height="64px" width="64px">
+                      </div>
+                      <div class="delete-box">
+                        <i class="bi bi-trash3" style="color:red"></i>
+                      </div>
+                      <div class="download-photo">
+                        <box-icon name='upload'></box-icon>
+                      </div>
+                      <input type="file" name="" id="images_upload" style="display: none;">
+                   </label>
+                  </div>
+
+                  <div class="form-check form-switch mb-3">
+                    Open 24 hours
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
+                    <label class="form-check-label" for="flexSwitchCheckChecked"
+                      ></label
+                    >
+                  </div>
+
+                  <div class="row mb-3">
+                    <div class="col">
+                        <label for="exampleFormControlInput1" class="form-label">Open Status</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Opened" />
+                    </div>
+                      <div class="col">
+                          <label for="exampleFormControlInput1" class="form-label">Closing Status</label>
+                          <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Closed" />
+                    </div>
+                  </div>
+
+                  <div class="my-4">
+                    <div class="mb-2">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                      <label class="form-check-label" for="defaultCheck1">
+                        Monday
+                      </label>
+                    </div>
+                    <div class="row">
+                      <div class="col-4"><input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Monday" /></div>
+                      <div class="col-3">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
+                          <span class="input-group-text" id="basic-addon11">@</span>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
+                          <span class="input-group-text" id="basic-addon11">@</span>
+                        </div>
+                      </div>
+                      <div class="col-2">
+                        <button class="btn btn-outline-primary">+</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="my-4">
+                    <div class="mb-2">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                      <label class="form-check-label" for="defaultCheck1">
+                        Tuesday
+                      </label>
+                    </div>
+                    <div class="row">
+                      <div class="col-4"><input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Monday" /></div>
+                      <div class="col-3">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
+                          <span class="input-group-text" id="basic-addon11">@</span>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
+                          <span class="input-group-text" id="basic-addon11">@</span>
+                        </div>
+                      </div>
+                      <div class="col-2">
+                        <button class="btn btn-outline-primary">+</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="my-4">
+                    <div class="mb-2">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                      <label class="form-check-label" for="defaultCheck1">
+                        Wednesday
+                      </label>
+                    </div>
+                    <div class="row">
+                      <div class="col-4"><input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Monday" /></div>
+                      <div class="col-3">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
+                          <span class="input-group-text" id="basic-addon11">@</span>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
+                          <span class="input-group-text" id="basic-addon11">@</span>
+                        </div>
+                      </div>
+                      <div class="col-2">
+                        <button class="btn btn-outline-primary">+</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="my-4">
+                    <div class="mb-2">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                      <label class="form-check-label" for="defaultCheck1">
+                        Thursday
+                      </label>
+                    </div>
+                    <div class="row">
+                      <div class="col-4"><input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Monday" /></div>
+                      <div class="col-3">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
+                          <span class="input-group-text" id="basic-addon11">@</span>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
+                          <span class="input-group-text" id="basic-addon11">@</span>
+                        </div>
+                      </div>
+                      <div class="col-2">
+                        <button class="btn btn-outline-primary">+</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="my-4">
+                    <div class="mb-2">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                      <label class="form-check-label" for="defaultCheck1">
+                        Friday
+                      </label>
+                    </div>
+                    <div class="row">
+                      <div class="col-4"><input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Monday" /></div>
+                      <div class="col-3">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
+                          <span class="input-group-text" id="basic-addon11">@</span>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
+                          <span class="input-group-text" id="basic-addon11">@</span>
+                        </div>
+                      </div>
+                      <div class="col-2">
+                        <button class="btn btn-outline-primary">+</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="my-4">
+                    <div class="mb-2">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                      <label class="form-check-label" for="defaultCheck1">
+                        Saturday
+                      </label>
+                    </div>
+                    <div class="row">
+                      <div class="col-4"><input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Monday" /></div>
+                      <div class="col-3">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
+                          <span class="input-group-text" id="basic-addon11">@</span>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
+                          <span class="input-group-text" id="basic-addon11">@</span>
+                        </div>
+                      </div>
+                      <div class="col-2">
+                        <button class="btn btn-outline-primary">+</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="my-4">
+                    <div class="mb-2">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                      <label class="form-check-label" for="defaultCheck1">
+                        Sunday
+                      </label>
+                    </div>
+                    <div class="row">
+                      <div class="col-4"><input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Monday" /></div>
+                      <div class="col-3">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
+                          <span class="input-group-text" id="basic-addon11">@</span>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
+                          <span class="input-group-text" id="basic-addon11">@</span>
+                        </div>
+                      </div>
+                      <div class="col-2">
+                        <button class="btn btn-outline-primary">+</button>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
           </div>
+
+          <!-- Accordian Ends Here -->
           
           <div class="text-center">
             <div class="btn-group my-4">
@@ -1299,13 +1642,53 @@
   
           <!-- QR code start -->
           <div class="tab-pane fade" id="myqrcode" role="tabpanel">
-  
-            <div class="mb-3">
-              <label for="qrcodetext" class="form-label">URL</label>
-              <input type="text" class="form-control" id="url" placeholder="Paste or Type URL here" aria-describedby="defaultFormControlHelp" />
+
+            <div class="alert alert-secondary " role="alert" style="display:flex; gap:30px; align-content:baseline; ">
+              <div class="icon">
+                <i class="bi bi-info-circle"></i>
+              </div>
+              <p>IMPORTANT<br>Please make sure to test scan your QR before printing for production.</p>
             </div>
+            <p class="mb-2">
+              Share this QR code on social media
+            </p>
+            <div class="col-lg-8 col-md-8 col-sm-12 mb-3" style="display:flex; flex-wrap:wrap; gap:15px;">
+              <button type="button" class="btn me-2 " style="background-color:#316FF6; display:flex; justify-content:center; align-items:center; color:white">
+                <i class="bx bxl-facebook me-1"></i>
+                <span class="qr-sharing-btn">Facebook</span>
+              </button>
+              <button type="button" class="btn me-2"style="background-color:black; display:flex; justify-content:center; align-items:center; color:white">
+                <i class="bi bi-twitter-x"></i>
+                <span class="qr-sharing-btn">Twitter</span>
+              </button>
+              <button type="button" class="btn me-2
+              "style="background-color:#0077B5; display:flex; justify-content:center; align-items:center; color:white">
+                <i class="bx bxl-linkedin me-1"></i>
+                <span class="qr-sharing-btn">LinkedIn</span>
+              </button>
+  
+            </div>
+
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="http://linko.page/sg50vypiencz" aria-label="Username" aria-describedby="basic-addon1">
+              <button type="button" class="btn btn-outline-none"> <i class="bx bx-copy"></i></button>
+            </div>
+
+            <p class="mb-2">
+              Embed code
+            </p>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="<iframe src= //linko.page/sg50vypiencz" aria-label="Username" aria-describedby="basic-addon1">
+              <button type="button" class="btn btn-outline-none"> <i class="bx bx-copy"></i></button>
+            </div>
+
+            <button type="button" class="btn btn-secondary me-2" style="">Cancel</button>
+            <!-- <div class="mb-3">
+              <label for="qrcodetext" class="form-label">URL</label>
+              <input type="text" class="form-control" id="url" placeholder="<iframe src= //linko.page/sg50vypiencz"aria-describedby="defaultFormControlHelp" />
+            </div> -->
             
-           <div class="text-center">
+           <!-- <div class="text-center">
             <button type="button" class="btn btn-primary" onclick="generateQRCode()">Publish QRCode</button>
   
             <div id="liveAlertPlaceholder" class="p-3"></div>
@@ -1314,7 +1697,7 @@
   
             <button type="button" class="btn btn-primary" onclick="downloadQRCode()" style="display: none;" id="downloadbtn">Download QRCode</button>
   
-           </div>
+           </div> -->
   
           </div>
       </div>
