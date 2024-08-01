@@ -655,9 +655,9 @@
                   <div class="mb-3">
                     <label class="image-profile-photo" for="images_upload">
                       <div class="image-photo">
-                        <img src="./images/tem2.png" height="64px" width="64px">
+                        <img src="./images/tem2.png" height="64px" width="64px" id="image-section-img">
                       </div>
-                      <div class="delete-box">
+                      <div class="delete-box" onclick="deleteImage(this)" id="trash-img">
                         <i class="bi bi-trash3" style="color:red"></i>
                       </div>
                       <div class="download-photo">
@@ -829,21 +829,17 @@
           
                   <div class="btn-group">
                     <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                      + Add More
+                      + Add Link
                     </button>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">SMS</a></li>
+                      <li><a class="dropdown-item" href="#">Twitter</a></li>
                       <li>
-                        <a class="dropdown-item" href="#">Web Chat</a>
+                        <a class="dropdown-item" href="#">Whatsapp</a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">Location</a>
+                        <a class="dropdown-item" href="#">Instagram</a>
                       </li>
-                      <li><a class="dropdown-item" href="#">Email</a></li>
-                      <li>
-                        <a class="dropdown-item" href="#">WhatsApp</a>
-                      </li>
-                      <li><a class="dropdown-item" href="#">FAX</a></li>
+                      <li><a class="dropdown-item" href="#">Facebook</a></li>
                     </ul>
                   </div>
                 </div>
@@ -928,8 +924,9 @@
               </h2>
               <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
                 data-bs-parent="#accordionExample">
-                <div class="accordion-body py-3">
+                <div class="accordion-body py-3" id="testimonial-accordion-body">
 
+                  <div id="testimonial-container" class="testimonials">
                   <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Upload Testimonial Image:</label>
                   </div>
@@ -960,8 +957,9 @@
                       placeholder="Add Their Review"></textarea>
                   </div>
 
-                  <button type="button" class="btn btn-primary">Add New Testimonial</button>
+                  <button type="button" class="btn btn-primary mb-2" onclick="addTestimonial()">Add New Testimonial</button>
 
+                 </div>
                 </div>
               </div>
             </div>
@@ -983,7 +981,10 @@
               </h2>
               <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
                 data-bs-parent="#accordionExample">
-                <div class="accordion-body py-3">
+                <div class="accordion-body py-3" id="Product-accordian-body">
+
+                  <div id="product-container">
+
                   <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Upload Product Image:</label>
                   </div>
@@ -1032,10 +1033,9 @@
                     </div>
                   </div>
 
-                  <button type="button" class="btn btn-primary">Add New Product</button>
+                  <button type="button" class="btn btn-primary mb-2" onclick="addProduct()">Add New Product</button>
 
-
-
+                </div>
                 </div>
               </div>
             </div>
@@ -1097,7 +1097,7 @@
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseNine">
                   <div class="btn-container">
-                    <span class="d-flex align-items-center"> <i class="bx bx-video me-1"></i>Bussiness Hours</span>
+                    <span class="d-flex align-items-center"><i class="bi bi-hourglass-split"></i>&nbsp;Bussiness Hours</span>
                     <div class="form-check form-switch mb-2">
                           <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
                           <label class="form-check-label" for="flexSwitchCheckChecked"
@@ -1110,7 +1110,6 @@
               <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingNine"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body py-3">
-                  Hello
                   <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Title</label>
                     <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Bussiness Hours" />
@@ -1162,17 +1161,23 @@
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">@</span>
+                          <span class="input-group-text" id="basic-addon11">
+                            <i class="bi bi-clock"></i>
+                          </span>
                         </div>
                       </div>
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">@</span>
+                          <span class="input-group-text" id="basic-addon11">
+                            <i class="bi bi-clock"></i>
+                          </span>
                         </div>
                       </div>
                       <div class="col-2">
-                        <button class="btn btn-outline-primary">+</button>
+                        <button class="btn btn-outline-primary">
+                          <i class="bi bi-plus-lg"></i>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -1189,17 +1194,23 @@
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">@</span>
+                          <span class="input-group-text" id="basic-addon11">
+                            <i class="bi bi-clock"></i>
+                          </span>
                         </div>
                       </div>
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">@</span>
+                          <span class="input-group-text" id="basic-addon11">
+                            <i class="bi bi-clock"></i>
+                          </span>
                         </div>
                       </div>
                       <div class="col-2">
-                        <button class="btn btn-outline-primary">+</button>
+                        <button class="btn btn-outline-primary">
+                          <i class="bi bi-plus-lg"></i>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -1216,17 +1227,23 @@
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">@</span>
+                          <span class="input-group-text" id="basic-addon11">
+                            <i class="bi bi-clock"></i>
+                          </span>
                         </div>
                       </div>
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">@</span>
+                          <span class="input-group-text" id="basic-addon11">
+                            <i class="bi bi-clock"></i>
+                          </span>
                         </div>
                       </div>
                       <div class="col-2">
-                        <button class="btn btn-outline-primary">+</button>
+                        <button class="btn btn-outline-primary">
+                          <i class="bi bi-plus-lg"></i>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -1243,17 +1260,23 @@
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">@</span>
+                          <span class="input-group-text" id="basic-addon11">
+                            <i class="bi bi-clock"></i>
+                          </span>
                         </div>
                       </div>
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">@</span>
+                          <span class="input-group-text" id="basic-addon11">
+                            <i class="bi bi-clock"></i>
+                          </span>
                         </div>
                       </div>
                       <div class="col-2">
-                        <button class="btn btn-outline-primary">+</button>
+                        <button class="btn btn-outline-primary">
+                          <i class="bi bi-plus-lg"></i>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -1270,17 +1293,23 @@
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">@</span>
+                          <span class="input-group-text" id="basic-addon11">
+                            <i class="bi bi-clock"></i>
+                          </span>
                         </div>
                       </div>
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">@</span>
+                          <span class="input-group-text" id="basic-addon11">
+                            <i class="bi bi-clock"></i>
+                          </span>
                         </div>
                       </div>
                       <div class="col-2">
-                        <button class="btn btn-outline-primary">+</button>
+                        <button class="btn btn-outline-primary">
+                          <i class="bi bi-plus-lg"></i>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -1297,17 +1326,23 @@
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">@</span>
+                          <span class="input-group-text" id="basic-addon11">
+                            <i class="bi bi-clock"></i>
+                          </span>
                         </div>
                       </div>
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">@</span>
+                          <span class="input-group-text" id="basic-addon11">
+                            <i class="bi bi-clock"></i>
+                          </span>
                         </div>
                       </div>
                       <div class="col-2">
-                        <button class="btn btn-outline-primary">+</button>
+                        <button class="btn btn-outline-primary">
+                          <i class="bi bi-plus-lg"></i>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -1324,17 +1359,23 @@
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">@</span>
+                          <span class="input-group-text" id="basic-addon11">
+                            <i class="bi bi-clock"></i>
+                          </span>
                         </div>
                       </div>
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">@</span>
+                          <span class="input-group-text" id="basic-addon11">
+                            <i class="bi bi-clock"></i>
+                          </span>
                         </div>
                       </div>
                       <div class="col-2">
-                        <button class="btn btn-outline-primary">+</button>
+                        <button class="btn btn-outline-primary">
+                          <i class="bi bi-plus-lg"></i>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -1361,7 +1402,10 @@
               </h2>
               <div id="collapseten" class="accordion-collapse collapse" aria-labelledby="headingten"
                 data-bs-parent="#accordionExample">
-                <div class="accordion-body py-3">
+                <div class="accordion-body py-3" id="team-accordian-body">
+
+                  <div class="team-container">
+                    
                   <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Title</label>
                     <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Title" />
@@ -1398,8 +1442,11 @@
                       <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
                         placeholder="Description"></textarea>
                     </div>
-  
-  
+
+                    <button type="button" class="btn btn-primary mb-2" onclick="addTeamMember()">Add More</button>
+
+                  </div>
+      
                 </div>
               </div>
             </div>
@@ -1732,7 +1779,8 @@
             </div>
 
             <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="http://linko.page/sg50vypiencz" aria-label="Username" aria-describedby="basic-addon1">
+              <!-- <input type="text" class="form-control" placeholder="http://linko.page/sg50vypiencz" aria-label="Username" aria-describedby="basic-addon1"> -->
+              <input type="text" class="form-control" id="url" placeholder="<iframe src= //linko.page/sg50vypiencz"aria-describedby="defaultFormControlHelp" />
               <button type="button" class="btn btn-outline-none"> <i class="bx bx-copy"></i></button>
             </div>
 
@@ -1740,11 +1788,17 @@
               Embed code
             </p>
             <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="<iframe src= //linko.page/sg50vypiencz" aria-label="Username" aria-describedby="basic-addon1">
+              <!-- <input type="text" class="form-control" placeholder="<iframe src= //linko.page/sg50vypiencz" aria-label="Username" aria-describedby="basic-addon1"> -->
+              <input type="text" class="form-control" id="url" placeholder="<iframe src= //linko.page/sg50vypiencz"aria-describedby="defaultFormControlHelp" />        
               <button type="button" class="btn btn-outline-none"> <i class="bx bx-copy"></i></button>
             </div>
 
-            <button type="button" class="btn btn-secondary me-2" style="">Cancel</button>
+            <button type="button" class="btn btn-secondary me-2">Cancel</button>
+            <button type="button" class="btn btn-primary" onclick="generateQRCode()">Publish QRCode</button>
+  
+            <div id="liveAlertPlaceholder" class="p-3"></div>
+
+            <div id="qrcode" class="my-4"></div>
             <!-- <div class="mb-3">
               <label for="qrcodetext" class="form-label">URL</label>
               <input type="text" class="form-control" id="url" placeholder="<iframe src= //linko.page/sg50vypiencz"aria-describedby="defaultFormControlHelp" />

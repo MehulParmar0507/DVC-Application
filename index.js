@@ -69,3 +69,173 @@ function deleteContact(t){
     let c = document.getElementById(t);
     c.remove();
 }
+
+
+// image section functionalities:-
+
+let DVCImage = document.getElementById('image-section-img');
+let deleteImg = document.getElementById('trash-img');
+
+function deleteImage(currElement)
+{
+  console.log(currElement.previousElementSibling.children[0]);
+  currElement.previousElementSibling.remove();
+  currElement.remove();
+}
+
+// testimonial sections
+
+let testimonialAccordionBody = document.getElementById('testimonial-accordion-body');
+
+function addTestimonial()
+{
+let testimonialContainer = document.createElement('div');
+testimonialContainer.innerHTML = `<div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Upload Testimonial Image:</label>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="image-profile-photo" for="images_upload">
+                      <div class="image-photo">
+                        <img src="./images/pexels-italo-melo-881954-2379004.jpg" height="64px" width="64px">
+                      </div>
+                      <div class="delete-box">
+                        <i class="bi bi-trash3" style="color:red"></i>
+                      </div>
+                      <div class="download-photo">
+                        <box-icon name='upload'></box-icon>
+                      </div>
+                      <input type="file" name="" id="images_upload" style="display: none;">
+                   </label>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Testimonial Name:</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Testimonial Name" />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Review:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                      placeholder="Add Their Review"></textarea>
+                  </div>
+
+                  <button type="button" class="btn btn-primary" onclick="addTestimonial()">Add New Testimonial</button>`
+  console.log(testimonialContainer);
+  console.log(testimonialAccordionBody);
+  testimonialAccordionBody.appendChild(testimonialContainer);
+}
+
+
+// Product Sections:-
+
+let ProductAccordianBody = document.getElementById('Product-accordian-body');
+
+function addProduct()
+{
+  let productContainer = document.createElement('div');
+  productContainer.innerHTML = `<div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Upload Product Image:</label>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="image-profile-photo" for="images_upload">
+                      <div class="image-photo">
+                        <img src="./images/oneplus9-1-500x500.webp" height="64px" width="64px">
+                      </div>
+                      <div class="delete-box">
+                        <i class="bi bi-trash3" style="color:red"></i>
+                      </div>
+                      <div class="download-photo">
+                        <box-icon name='upload'></box-icon>
+                      </div>
+                      <input type="file" name="" id="images_upload" style="display: none;">
+                   </label>
+                  </div>
+
+                  <div class="mb-3 col-lg-6 col-md-12 col-sm-12">
+                    <label for="exampleFormControlInput1" class="form-label">Product Name:</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Name" />
+                  </div>
+
+                  <label class="form-label text-secondary">Product Information:</label>
+
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Product Feature 1:</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Features" />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Product Feature 2:</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Features(Place it Empty if you have Not Enough Features)" />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Product Feature 3:</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Features(Place it Empty if you have Not Enough Features)" />
+                  </div>
+
+                  <div class="mb-4 row">
+                    <label for="html5-number-input" class="col-md-0 col-form-label">Product Price:</label>
+                    <div class="col-md-4">
+                      <input class="form-control" type="number" value="" placeholder="Enter only Numbers" id="html5-number-input" />
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn btn-primary">Add New Product</button>`;
+
+  console.log(ProductAccordianBody);
+  console.log(productContainer);
+  ProductAccordianBody.appendChild(productContainer);
+}
+
+// Team Section Functionalities
+
+let teamAccordianBody = document.getElementById('team-accordian-body');
+
+
+function addTeamMember()
+{
+  let teamContainer = document.createElement('div');
+  teamContainer.innerHTML = `<div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Title</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Title" />
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        placeholder="Description"></textarea>
+                    </div>
+    
+                    <p>Profile (250x250px, 1:1 Ratio)</p>
+                    <label class="image-profile-photo" for="link_upload">
+                      <div class="image-photo" >
+                        <img src="./images/image.png" height="64px" width="64px" style="border-radius: 5px;">
+                      </div>
+                      <div class="download-photo">
+                        <box-icon name='upload'></box-icon>
+                      </div>
+                      <input type="file" id="link_upload" style="display: none;">
+                    </label>
+                       <br>
+                      <div class="row  mt-10 last-container">
+                        <div class="col-sm-12 col-md-12 col-lg-6">
+                          <label for="" class="form-label">Name</label>
+                          <input type="text" class="form-control" placeholder="Name" aria-label="First name">
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-6">
+                          <label for="" class="form-label">Designation</label>
+                          <input type="text" class="form-control" placeholder="Designation" aria-label="Last name">
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                          placeholder="Description"></textarea>
+                      </div>
+  
+                      <button type="button" class="btn btn-primary mb-2" onclick="addTeamMember()">Add More</button>`;
+   console.log(teamAccordianBody);
+   console.log(teamContainer);
+   teamAccordianBody.appendChild(teamContainer);
+}
