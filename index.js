@@ -236,3 +236,52 @@ function addTeamMember()
    console.log(teamContainer);
    teamAccordianBody.appendChild(teamContainer);
 }
+
+
+function addSocialLink(t){
+  let my_social_link = document.getElementById("my_social_link");
+  let slDiv = document.createElement("div");
+  slDiv.innerHTML = `<div class="py-3">
+                    <div class="input-group mb-3">
+                      <span>
+                        <select class="form-select" aria-label="Default select example">
+                          <option selected>${t}</option>
+                        </select>
+                      </span>
+                      <input type="text" class="form-control" placeholder="URL" aria-label="Username"
+                        aria-describedby="basic-addon1" />
+                    </div>
+                    <span class="image-profile-photo" for="profile_upload">
+                      <div class="image-photo">
+                        <img src="./images/${t} png.png" height="64px" width="80px">
+                      </div>
+                      <label for="${t}_upload">
+                        <div class="download-photo">
+                          <box-icon name='upload'></box-icon>
+                        </div>
+                      </label>
+                      <input type="file" name="" id="${t}_upload" style="display: none;">
+                    </span>
+        
+                   <div class="input-group py-2">
+                    <div class="me-3 col-sm-12 col-md-12 col-lg-5">
+                      <label for="exampleFormControlInput2" class="form-label">Title</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="${t}">
+                    </div>
+    
+                    <div class="col-sm-12 col-md-12 col-lg-6">
+                      <!-- <label for="exampleFormControlInput2" class="form-label">Subtitle</label> -->
+                      <div class="profile-photo d-flex align-items-center">
+                        <label for="exampleFormControlInput2" class="form-label">SUBTITLE</label>
+                        <div class="form-check form-switch mb-2">
+                          <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked="">
+                          <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                        </div>
+                     </div>
+                      
+                      <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Follow us on ${t}">
+                    </div>
+                  </div>
+                  </div>`;
+  my_social_link.appendChild(slDiv);
+}

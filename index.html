@@ -351,15 +351,18 @@
                           >
                         </div>
                      </div>
-                     <label class="image-profile-photo" for="profile_upload">
+
+                     <span class="image-profile-photo" for="profile_upload">
                         <div class="image-photo">
                           <img src="./images/tem2.png" height="64px" width="64px">
                         </div>
-                        <div class="download-photo">
-                          <box-icon name='upload'></box-icon>
-                        </div>
+                        <label for="profile_upload">
+                          <div class="download-photo">
+                            <box-icon name='upload'></box-icon>
+                          </div>
+                        </label>
                         <input type="file" name="" id="profile_upload" style="display: none;">
-                     </label>
+                     </span>
                   </div>
                   <div class="profile-box" id="profile-box-2">
                     <div class="profile-photo">
@@ -371,15 +374,17 @@
                         >
                       </div>
                    </div>
-                   <label class="image-profile-photo" for="logo_upload">
+                   <span class="image-profile-photo">
                       <div class="image-photo">
                         <img src="./images/Sitesoch Logo.png" height="64px" width="64px">
                       </div>
-                      <div class="download-photo">
-                        <box-icon name='upload'></box-icon>
-                      </div>
+                      <label for="logo_upload">
+                        <div class="download-photo">
+                          <box-icon name='upload'></box-icon>
+                        </div>
+                      </label>
                       <input type="file" name="" id="logo_upload" style="display: none;">
-                   </label>
+                    </span>
                   </div>
                 </div>
                 <br>
@@ -538,15 +543,17 @@
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Contact Us"/>
                   </div>
   
-                  <label class="image-profile-photo mb-4" for="icon_upload">
+                  <span class="image-profile-photo mb-4" for="icon_upload">
                     <div class="image-photo">
                       <img src="./images/pngwing.com (5).png" height="65px" width="65px">
                     </div>
-                    <div class="download-photo">
-                      <box-icon name='upload'></box-icon>
-                    </div>
+                    <label for="icon_upload">
+                      <div class="download-photo">
+                        <box-icon name='upload'></box-icon>
+                      </div>
+                    </label>
                     <input type="file" name="" id="icon_upload" style="display: none;">
-                  </label>
+                  </span>
   
                   <div class="row">
                     <label class="form-label text-secondary">Contact Number</label>
@@ -653,18 +660,20 @@
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body py-3">
                   <div class="mb-3">
-                    <label class="image-profile-photo" for="images_upload">
+                    <span class="image-profile-photo">
                       <div class="image-photo">
-                        <img src="./images/tem2.png" height="64px" width="64px" id="image-section-img">
+                        <img src="./images/tem2.png" height="64px" width="64px">
                       </div>
-                      <div class="delete-box" onclick="deleteImage(this)" id="trash-img">
+                      <div class="delete-box">
                         <i class="bi bi-trash3" style="color:red"></i>
                       </div>
-                      <div class="download-photo">
-                        <box-icon name='upload'></box-icon>
-                      </div>
+                      <label for="images_upload">
+                        <div class="download-photo">
+                          <box-icon name='upload'></box-icon>
+                        </div>
+                      </label>
                       <input type="file" name="" id="images_upload" style="display: none;">
-                   </label>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -688,6 +697,7 @@
               <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body py-3">
+                  <div id="my_social_link">
                   <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Title</label>
                     <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="About me" />
@@ -712,15 +722,17 @@
                       <input type="text" class="form-control" placeholder="URL" aria-label="Username"
                         aria-describedby="basic-addon1" />
                     </div>
-                    <label class="image-profile-photo" for="profile_upload">
+                    <span class="image-profile-photo" for="profile_upload">
                       <div class="image-photo">
                         <img src="./images/facebook png.png" height="64px" width="80px">
                       </div>
-                      <div class="download-photo">
-                        <box-icon name='upload'></box-icon>
-                      </div>
-                      <input type="file" name="" id="profile_upload" style="display: none;">
-                   </label>
+                      <label for="facebook_upload">
+                        <div class="download-photo">
+                          <box-icon name='upload'></box-icon>
+                        </div>
+                      </label>
+                      <input type="file" name="" id="facebook_upload" style="display: none;">
+                    </span>
         
                    <div class="input-group py-2">
                     <div class="me-3 col-sm-12 col-md-12 col-lg-5">
@@ -755,15 +767,17 @@
                       <input type="text" class="form-control" placeholder="URL" aria-label="Username"
                         aria-describedby="basic-addon1" />
                     </div>
-                    <label class="image-profile-photo" for="profile_upload">
+                    <span class="image-profile-photo">
                       <div class="image-photo">
                         <img src="./images/insta png.png" height="64px" width="64px">
                       </div>
-                      <div class="download-photo">
-                        <box-icon name='upload'></box-icon>
-                      </div>
-                      <input type="file" name="" id="profile_upload" style="display: none;">
-                   </label>
+                      <label for="insta_upload">
+                        <div class="download-photo">
+                          <box-icon name='upload'></box-icon>
+                        </div>
+                      </label>
+                      <input type="file" name="" id="insta_upload" style="display: none;">
+                    </span>
                    <div class="input-group py-2">
                     <div class="me-3 col-sm-12 col-md-12 col-lg-5">
                       <label for="exampleFormControlInput2" class="form-label">Title</label>
@@ -797,15 +811,17 @@
                       <input type="text" class="form-control" placeholder="URL" aria-label="Username"
                         aria-describedby="basic-addon1" />
                     </div>
-                    <label class="image-profile-photo" for="profile_upload">
+                    <span class="image-profile-photo">
                       <div class="image-photo">
                         <img src="./images/twitter png.png" height="64px" width="64px">
                       </div>
-                      <div class="download-photo">
-                        <box-icon name='upload'></box-icon>
-                      </div>
-                      <input type="file" name="" id="profile_upload" style="display: none;">
-                   </label>
+                      <label for="twitter_upload">
+                        <div class="download-photo">
+                          <box-icon name='upload'></box-icon>
+                        </div>
+                      </label>
+                      <input type="file" name="" id="twitter_upload" style="display: none;">
+                    </span>
                    <div class="input-group py-2">
                     <div class="me-3 col-sm-12 col-md-12 col-lg-5">
                       <label for="exampleFormControlInput2" class="form-label">Title</label>
@@ -826,24 +842,23 @@
                     </div>
                   </div>
                   </div>
-          
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                      + Add Link
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Twitter</a></li>
-                      <li>
-                        <a class="dropdown-item" href="#">Whatsapp</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">Instagram</a>
-                      </li>
-                      <li><a class="dropdown-item" href="#">Facebook</a></li>
-                    </ul>
-                  </div>
                 </div>
                   
+                  </div>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      + Add More
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" onclick="addSocialLink('Github')">Github</a></li>
+                      <li>
+                        <a class="dropdown-item" onclick="addSocialLink('Github')">LinkedIn</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" onclick="addSocialLink('Youtube')">Youtube</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -881,15 +896,17 @@
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Link" />
                   </div>
   
-                  <label class="image-profile-photo" for="link_upload">
+                  <span class="image-profile-photo">
                     <div class="image-photo" style="border:1px solid rgb(211, 211, 211)">
                       <img src="./images/pngwing.com (11).png" height="64px" width="64px">
                     </div>
-                    <div class="download-photo">
-                      <box-icon name='upload'></box-icon>
-                    </div>
+                    <label for="link_upload">
+                      <div class="download-photo">
+                        <box-icon name='upload'></box-icon>
+                      </div>
+                    </label>
                     <input type="file" id="link_upload" style="display: none;">
-                  </label>
+                  </span>
                      <br>
                     <div class="row  mt-10 last-container">
                       <div class="col-sm-12 col-md-12 col-lg-6">
@@ -926,40 +943,40 @@
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body py-3">
 
-                  <div id="testimonial-accordion-body">
-                    <div id="testimonial-container" class="testimonials">
-                      <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Upload Testimonial Image:</label>
-                      </div>
-    
-                      <div class="mb-3">
-                        <label class="image-profile-photo" for="images_upload">
-                          <div class="image-photo">
-                            <img src="./images/pexels-italo-melo-881954-2379004.jpg" height="64px" width="64px">
-                          </div>
-                          <div class="delete-box" onclick="deleteImage(this)">
-                            <i class="bi bi-trash3" style="color:red"></i>
-                          </div>
-                          <div class="download-photo">
-                            <box-icon name='upload'></box-icon>
-                          </div>
-                          <input type="file" name="" id="images_upload" style="display: none;">
-                       </label>
-                      </div>
-    
-                      <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Testimonial Name:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Testimonial Name" />
-                      </div>
-    
-                      <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Review:</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                          placeholder="Add Their Review"></textarea>
-                      </div>
-                     </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Upload Testimonial Image:</label>
                   </div>
-                  <button type="button" class="btn btn-primary mb-2" onclick="addTestimonial()">Add New Testimonial</button>
+
+                  <div class="mb-3">
+                    <span class="image-profile-photo" for="images_upload">
+                      <div class="image-photo">
+                        <img src="./images/pexels-italo-melo-881954-2379004.jpg" height="64px" width="64px">
+                      </div>
+                      <div class="delete-box">
+                        <i class="bi bi-trash3" style="color:red"></i>
+                      </div>
+                      <label for="test_upload">
+                        <div class="download-photo">
+                          <box-icon name='upload'></box-icon>
+                        </div>
+                      </label>
+                      <input type="file" name="" id="test_upload" style="display: none;">
+                    </span>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Testimonial Name:</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Testimonial Name" />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Review:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                      placeholder="Add Their Review"></textarea>
+                  </div>
+
+                  <button type="button" class="btn btn-primary">Add New Testimonial</button>
+
                 </div>
               </div>
             </div>
@@ -982,61 +999,60 @@
               <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body py-3">
-                  <div id="Product-accordian-body">
-                    <div id="product-container">
-
-                      <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Upload Product Image:</label>
-                      </div>
-    
-                      <div class="mb-3">
-                        <label class="image-profile-photo" for="images_upload">
-                          <div class="image-photo">
-                            <img src="./images/pexels-italo-melo-881954-2379004.jpg" height="64px" width="64px">
-                          </div>
-                          <div class="delete-box" onclick="deleteImage(this)">
-                            <i class="bi bi-trash3" style="color:red"></i>
-                          </div>
-                          <div class="download-photo">
-                            <box-icon name='upload'></box-icon>
-                          </div>
-                          <input type="file" name="" id="images_upload" style="display: none;">
-                       </label>
-                      </div>
-    
-                      <div class="mb-3 col-lg-6 col-md-12 col-sm-12">
-                        <label for="exampleFormControlInput1" class="form-label">Product Name:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Name" />
-                      </div>
-    
-                      <label class="form-label text-secondary">Product Information:</label>
-    
-                      <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Product Feature 1:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Features" />
-                      </div>
-    
-                      <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Product Feature 2:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Features(Place it Empty if you have Not Enough Features)" />
-                      </div>
-    
-                      <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Product Feature 3:</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Features(Place it Empty if you have Not Enough Features)" />
-                      </div>
-    
-                      <div class="mb-4 row">
-                        <label for="html5-number-input" class="col-md-0 col-form-label">Product Price:</label>
-                        <div class="col-md-4">
-                          <input class="form-control" type="number" value="" placeholder="Enter only Numbers" id="html5-number-input" />
-                        </div>
-                      </div>
-                    </div>
-
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Upload Product Image:</label>
                   </div>
-                  <button type="button" class="btn btn-primary mb-2" onclick="addProduct()">Add New Product</button>
-              
+
+                  <div class="mb-3">
+                    <span class="image-profile-photo">
+                      <div class="image-photo">
+                        <img src="./images/oneplus9-1-500x500.webp" height="64px" width="64px">
+                      </div>
+                      <div class="delete-box">
+                        <i class="bi bi-trash3" style="color:red"></i>
+                      </div>
+                      <label for="prod_uplaod">
+                        <div class="download-photo">
+                          <box-icon name='upload'></box-icon>
+                        </div>
+                      </label>
+                      <input type="file" name="" id="prod_uplaod" style="display: none;">
+                    </span>
+                  </div>
+
+                  <div class="mb-3 col-lg-6 col-md-12 col-sm-12">
+                    <label for="exampleFormControlInput1" class="form-label">Product Name:</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Name" />
+                  </div>
+
+                  <label class="form-label text-secondary">Product Information:</label>
+
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Product Feature 1:</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Features" />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Product Feature 2:</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Features(Place it Empty if you have Not Enough Features)" />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Product Feature 3:</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Features(Place it Empty if you have Not Enough Features)" />
+                  </div>
+
+                  <div class="mb-4 row">
+                    <label for="html5-number-input" class="col-md-0 col-form-label">Product Price:</label>
+                    <div class="col-md-4">
+                      <input class="form-control" type="number" value="" placeholder="Enter only Numbers" id="html5-number-input" />
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn btn-primary">Add New Product</button>
+
+
+
                 </div>
               </div>
             </div>
@@ -1098,7 +1114,7 @@
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseNine">
                   <div class="btn-container">
-                    <span class="d-flex align-items-center"><i class="bi bi-hourglass-split"></i>&nbsp;Bussiness Hours</span>
+                    <span class="d-flex align-items-center"> <i class="bx bx-video me-1"></i>Bussiness Hours</span>
                     <div class="form-check form-switch mb-2">
                           <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
                           <label class="form-check-label" for="flexSwitchCheckChecked"
@@ -1111,24 +1127,27 @@
               <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingNine"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body py-3">
+                  Hello
                   <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Title</label>
                     <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Bussiness Hours" />
                   </div>
 
                   <div class="mb-3">
-                    <label class="image-profile-photo" for="images_upload">
+                    <span class="image-profile-photo">
                       <div class="image-photo">
-                        <img src="./images/pexels-italo-melo-881954-2379004.jpg" height="64px" width="64px">
+                        <img src="./images/oneplus9-1-500x500.webp" height="64px" width="64px">
                       </div>
-                      <div class="delete-box" onclick="deleteImage(this)">
+                      <div class="delete-box">
                         <i class="bi bi-trash3" style="color:red"></i>
                       </div>
-                      <div class="download-photo">
-                        <box-icon name='upload'></box-icon>
-                      </div>
+                      <label for="buss_upload">
+                        <div class="download-photo">
+                          <box-icon name='upload'></box-icon>
+                        </div>
+                      </label>
                       <input type="file" name="" id="images_upload" style="display: none;">
-                   </label>
+                    </span>
                   </div>
 
                   <div class="form-check form-switch mb-3">
@@ -1162,23 +1181,17 @@
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">
-                            <i class="bi bi-clock"></i>
-                          </span>
+                          <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">
-                            <i class="bi bi-clock"></i>
-                          </span>
+                          <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
                       <div class="col-2">
-                        <button class="btn btn-outline-primary">
-                          <i class="bi bi-plus-lg"></i>
-                        </button>
+                        <button class="btn btn-outline-primary">+</button>
                       </div>
                     </div>
                   </div>
@@ -1195,23 +1208,17 @@
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">
-                            <i class="bi bi-clock"></i>
-                          </span>
+                          <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">
-                            <i class="bi bi-clock"></i>
-                          </span>
+                          <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
                       <div class="col-2">
-                        <button class="btn btn-outline-primary">
-                          <i class="bi bi-plus-lg"></i>
-                        </button>
+                        <button class="btn btn-outline-primary">+</button>
                       </div>
                     </div>
                   </div>
@@ -1228,23 +1235,17 @@
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">
-                            <i class="bi bi-clock"></i>
-                          </span>
+                          <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">
-                            <i class="bi bi-clock"></i>
-                          </span>
+                          <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
                       <div class="col-2">
-                        <button class="btn btn-outline-primary">
-                          <i class="bi bi-plus-lg"></i>
-                        </button>
+                        <button class="btn btn-outline-primary">+</button>
                       </div>
                     </div>
                   </div>
@@ -1261,23 +1262,17 @@
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">
-                            <i class="bi bi-clock"></i>
-                          </span>
+                          <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">
-                            <i class="bi bi-clock"></i>
-                          </span>
+                          <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
                       <div class="col-2">
-                        <button class="btn btn-outline-primary">
-                          <i class="bi bi-plus-lg"></i>
-                        </button>
+                        <button class="btn btn-outline-primary">+</button>
                       </div>
                     </div>
                   </div>
@@ -1294,23 +1289,17 @@
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">
-                            <i class="bi bi-clock"></i>
-                          </span>
+                          <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">
-                            <i class="bi bi-clock"></i>
-                          </span>
+                          <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
                       <div class="col-2">
-                        <button class="btn btn-outline-primary">
-                          <i class="bi bi-plus-lg"></i>
-                        </button>
+                        <button class="btn btn-outline-primary">+</button>
                       </div>
                     </div>
                   </div>
@@ -1327,23 +1316,17 @@
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">
-                            <i class="bi bi-clock"></i>
-                          </span>
+                          <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">
-                            <i class="bi bi-clock"></i>
-                          </span>
+                          <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
                       <div class="col-2">
-                        <button class="btn btn-outline-primary">
-                          <i class="bi bi-plus-lg"></i>
-                        </button>
+                        <button class="btn btn-outline-primary">+</button>
                       </div>
                     </div>
                   </div>
@@ -1360,23 +1343,17 @@
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">
-                            <i class="bi bi-clock"></i>
-                          </span>
+                          <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
                       <div class="col-3">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
-                          <span class="input-group-text" id="basic-addon11">
-                            <i class="bi bi-clock"></i>
-                          </span>
+                          <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
                       <div class="col-2">
-                        <button class="btn btn-outline-primary">
-                          <i class="bi bi-plus-lg"></i>
-                        </button>
+                        <button class="btn btn-outline-primary">+</button>
                       </div>
                     </div>
                   </div>
@@ -1384,74 +1361,6 @@
                 </div>
               </div>
             </div>
-
-            
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingSix">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapseten" aria-expanded="false" aria-controls="collapseten">
-                  <div class="btn-container">
-                    <span class="d-flex align-items-center"> <i class="bi bi-microsoft-teams "> </i></i> &nbsp;Team</span>
-                    <div class="form-check form-switch mb-2">
-                          <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
-                          <label class="form-check-label" for="flexSwitchCheckChecked"
-                            ></label
-                          >
-                        </div>
-                  </div>
-                </button>
-              </h2>
-              <div id="collapseten" class="accordion-collapse collapse" aria-labelledby="headingten"
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body py-3">
-                   <div id="team-accordian-body">
-                    <div class="team-container">
-                      <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Title</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Title" />
-                      </div>
-                      <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                          placeholder="Description"></textarea>
-                      </div>
-      
-                      <p>Profile (250x250px, 1:1 Ratio)</p>
-                      <label class="image-profile-photo" for="link_upload">
-                        <div class="image-photo">
-                          <img src="./images/pexels-italo-melo-881954-2379004.jpg" height="64px" width="64px">
-                        </div>
-                        <div class="delete-box" onclick="deleteImage(this)">
-                          <i class="bi bi-trash3" style="color:red"></i>
-                        </div>
-                        <div class="download-photo">
-                          <box-icon name='upload'></box-icon>
-                        </div>
-                        <input type="file" id="link_upload" style="display: none;">
-                      </label>
-                         <br>
-                        <div class="row  mt-10 last-container">
-                          <div class="col-sm-12 col-md-12 col-lg-6">
-                            <label for="" class="form-label">Name</label>
-                            <input type="text" class="form-control" placeholder="Name" aria-label="First name">
-                          </div>
-                          <div class="col-sm-12 col-md-12 col-lg-6">
-                            <label for="" class="form-label">Designation</label>
-                            <input type="text" class="form-control" placeholder="Designation" aria-label="Last name">
-                          </div>
-                        </div>
-                        <div class="mb-3">
-                          <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                            placeholder="Description"></textarea>
-                        </div>
-                      </div>
-                   </div>
-                  <button type="button" class="btn btn-primary mb-2" onclick="addTeamMember()">Add More</button>
-                </div>
-              </div>
-            </div>
-            
           </div>
 
           <!-- Accordian Ends Here -->
@@ -1780,8 +1689,7 @@
             </div>
 
             <div class="input-group mb-3">
-              <!-- <input type="text" class="form-control" placeholder="http://linko.page/sg50vypiencz" aria-label="Username" aria-describedby="basic-addon1"> -->
-              <input type="text" class="form-control" id="url" placeholder="<iframe src= //linko.page/sg50vypiencz"aria-describedby="defaultFormControlHelp" />
+              <input type="text" class="form-control" placeholder="http://linko.page/sg50vypiencz" aria-label="Username" aria-describedby="basic-addon1">
               <button type="button" class="btn btn-outline-none"> <i class="bx bx-copy"></i></button>
             </div>
 
@@ -1789,17 +1697,11 @@
               Embed code
             </p>
             <div class="input-group mb-3">
-              <!-- <input type="text" class="form-control" placeholder="<iframe src= //linko.page/sg50vypiencz" aria-label="Username" aria-describedby="basic-addon1"> -->
-              <input type="text" class="form-control" id="url" placeholder="<iframe src= //linko.page/sg50vypiencz"aria-describedby="defaultFormControlHelp" />        
+              <input type="text" class="form-control" placeholder="<iframe src= //linko.page/sg50vypiencz" aria-label="Username" aria-describedby="basic-addon1">
               <button type="button" class="btn btn-outline-none"> <i class="bx bx-copy"></i></button>
             </div>
 
-            <button type="button" class="btn btn-secondary me-2">Cancel</button>
-            <button type="button" class="btn btn-primary" onclick="generateQRCode()">Publish QRCode</button>
-  
-            <div id="liveAlertPlaceholder" class="p-3"></div>
-
-            <div id="qrcode" class="my-4"></div>
+            <button type="button" class="btn btn-secondary me-2" style="">Cancel</button>
             <!-- <div class="mb-3">
               <label for="qrcodetext" class="form-label">URL</label>
               <input type="text" class="form-control" id="url" placeholder="<iframe src= //linko.page/sg50vypiencz"aria-describedby="defaultFormControlHelp" />
