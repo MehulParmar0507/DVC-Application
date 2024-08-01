@@ -118,9 +118,7 @@ testimonialContainer.innerHTML = `<div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Review:</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
                       placeholder="Add Their Review"></textarea>
-                  </div>
-
-                  <button type="button" class="btn btn-primary" onclick="addTestimonial()">Add New Testimonial</button>`
+                  </div>`;
   console.log(testimonialContainer);
   console.log(testimonialAccordionBody);
   testimonialAccordionBody.appendChild(testimonialContainer);
@@ -180,9 +178,7 @@ function addProduct()
                     <div class="col-md-4">
                       <input class="form-control" type="number" value="" placeholder="Enter only Numbers" id="html5-number-input" />
                     </div>
-                  </div>
-
-                  <button type="button" class="btn btn-primary">Add New Product</button>`;
+                  </div>`
 
   console.log(ProductAccordianBody);
   console.log(productContainer);
@@ -209,9 +205,12 @@ function addTeamMember()
     
                     <p>Profile (250x250px, 1:1 Ratio)</p>
                     <label class="image-profile-photo" for="link_upload">
-                      <div class="image-photo" >
-                        <img src="./images/image.png" height="64px" width="64px" style="border-radius: 5px;">
-                      </div>
+                      <div class="image-photo">
+                          <img src="./images/pexels-italo-melo-881954-2379004.jpg" height="64px" width="64px">
+                        </div>
+                        <div class="delete-box" onclick="deleteImage(this)">
+                          <i class="bi bi-trash3" style="color:red"></i>
+                        </div>
                       <div class="download-photo">
                         <box-icon name='upload'></box-icon>
                       </div>
@@ -232,9 +231,7 @@ function addTeamMember()
                         <label for="exampleFormControlTextarea1" class="form-label">Description</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
                           placeholder="Description"></textarea>
-                      </div>
-  
-                      <button type="button" class="btn btn-primary mb-2" onclick="addTeamMember()">Add More</button>`;
+                      </div>`;
    console.log(teamAccordianBody);
    console.log(teamContainer);
    teamAccordianBody.appendChild(teamContainer);
