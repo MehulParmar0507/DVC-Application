@@ -90,35 +90,39 @@ let testimonialAccordionBody = document.getElementById('testimonial-accordion-bo
 function addTestimonial()
 {
 let testimonialContainer = document.createElement('div');
-testimonialContainer.innerHTML = `<div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Upload Testimonial Image:</label>
-                  </div>
-
-                  <div class="mb-3">
-                    <label class="image-profile-photo" for="images_upload">
-                      <div class="image-photo">
-                        <img src="./images/pexels-italo-melo-881954-2379004.jpg" height="64px" width="64px">
-                      </div>
-                      <div class="delete-box">
-                        <i class="bi bi-trash3" style="color:red"></i>
-                      </div>
-                      <div class="download-photo">
-                        <box-icon name='upload'></box-icon>
-                      </div>
-                      <input type="file" name="" id="images_upload" style="display: none;">
-                   </label>
-                  </div>
-
-                  <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Testimonial Name:</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Testimonial Name" />
-                  </div>
-
-                  <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Review:</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                      placeholder="Add Their Review"></textarea>
-                  </div>`;
+testimonialContainer.innerHTML = `
+                      <hr/>
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Upload Testimonial Image:</label>
+                    </div>
+  
+                    <div class="mb-3">
+                      <span class="image-profile-photo" for="images_upload">
+                        <div class="image-photo">
+                          <img src="./images/pexels-italo-melo-881954-2379004.jpg" height="64px" width="64px">
+                        </div>
+                        <div class="delete-box" onclick="deleteImage(this)">
+                          <i class="bi bi-trash3" style="color:red"></i>
+                        </div>
+                        <label for="test_upload">
+                          <div class="download-photo">
+                            <box-icon name='upload'></box-icon>
+                          </div>
+                        </label>
+                        <input type="file" name="" id="test_upload" style="display: none;">
+                      </span>
+                    </div>
+  
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Testimonial Name:</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Testimonial Name" />
+                    </div>
+  
+                    <div class="mb-3">
+                      <label for="exampleFormControlTextarea1" class="form-label">Review:</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        placeholder="Add Their Review"></textarea>
+                    </div>`;
   console.log(testimonialContainer);
   console.log(testimonialAccordionBody);
   testimonialAccordionBody.appendChild(testimonialContainer);
@@ -132,53 +136,56 @@ let ProductAccordianBody = document.getElementById('Product-accordian-body');
 function addProduct()
 {
   let productContainer = document.createElement('div');
-  productContainer.innerHTML = `<div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Upload Product Image:</label>
-                  </div>
-
-                  <div class="mb-3">
-                    <label class="image-profile-photo" for="images_upload">
-                      <div class="image-photo">
-                        <img src="./images/oneplus9-1-500x500.webp" height="64px" width="64px">
-                      </div>
-                      <div class="delete-box">
-                        <i class="bi bi-trash3" style="color:red"></i>
-                      </div>
-                      <div class="download-photo">
-                        <box-icon name='upload'></box-icon>
-                      </div>
-                      <input type="file" name="" id="images_upload" style="display: none;">
-                   </label>
-                  </div>
-
-                  <div class="mb-3 col-lg-6 col-md-12 col-sm-12">
-                    <label for="exampleFormControlInput1" class="form-label">Product Name:</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Name" />
-                  </div>
-
-                  <label class="form-label text-secondary">Product Information:</label>
-
-                  <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Product Feature 1:</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Features" />
-                  </div>
-
-                  <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Product Feature 2:</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Features(Place it Empty if you have Not Enough Features)" />
-                  </div>
-
-                  <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Product Feature 3:</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Features(Place it Empty if you have Not Enough Features)" />
-                  </div>
-
-                  <div class="mb-4 row">
-                    <label for="html5-number-input" class="col-md-0 col-form-label">Product Price:</label>
-                    <div class="col-md-4">
-                      <input class="form-control" type="number" value="" placeholder="Enter only Numbers" id="html5-number-input" />
+  productContainer.innerHTML = `<hr/>
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Upload Product Image:</label>
                     </div>
-                  </div>`
+  
+                    <div class="mb-3">
+                      <span class="image-profile-photo">
+                        <div class="image-photo">
+                          <img src="./images/oneplus9-1-500x500.webp" height="64px" width="64px">
+                        </div>
+                        <div class="delete-box" onclick="deleteImage(this)">
+                          <i class="bi bi-trash3" style="color:red"></i>
+                        </div>
+                        <label for="prod_uplaod">
+                          <div class="download-photo">
+                            <box-icon name='upload'></box-icon>
+                          </div>
+                        </label>
+                        <input type="file" name="" id="prod_uplaod" style="display: none;">
+                      </span>
+                    </div>
+  
+                    <div class="mb-3 col-lg-6 col-md-12 col-sm-12">
+                      <label for="exampleFormControlInput1" class="form-label">Product Name:</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Name" />
+                    </div>
+  
+                    <label class="form-label text-secondary">Product Information:</label>
+  
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Product Feature 1:</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Features" />
+                    </div>
+  
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Product Feature 2:</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Features(Place it Empty if you have Not Enough Features)" />
+                    </div>
+  
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Product Feature 3:</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Features(Place it Empty if you have Not Enough Features)" />
+                    </div>
+  
+                    <div class="mb-4 row">
+                      <label for="html5-number-input" class="col-md-0 col-form-label">Product Price:</label>
+                      <div class="col-md-4">
+                        <input class="form-control" type="number" value="" placeholder="Enter only Numbers" id="html5-number-input" />
+                      </div>
+                    </div>`;
 
   console.log(ProductAccordianBody);
   console.log(productContainer);
@@ -193,7 +200,7 @@ let teamAccordianBody = document.getElementById('team-accordian-body');
 function addTeamMember()
 {
   let teamContainer = document.createElement('div');
-  teamContainer.innerHTML = `<div class="mb-3">
+  teamContainer.innerHTML = `<hr/><div class="mb-3">
                       <label for="exampleFormControlInput1" class="form-label">Title</label>
                       <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Title" />
                     </div>
@@ -204,18 +211,20 @@ function addTeamMember()
                     </div>
     
                     <p>Profile (250x250px, 1:1 Ratio)</p>
-                    <label class="image-profile-photo" for="link_upload">
+                    <span class="image-profile-photo" for="link_upload">
                       <div class="image-photo">
                           <img src="./images/pexels-italo-melo-881954-2379004.jpg" height="64px" width="64px">
                         </div>
                         <div class="delete-box" onclick="deleteImage(this)">
                           <i class="bi bi-trash3" style="color:red"></i>
                         </div>
+                      <label for="team_upload">
                       <div class="download-photo">
                         <box-icon name='upload'></box-icon>
                       </div>
-                      <input type="file" id="link_upload" style="display: none;">
-                    </label>
+                      </label>
+                      <input type="file" id="team_upload" style="display: none;">
+                    </span>
                        <br>
                       <div class="row  mt-10 last-container">
                         <div class="col-sm-12 col-md-12 col-lg-6">
