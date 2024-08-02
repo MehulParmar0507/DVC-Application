@@ -655,18 +655,20 @@ teamAccordianDiv.innerHTML = `<div class="accordion-item">
                 </div>
 
                 <p>Profile (250x250px, 1:1 Ratio)</p>
-                <label class="image-profile-photo" for="link_upload">
+                <span class="image-profile-photo">
                   <div class="image-photo">
                         <img src="./images/pexels-italo-melo-881954-2379004.jpg" height="64px" width="64px">
                       </div>
                       <div class="delete-box" onclick="deleteImage(this)">
                         <i class="bi bi-trash3" style="color:red"></i>
                       </div>
+                  <label for="link_upload">
                   <div class="download-photo">
                     <box-icon name='upload'></box-icon>
                   </div>
+                  </label>
                   <input type="file" id="link_upload" style="display: none;">
-                </label>
+                </span>
                    <br>
                   <div class="row  mt-10 last-container">
                     <div class="col-sm-12 col-md-12 col-lg-6">
