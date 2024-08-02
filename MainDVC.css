@@ -113,6 +113,10 @@
     display: none;
   }
 
+  .publish{
+    background: url(images/publish.svg);
+  }
+
   @media only screen and (max-width: 600px) {
 
     .mobile{
