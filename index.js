@@ -448,21 +448,21 @@ function addBussinessAccordion(){
                       </label>
                     </div>
                     <div class="row">
-                      <div class="col-4"><input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Monday" /></div>
-                      <div class="col-3">
+                      <div class="col-lg-4 col-sm-12 my-1 my-2"><input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Monday" /></div>
+                      <div class="col-lg-3 col-sm-6 my-1 my-2">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
                           <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
-                      <div class="col-3">
+                      <div class="col-lg-3 col-sm-6 my-1 my-2">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
                           <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
-                      <div class="col-2">
-                        <button class="btn btn-outline-primary">+</button>
+                      <div class="col-lg-2 col-sm-12 text-center">
+                        <button class="btn btn-outline-primary btn-block">+</button>
                       </div>
                     </div>
                   </div>
@@ -475,21 +475,21 @@ function addBussinessAccordion(){
                       </label>
                     </div>
                     <div class="row">
-                      <div class="col-4"><input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Monday" /></div>
-                      <div class="col-3">
+                      <div class="col-lg-4 col-sm-12 my-1"><input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Monday" /></div>
+                      <div class="col-lg-3 col-sm-6 my-1">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
                           <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
-                      <div class="col-3">
+                      <div class="col-lg-3 col-sm-6 my-1">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
                           <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
-                      <div class="col-2">
-                        <button class="btn btn-outline-primary">+</button>
+                      <div class="col-lg-2 col-sm-12 text-center">
+                        <button class="btn btn-outline-primary btn-block btn-lg">+</button>
                       </div>
                     </div>
                   </div>
@@ -502,21 +502,21 @@ function addBussinessAccordion(){
                       </label>
                     </div>
                     <div class="row">
-                      <div class="col-4"><input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Monday" /></div>
-                      <div class="col-3">
+                      <div class="col-lg-4 col-sm-12 my-1"><input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Monday" /></div>
+                      <div class="col-lg-3 col-sm-6 my-1">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
                           <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
-                      <div class="col-3">
+                      <div class="col-lg-3 col-sm-6 my-1">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
                           <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
-                      <div class="col-2">
-                        <button class="btn btn-outline-primary">+</button>
+                      <div class="col-lg-2 col-sm-12 text-center">
+                        <button class="btn btn-outline-primary btn-block btn-lg">+</button>
                       </div>
                     </div>
                   </div>
@@ -529,21 +529,21 @@ function addBussinessAccordion(){
                       </label>
                     </div>
                     <div class="row">
-                      <div class="col-4"><input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Monday" /></div>
-                      <div class="col-3">
+                      <div class="col-lg-4 col-sm-12 my-1"><input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Monday" /></div>
+                      <div class="col-lg-3 col-sm-6 my-1">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
                           <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
-                      <div class="col-3">
+                      <div class="col-lg-3 col-sm-6 my-1">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
                           <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
-                      <div class="col-2">
-                        <button class="btn btn-outline-primary">+</button>
+                      <div class="col-lg-2 col-sm-12 text-center">
+                        <button class="btn btn-outline-primary btn-block btn-lg">+</button>
                       </div>
                     </div>
                   </div>
@@ -556,21 +556,21 @@ function addBussinessAccordion(){
                       </label>
                     </div>
                     <div class="row">
-                      <div class="col-4"><input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Monday" /></div>
-                      <div class="col-3">
+                      <div class="col-lg-4 col-sm-12 my-1"><input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Monday" /></div>
+                      <div class="col-lg-3 col-sm-6 my-1">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
                           <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
-                      <div class="col-3">
+                      <div class="col-lg-3 col-sm-6 my-1">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
                           <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
-                      <div class="col-2">
-                        <button class="btn btn-outline-primary">+</button>
+                      <div class="col-lg-2 col-sm-12 text-center">
+                        <button class="btn btn-outline-primary btn-block btn-lg">+</button>
                       </div>
                     </div>
                   </div>
@@ -583,21 +583,21 @@ function addBussinessAccordion(){
                       </label>
                     </div>
                     <div class="row">
-                      <div class="col-4"><input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Monday" /></div>
-                      <div class="col-3">
+                      <div class="col-lg-4 col-sm-12 my-1"><input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Monday" /></div>
+                      <div class="col-lg-3 col-sm-6 my-1">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
                           <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
-                      <div class="col-3">
+                      <div class="col-lg-3 col-sm-6 my-1">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
                           <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
-                      <div class="col-2">
-                        <button class="btn btn-outline-primary">+</button>
+                      <div class="col-lg-2 col-sm-12 text-center">
+                        <button class="btn btn-outline-primary btn-block btn-lg">+</button>
                       </div>
                     </div>
                   </div>
@@ -610,21 +610,21 @@ function addBussinessAccordion(){
                       </label>
                     </div>
                     <div class="row">
-                      <div class="col-4"><input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Monday" /></div>
-                      <div class="col-3">
+                      <div class="col-lg-4 col-sm-12 my-1"><input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Monday" /></div>
+                      <div class="col-lg-3 col-sm-6 my-1">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
                           <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
-                      <div class="col-3">
+                      <div class="col-lg-3 col-sm-6 my-1">
                         <div class="input-group">
                           <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon11" />
                           <span class="input-group-text" id="basic-addon11">@</span>
                         </div>
                       </div>
-                      <div class="col-2">
-                        <button class="btn btn-outline-primary">+</button>
+                      <div class="col-lg-2 col-sm-12 text-center">
+                        <button class="btn btn-outline-primary btn-block btn-lg">+</button>
                       </div>
                     </div>
                   </div>
