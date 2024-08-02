@@ -83,58 +83,11 @@ function deleteImage(currElement)
   currElement.remove();
 }
 
-// testimonial sections
-
-let testimonialAccordionBody = document.getElementById('testimonial-accordion-body');
-
-function addTestimonial()
-{
-let testimonialContainer = document.createElement('div');
-testimonialContainer.innerHTML = `
-                      <hr/>
-                    <div class="mb-3">
-                      <label for="exampleFormControlInput1" class="form-label">Upload Testimonial Image:</label>
-                    </div>
-  
-                    <div class="mb-3">
-                      <span class="image-profile-photo" for="images_upload">
-                        <div class="image-photo">
-                          <img src="./images/pexels-italo-melo-881954-2379004.jpg" height="64px" width="64px">
-                        </div>
-                        <div class="delete-box" onclick="deleteImage(this)">
-                          <i class="bi bi-trash3" style="color:red"></i>
-                        </div>
-                        <label for="test_upload">
-                          <div class="download-photo">
-                            <box-icon name='upload'></box-icon>
-                          </div>
-                        </label>
-                        <input type="file" name="" id="test_upload" style="display: none;">
-                      </span>
-                    </div>
-  
-                    <div class="mb-3">
-                      <label for="exampleFormControlInput1" class="form-label">Testimonial Name:</label>
-                      <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Testimonial Name" />
-                    </div>
-  
-                    <div class="mb-3">
-                      <label for="exampleFormControlTextarea1" class="form-label">Review:</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                        placeholder="Add Their Review"></textarea>
-                    </div>`;
-  console.log(testimonialContainer);
-  console.log(testimonialAccordionBody);
-  testimonialAccordionBody.appendChild(testimonialContainer);
-}
-
-
 // Product Sections:-
 
-let ProductAccordianBody = document.getElementById('Product-accordian-body');
-
-function addProduct()
+function addProduct(c)
 {
+  let ProductAccordianBody = document.getElementById(`Product-accordian-body${c}`);
   let productContainer = document.createElement('div');
   productContainer.innerHTML = `<hr/>
                     <div class="mb-3">
@@ -194,11 +147,10 @@ function addProduct()
 
 // Team Section Functionalities
 
-let teamAccordianBody = document.getElementById('team-accordian-body');
 
-
-function addTeamMember()
+function addTeamMember(c)
 {
+  let teamAccordianBody = document.getElementById(`team-accordian-body${c}`);
   let teamContainer = document.createElement('div');
   teamContainer.innerHTML = `<hr/><div class="mb-3">
                       <label for="exampleFormControlInput1" class="form-label">Title</label>
@@ -320,7 +272,7 @@ function addTestimonialAccordion(){
               <div id="tac${count}" class="accordion-collapse collapse" aria-labelledby="ta${count}"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body py-3">
-                  <div id="testimonial-accordion-body">
+                  <div id="testimonial-accordion-body${count}">
                     <div class="mb-3">
                       <label for="exampleFormControlInput1" class="form-label">Upload Testimonial Image:</label>
                     </div>
@@ -351,10 +303,10 @@ function addTestimonialAccordion(){
                       <label for="exampleFormControlTextarea1" class="form-label">Review:</label>
                       <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
                         placeholder="Add Their Review"></textarea>
-                    </div>
+                  </div>
   
                 </div>
-                <button type="button" class="btn btn-primary" onclick="addTestimonial()">Add New Testimonial</button>
+                <button type="button" class="btn btn-primary" onclick="addTestimonial(${count})">Add New Testimonial</button>
                 </div>
 
 
@@ -705,7 +657,7 @@ function addTeamAccordion(){
               <div id="tma${count}" class="accordion-collapse collapse" aria-labelledby="headingten"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body py-3">
-                  <div id="team-accordian-body">
+                  <div id="team-accordian-body${count}">
                   <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Title</label>
                     <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Title" />
@@ -743,7 +695,7 @@ function addTeamAccordion(){
                         placeholder="Description"></textarea>
                     </div>
                   </div>
-                  <button class="btn btn-primary" onclick="addTeamMember()">Add Team Member</button>
+                  <button class="btn btn-primary" onclick="addTeamMember(${count})">Add Team Member</button>
                 </div>
               </div>
             </div>`;
@@ -773,7 +725,7 @@ function addProductAccordion(){
               <div id="pac${count}" class="accordion-collapse collapse" aria-labelledby="pa${count}"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body py-3">
-                  <div id="Product-accordian-body">
+                  <div id="Product-accordian-body${count}">
                   <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Upload Product Image:</label>
                   </div>
@@ -824,11 +776,56 @@ function addProductAccordion(){
                     </div>
                   </div>
                   </div>  
-                  <button type="button" class="btn btn-primary" onclick="addProduct()">Add New Product</button>
+                  <button type="button" class="btn btn-primary" onclick="addProduct(${count})">Add New Product</button>
 
                 </div>
               </div>
             </div>`;
 
     homeAccordion.appendChild(productAccordianDiv);
+}
+
+
+// testimonial sections
+
+function addTestimonial(c)
+{
+let testimonialAccordionBody = document.getElementById(`testimonial-accordion-body${c}`);
+let testimonialContainer = document.createElement('div');
+testimonialContainer.innerHTML = `
+                      <hr/>
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Upload Testimonial Image:</label>
+                    </div>
+  
+                    <div class="mb-3">
+                      <span class="image-profile-photo" for="images_upload">
+                        <div class="image-photo">
+                          <img src="./images/pexels-italo-melo-881954-2379004.jpg" height="64px" width="64px">
+                        </div>
+                        <div class="delete-box" onclick="deleteImage(this)">
+                          <i class="bi bi-trash3" style="color:red"></i>
+                        </div>
+                        <label for="test_upload">
+                          <div class="download-photo">
+                            <box-icon name='upload'></box-icon>
+                          </div>
+                        </label>
+                        <input type="file" name="" id="test_upload" style="display: none;">
+                      </span>
+                    </div>
+  
+                    <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">Testimonial Name:</label>
+                      <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Testimonial Name" />
+                    </div>
+  
+                    <div class="mb-3">
+                      <label for="exampleFormControlTextarea1" class="form-label">Review:</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        placeholder="Add Their Review"></textarea>
+                    </div>`;
+  console.log(testimonialContainer);
+  console.log(testimonialAccordionBody);
+  testimonialAccordionBody.appendChild(testimonialContainer);
 }
