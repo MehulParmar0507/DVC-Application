@@ -246,6 +246,7 @@ function addTeamMember()
    teamAccordianBody.appendChild(teamContainer);
 }
 
+// Social Links Functionalities
 
 function addSocialLink(t){
   let my_social_link = document.getElementById("my_social_link");
