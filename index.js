@@ -198,6 +198,7 @@ function addTeamMember(c)
    teamAccordianBody.appendChild(teamContainer);
 }
 
+// Social Links Functionalities
 
 function addSocialLink(t){
   let my_social_link = document.getElementById("my_social_link");
@@ -670,9 +671,12 @@ function addTeamAccordion(){
 
                   <p>Profile (250x250px, 1:1 Ratio)</p>
                   <label class="image-profile-photo" for="link_upload">
-                    <div class="image-photo" >
-                      <img src="./images/image.png" height="64px" width="64px" style="border-radius: 5px;">
-                    </div>
+                    <div class="image-photo">
+                          <img src="./images/pexels-italo-melo-881954-2379004.jpg" height="64px" width="64px">
+                        </div>
+                        <div class="delete-box" onclick="deleteImage(this)">
+                          <i class="bi bi-trash3" style="color:red"></i>
+                        </div>
                     <div class="download-photo">
                       <box-icon name='upload'></box-icon>
                     </div>
