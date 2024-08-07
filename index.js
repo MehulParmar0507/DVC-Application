@@ -820,3 +820,20 @@ console.log(testimonialContainer);
 console.log(testimonialAccordionBody);
 testimonialAccordionBody.appendChild(testimonialContainer);
 }
+
+
+let dvc = {
+  name: "name",
+  jobTitle: "title",
+  mobileNo: "0000000000",
+  emailID: "name@domain.com",
+  addressText: "street, street, city, state, pincode, country",
+  
+}
+
+function changeDVCText(){
+  var iframe = document.querySelector("iframe");
+  var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+  let name = iframeDocument.getElementById("username");
+  name.innerHTML=dvc.name;
+}
