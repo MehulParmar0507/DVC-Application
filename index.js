@@ -824,9 +824,17 @@ testimonialAccordionBody.appendChild(testimonialContainer);
 
 let dvc = {}
 
-function changeDVCText(){
+function changeDVCText(r, f_id){
   var iframe = document.querySelector("iframe");
   var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-  let name = iframeDocument.getElementById("username");
-  name.innerHTML=dvc.name;
+
+  let jobtitle = iframeDocument.getElementById("jobtitle");
+  let company = iframeDocument.getElementById("company");
+  
+  // dvc.name = document.getElementById("name-field").value;
+  // dvc.jobtitle = document.getElementById("jobtitle-field").value;
+  // dvc.company = document.getElementById("company-field").value;
+  
+  iframeDocument.getElementById(f_id).innerHTML = r.value;
+  
 }
