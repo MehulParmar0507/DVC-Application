@@ -377,8 +377,8 @@
                 </div>
                 <br>
                 <div class="mb-3">
-                  <label for="exampleFormControlInput1" class="form-label">Name</label>
-                  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name" onfocusout="changeDVCText()"/>
+                  <label for="name-field class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name-field" placeholder="Name" value="Name" onfocusout="changeDVCText()"/>
                 </div>
   
                 <hr>
@@ -387,13 +387,13 @@
   
                 <div class="input-group py-2">
                   <div class="me-3 col-sm-12 col-md-12 col-lg-5">
-                    <label for="exampleFormControlInput2" class="form-label">Title</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Title" />
+                    <label for="jobtitle-field" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="jobtitle-field" value="title" placeholder="Title" />
                   </div>
   
                   <div class="col-sm-12 col-md-12 col-lg-6">
-                    <label for="exampleFormControlInput2" class="form-label">Company</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Company" />
+                    <label for="company-field" class="form-label">Company</label>
+                    <input type="text" class="form-control" id="company-field" value="company" placeholder="Company" />
                   </div>
                 </div>
   
@@ -420,7 +420,7 @@
                           <option value="3">Telephone</option>
                         </select>
                       </span>
-                      <input type="text" class="form-control" placeholder="Mobile Number" aria-label="Username"
+                      <input type="text" class="form-control" placeholder="Mobile Number" id="mobile-field" value="0000000000" aria-label="Username"
                         aria-describedby="basic-addon1" />
                         <span onclick="deleteContact('imobile')" class="position-absolute   translate-middle badge badge-center rounded-pill"><svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
                           <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
@@ -436,7 +436,7 @@
                           <option value="3">Mobile</option>
                         </select>
                       </span>
-                      <input type="text" class="form-control" placeholder="Email ID" aria-label="Username"
+                      <input type="text" class="form-control" placeholder="Email ID" id="email-field" value="name@email.com" aria-label="Username"
                         aria-describedby="basic-addon1" />
                         <span onclick="deleteContact('iemail')" class="position-absolute   translate-middle badge badge-center rounded-pill  text-"><svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
                           <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
@@ -452,7 +452,7 @@
                           <option value="3">Mobile</option>
                         </select>
                       </span>
-                      <input type="text" class="form-control" placeholder="Contact Number" aria-label="Username"
+                      <input type="text" class="form-control" placeholder="Contact Number" id="sms-field" value="0000000000" aria-label="Username"
                         aria-describedby="basic-addon1" />
                         <span onclick="deleteContact('isms')" class="position-absolute translate-middle badge badge-center rounded-pill  text-"><svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
                           <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
@@ -497,13 +497,13 @@
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body py-3">
                   <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Title</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="About me" />
+                    <label for="heading_title-field" class="form-label">Title</label>
+                    <input type="text" class="form-control" value="About Me" id="heading_title-field placeholder="About me" />
                   </div>
                   <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                      placeholder="Description"></textarea>
+                    <label for="head_disc-field" class="form-label">Description</label>
+                    <textarea class="form-control" id="head_desc-field" rows="3"
+                      placeholder="Description">Description</textarea>
                   </div>
                 </div>
               </div>
@@ -527,8 +527,8 @@
                 <div class="accordion-body py-3">
   
                   <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Title</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Contact Us"/>
+                    <label for="contact_title-field" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="contact_title-field" value="Contact Us" placeholder="Contact Us"/>
                   </div>
   
                   <span class="image-profile-photo mb-4" for="icon_upload">
@@ -546,24 +546,24 @@
                   <div class="row">
                     <label class="form-label text-secondary">Contact Number</label>
                     <div class="col-sm-12 col-md-12 col-lg-6">
-                      <label for="" class="form-label">Label</label>
-                      <input type="text" class="form-control" placeholder="Call Us" aria-label="First name">
+                      <label for="mobile_label-field" class="form-label">Label</label>
+                      <input type="text" class="form-control" placeholder="Call Us" id="mobile_label-field" value="Call Us" aria-label="First name">
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-6">
                       <label for="" class="form-label">Mobile</label>
-                      <input type="text" class="form-control" placeholder="0000000000" aria-label="Last name">
+                      <input type="text" class="form-control" placeholder="0000000000" id="contact_mobile-filed" value="0000000000" aria-label="Last name">
                     </div>
                   </div>
                   <br>
   
                   <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-6">
-                      <label for="" class="form-label">Label</label>
-                      <input type="text" class="form-control" placeholder="Email" aria-label="First name">
+                      <label for="email_label-field" class="form-label">Label</label>
+                      <input type="text" class="form-control" placeholder="Email" id="email_label-field" aria-label="First name">
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-6">
                       <label for="" class="form-label">Email</label>
-                      <input type="text" class="form-control" placeholder="contact@mail.com" aria-label="Last name">
+                      <input type="text" class="form-control" placeholder="contact@mail.com" value="contact@email.com" aria-label="Last name">
                     </div>
                   </div>
   
@@ -572,56 +572,56 @@
                   <div class="row py-2">
                     <label class="form-label text-secondary">Address</label>
                     <div class="col-sm-12 col-md-12 col-lg-12">
-                      <label for="" class="form-label">Label</label>
-                      <input type="text" class="form-control" placeholder="Address" aria-label="First name">
+                      <label for="address_label-field" class="form-label">Label</label>
+                      <input type="text" class="form-control" placeholder="Address" value="Address" id="address_label-field" aria-label="First name">
                     </div>
                   </div>
                   <br>
   
                   <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-6">
-                      <label for="" class="form-label">Address Line 1</label>
-                      <input type="text" class="form-control" placeholder="House" aria-label="First name">
+                      <label for="address_line1-field" class="form-label">Address Line 1</label>
+                      <input type="text" class="form-control" placeholder="House" id="address_line1-field" value="House" aria-label="First name">
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-6">
-                      <label for="" class="form-label">Address Line 2</label>
-                      <input type="text" class="form-control" placeholder="Street" aria-label="Last name">
-                    </div>
-                  </div>
-                  <br>
-  
-                  <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-6">
-                      <label for="" class="form-label">City</label>
-                      <input type="text" class="form-control" placeholder="City" aria-label="First name">
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-6">
-                      <label for="" class="form-label">State</label>
-                      <input type="text" class="form-control" placeholder="State" aria-label="Last name">
+                      <label for="address_line2-field" class="form-label">Address Line 2</label>
+                      <input type="text" class="form-control" placeholder="Street" value="Street" id="address_line2-field aria-label="Last name">
                     </div>
                   </div>
                   <br>
   
                   <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-6">
-                      <label for="" class="form-label">Country</label>
-                      <input type="text" class="form-control" placeholder="Country" aria-label="First name">
+                      <label for="address_city-field" class="form-label">City</label>
+                      <input type="text" class="form-control" placeholder="City" id="address_city-field" value="City" aria-label="First name">
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-6">
-                      <label for="" class="form-label">Zip Code</label>
-                      <input type="text" class="form-control" placeholder="Zip Code" aria-label="Last name">
+                      <label for="address_state-field" class="form-label">State</label>
+                      <input type="text" class="form-control" placeholder="State" id="address_state-field" value="State" aria-label="Last name">
                     </div>
                   </div>
                   <br>
   
                   <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-6">
-                      <label for="" class="form-label">Direction</label>
-                      <input type="text" class="form-control" placeholder="Direction" aria-label="First name">
+                      <label for="address_country-field" class="form-label">Country</label>
+                      <input type="text" class="form-control" placeholder="Country" id="address_country-field" value="Country" aria-label="First name">
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-6">
-                      <label for="" class="form-label">Google Map</label>
-                      <input type="text" class="form-control" placeholder="Map URL" aria-label="Last name">
+                      <label for="address_zipcode-field" class="form-label">Zip Code</label>
+                      <input type="text" class="form-control" placeholder="Zip Code" id="address_zipcode-field"  aria-label="Last name">
+                    </div>
+                  </div>
+                  <br>
+  
+                  <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-6">
+                      <label for="address_direction-field" class="form-label">Direction</label>
+                      <input type="text" class="form-control" placeholder="Direction" id="address_direction-field" value="Direction" aria-label="First name">
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-6">
+                      <label for="address_map_url-field" class="form-label">Google Map</label>
+                      <input type="text" class="form-control" placeholder="Map URL" id="address_map_url-field" value="Map URL" aria-label="Last name">
                     </div>
                   </div>
                   <br>

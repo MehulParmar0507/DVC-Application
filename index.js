@@ -822,14 +822,7 @@ testimonialAccordionBody.appendChild(testimonialContainer);
 }
 
 
-let dvc = {
-  name: "name",
-  jobTitle: "title",
-  mobileNo: "0000000000",
-  emailID: "name@domain.com",
-  addressText: "street, street, city, state, pincode, country",
-  
-}
+let dvc = {}
 
 function changeDVCText(){
   var iframe = document.querySelector("iframe");
