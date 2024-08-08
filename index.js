@@ -825,11 +825,12 @@ testimonialAccordionBody.appendChild(testimonialContainer);
 let dvc = {}
 
 function changeDVCText(r, f_id){
+  
   var iframe = document.querySelector("iframe");
   var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
 
-  let jobtitle = iframeDocument.getElementById("jobtitle");
-  let company = iframeDocument.getElementById("company");
+  // let jobtitle = iframeDocument.getElementById("jobtitle");
+  // let company = iframeDocument.getElementById("company");
   
   // dvc.name = document.getElementById("name-field").value;
   // dvc.jobtitle = document.getElementById("jobtitle-field").value;
