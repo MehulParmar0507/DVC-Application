@@ -648,19 +648,15 @@
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body py-3">
                   <div class="mb-3">
+                    <div id="images_grp"></div>
                     <span class="image-profile-photo">
-                      <div class="image-photo">
-                        <img src="./images/tem2.png" height="64px" width="64px" id="images_preview">
-                      </div>
-                      <div class="delete-box" onclick="deleteImage(this)">
-                        <i class="bi bi-trash3" style="color:red"></i>
-                      </div>
+                      
                       <label for="images_upload">
                         <div class="download-photo">
                           <box-icon name='upload'></box-icon>
                         </div>
                       </label>
-                      <input type="file" onchange="changeDVCImg(this, 'images_preview', 'images_photo')" name="" id="images_upload" style="display: none;">
+                      <input type="file" onchange="addMultipleImg(this, 'images_preview', 'images_photo')" name="" id="images_upload" style="display: none;">
                     </span>
                   </div>
                 </div>
