@@ -41,10 +41,9 @@
 
 /* About Section Ends */
 
-.profile_photo {
+.profile_photo img{
     height: 150px;
     width: 150px;
-    background-image: url(img/profile.png);
     background-position: center;
     background-size: cover;
     border-radius: 50%;

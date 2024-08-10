@@ -823,13 +823,13 @@ testimonialAccordionBody.appendChild(testimonialContainer);
 
 
 let dvc = {}
-
-function changeDVCText(r, f_id){
   
   var iframe = document.querySelector("iframe");
   var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
 
-  // let jobtitle = iframeDocument.getElementById("jobtitle");
+  
+function changeDVCText(r, f_id){
+// let jobtitle = iframeDocument.getElementById("jobtitle");
   // let company = iframeDocument.getElementById("company");
   
   // dvc.name = document.getElementById("name-field").value;
@@ -840,11 +840,9 @@ function changeDVCText(r, f_id){
   
 }
 
+
 function changeDVC_URL(r,f_id)
 {
-  var iframe = document.querySelector("iframe");
-  var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-
   let element = iframeDocument.getElementById(f_id);
   let inputValue = r.value;
 
@@ -857,4 +855,13 @@ function changeDVC_URL(r,f_id)
     element.setAttribute("src",inputValue);
   }
   
+}
+
+function changeDVCImg(r, siblingimg, dvcimg){
+  console.log(document.getElementById(siblingimg));
+  
+  // document.getElementById(siblingimg).src = URL.createObjectURL(r.files[0]);
+
+  document.getElementById(siblingimg).src = URL.createObjectURL(r.files[0]);
+  iframeDocument.getElementById(dvcimg).src=URL.createObjectURL(r.files[0]);
 }

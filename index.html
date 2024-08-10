@@ -342,14 +342,14 @@
 
                      <span class="image-profile-photo" for="profile_upload">
                         <div class="image-photo">
-                          <img src="./images/tem2.png" height="64px" width="64px">
+                          <img src="./images/tem2.png" height="64px" width="64px" id="profile_preview">
                         </div>
                         <label for="profile_upload">
                           <div class="download-photo">
                             <box-icon name='upload'></box-icon>
                           </div>
                         </label>
-                        <input type="file" name="" id="profile_upload" style="display: none;">
+                        <input type="file" onchange="changeDVCImg(this, 'profile_preview', 'profile_photo')" name="" id="profile_upload" style="display: none;" accept="image/*" multiple="">
                      </span>
                   </div>
                   <div class="profile-box" id="profile-box-2">
@@ -364,14 +364,14 @@
                    </div>
                    <span class="image-profile-photo">
                       <div class="image-photo">
-                        <img src="./images/Sitesoch Logo.png" height="64px" width="64px">
+                        <img src="./images/Sitesoch Logo.png" height="64px" width="64px" id="logo_preview">
                       </div>
                       <label for="logo_upload">
                         <div class="download-photo">
                           <box-icon name='upload'></box-icon>
                         </div>
                       </label>
-                      <input type="file" name="" id="logo_upload" style="display: none;">
+                      <input type="file" onchange="changeDVCImg(this, 'logo_preview', 'logo_photo')" name="" id="logo_upload" style="display: none;">
                     </span>
                   </div>
                 </div>
@@ -533,14 +533,14 @@
   
                   <span class="image-profile-photo mb-4" for="icon_upload">
                     <div class="image-photo">
-                      <img src="./images/pngwing.com (5).png" height="65px" width="65px">
+                      <img src="./images/pngwing.com (5).png" height="65px" width="65px" id="icon_preview">
                     </div>
                     <label for="icon_upload">
                       <div class="download-photo">
                         <box-icon name='upload'></box-icon>
                       </div>
                     </label>
-                    <input type="file" name="" id="icon_upload" style="display: none;">
+                    <input type="file" onchange="changeDVCImg(this, 'icon_preview', 'icon_photo')" name="" id="icon_upload" style="display: none;">
                   </span>
   
                   <div class="row">
@@ -650,7 +650,7 @@
                   <div class="mb-3">
                     <span class="image-profile-photo">
                       <div class="image-photo">
-                        <img src="./images/tem2.png" height="64px" width="64px">
+                        <img src="./images/tem2.png" height="64px" width="64px" id="images_preview">
                       </div>
                       <div class="delete-box" onclick="deleteImage(this)">
                         <i class="bi bi-trash3" style="color:red"></i>
@@ -660,7 +660,7 @@
                           <box-icon name='upload'></box-icon>
                         </div>
                       </label>
-                      <input type="file" name="" id="images_upload" style="display: none;">
+                      <input type="file" onchange="changeDVCImg(this, 'images_preview', 'images_photo')" name="" id="images_upload" style="display: none;">
                     </span>
                   </div>
                 </div>
@@ -712,14 +712,14 @@
                     </div>
                     <span class="image-profile-photo" for="profile_upload">
                       <div class="image-photo">
-                        <img src="./images/facebook png.png" height="64px" width="80px">
+                        <img src="./images/facebook png.png" height="64px" width="80px" id="facebook_preview">
                       </div>
                       <label for="facebook_upload">
                         <div class="download-photo">
                           <box-icon name='upload'></box-icon>
                         </div>
                       </label>
-                      <input type="file" name="" id="facebook_upload" style="display: none;">
+                      <input type="file" onchange="changeDVCImg(this, 'facebook_preview', 'facebook_photo')" name="" id="facebook_upload" style="display: none;">
                     </span>
         
                    <div class="input-group py-2">
@@ -757,14 +757,14 @@
                     </div>
                     <span class="image-profile-photo">
                       <div class="image-photo">
-                        <img src="./images/insta png.png" height="64px" width="64px">
+                        <img src="./images/insta png.png" height="64px" width="64px" id="insta_preview">
                       </div>
                       <label for="insta_upload">
                         <div class="download-photo">
                           <box-icon name='upload'></box-icon>
                         </div>
                       </label>
-                      <input type="file" name="" id="insta_upload" style="display: none;">
+                      <input type="file" onchange="changeDVCImg(this, 'insta_preview', 'insta_photo')" name="" id="insta_upload" style="display: none;">
                     </span>
                    <div class="input-group py-2">
                     <div class="me-3 col-sm-12 col-md-12 col-lg-5">
@@ -801,14 +801,14 @@
                     </div>
                     <span class="image-profile-photo">
                       <div class="image-photo">
-                        <img src="./images/twitter png.png" height="64px" width="64px">
+                        <img src="./images/twitter png.png" height="64px" width="64px" id="twitter_preview">
                       </div>
                       <label for="twitter_upload">
                         <div class="download-photo">
                           <box-icon name='upload'></box-icon>
                         </div>
                       </label>
-                      <input type="file" name="" id="twitter_upload" style="display: none;">
+                      <input type="file" onchange="changeDVCImg(this, 'twitter_preview', 'twitter_photo')" name="" id="twitter_upload" style="display: none;">
                     </span>
                    <div class="input-group py-2">
                     <div class="me-3 col-sm-12 col-md-12 col-lg-5">
@@ -886,14 +886,14 @@
   
                   <span class="image-profile-photo">
                     <div class="image-photo" style="border:1px solid rgb(211, 211, 211)">
-                      <img src="./images/pngwing.com (11).png" height="64px" width="64px">
+                      <img src="./images/pngwing.com (11).png" height="64px" width="64px" id="link_preview">
                     </div>
                     <label for="link_upload">
                       <div class="download-photo">
                         <box-icon name='upload'></box-icon>
                       </div>
                     </label>
-                    <input type="file" id="link_upload" style="display: none;">
+                    <input type="file" onchange="changeDVCImg(this, 'link_preview', 'link_photo')" id="link_upload" style="display: none;">
                   </span>
                      <br>
                     <div class="row  mt-10 last-container">
@@ -1165,7 +1165,7 @@
                             <div class="download-photo">
                               <i class="bi bi-upload" style="font-size:25px"></i>
                             </div>
-                            <input type="file" name="" id="logo_upload" style="display: none;">
+                            <input type="file" onchange="changeDVCImg(this, 'logo_preview', 'logo_photo')" name="" id="logo_upload" style="display: none;">
                          </label>
                         </div>
                     </div>
