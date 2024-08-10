@@ -349,12 +349,12 @@ videoAccordionDiv.innerHTML = `<div class="accordion-item">
                </div>
                 <div class="mb-3">
                   <label for="exampleFormControlInput1" class="form-label">Title</label>
-                  <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="About me" />
+                  <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="About me" onfocusout="changeDVCText(this,'video_heading')"/>
                 </div>
                 <div class="mb-3">
                   <label for="exampleFormControlTextarea1" class="form-label">Description</label>
                   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                    placeholder="Description"></textarea>
+                    placeholder="Description" onfocusout="changeDVCText(this,'video_desc')"></textarea>
                 </div>
 
                 <!-- <a href="#"><button type="button" class="btn btn-secondary mb-3">Youtube</button></a> -->
@@ -368,7 +368,7 @@ videoAccordionDiv.innerHTML = `<div class="accordion-item">
                 <br><br>
                 <div class="mb-3">
                   <label for="exampleFormControlInput1" class="form-label">video link</label>
-                  <input type="text" class="form-control" id="exampleFormControlInput3" />
+                  <input type="text" class="form-control" id="exampleFormControlInput3" onfocusout="changeDVC_URL(this,'YoutubeVideo')" placeholder="Put Embed Link of Youtube Video"/>
                 </div>
               </div>
             </div>
@@ -646,12 +646,12 @@ teamAccordianDiv.innerHTML = `<div class="accordion-item">
                 <div id="team-accordian-body${count}">
                 <div class="mb-3">
                   <label for="exampleFormControlInput1" class="form-label">Title</label>
-                  <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Title" />
+                  <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Title" onfocusout="changeDVCText(this,'team_heading')" />
                 </div>
                 <div class="mb-3">
                   <label for="exampleFormControlTextarea1" class="form-label">Description</label>
                   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                    placeholder="Description"></textarea>
+                    placeholder="Description" onfocusout="changeDVCText(this,'team_company')"></textarea>
                 </div>
 
                 <p>Profile (250x250px, 1:1 Ratio)</p>
@@ -808,13 +808,13 @@ testimonialContainer.innerHTML = `
 
                   <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Testimonial Name:</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Testimonial Name" />
+                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Testimonial Name" onfocusout="changeDVCText(this,'testimonialName')"/>
                   </div>
 
                   <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Review:</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                      placeholder="Add Their Review"></textarea>
+                      placeholder="Add Their Review" onfocusout="changeDVCText(this,'testimonialDescription')"></textarea>
                   </div>`;
 console.log(testimonialContainer);
 console.log(testimonialAccordionBody);
@@ -837,5 +837,24 @@ function changeDVCText(r, f_id){
   // dvc.company = document.getElementById("company-field").value;
   
   iframeDocument.getElementById(f_id).innerHTML = r.value;
+  
+}
+
+function changeDVC_URL(r,f_id)
+{
+  var iframe = document.querySelector("iframe");
+  var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+
+  let element = iframeDocument.getElementById(f_id);
+  let inputValue = r.value;
+
+  if(element.hasAttribute("href"))
+  {
+    element.setAttribute("href",inputValue);
+  }
+  else if(element.hasAttribute("src"))
+  {
+    element.setAttribute("src",inputValue);
+  }
   
 }

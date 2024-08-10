@@ -21,13 +21,23 @@
             <div class="card-body">
                 <h1 class="card-title" id="username">Prashant Patil</h1>
                 <p class="card-text" id="jobtitle">Web Developer</p>
+                 <p class="company" id="companyName">SiteSoch</p>
                 <div class="icons mb-3">
-                    <a href="#" class="me-2 fs-2"><i class="bi bi-envelope-fill"></i></a>
-                    <a href="#" class="me-2 fs-2"><i class="bi bi-github"></i></i></a>
-                    <a href="#" class="me-2 fs-2"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="me-2 fs-2" id="profile_Mobile" target="_blank"><i class="bi bi-phone"></i></a>
+                    <a href="#" class="me-2 fs-2" id="profile_Email" target="_blank"><i class="bi bi-envelope"></i></a>
+                    <a href="#" class="me-2 fs-2" id="profile_SMS" target="_blank"><i class="bi bi-chat-left-dots"></i></a>
                 </div>
             </div>
         </div>
+
+        <section id="about-container">
+          <div id="about">
+          <h1 id="AboutHeading">About Me</h1>
+          <div class="description">
+          <p id="AboutDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ad omnis aliquid culpa at earum magni quisquam, quis mollitia a velit quos.</p>
+          </div>
+          </div>
+        </section>
 
         <section class="contact mb-4 mt-4 p-3 shadow rounded">
             <div class="d-flex align-items-center">
@@ -46,15 +56,15 @@
               <span id="address_line1">House</span>, <span id="address_line2">Street</span>, <span id="address_city">City</span>,<br>
               <span id="address_state">State</span>, <span id="address_country">Country</span>, <span id="address_zipcode">400000</span>
             </address>
-            <button onclick="location.href='https://maps.app.goo.gl/pyqckC6eBdfJ8haq7'" class="btn btn-outline-primary shadow-lg">
-                <i class="fa fa-location-arrow"></i> Direction
-            </button>
+            <a href="https://maps.app.goo.gl/pyqckC6eBdfJ8haq7" class="btn btn-outline-primary shadow-lg">
+                <i class="fa fa-location-arrow"></i><span id="Direction_Btn" style="margin-left:10px">Direction</span>
+            </a>
         </section>
 
         <section class="map mb-4 p-3 shadow rounded">
             <h1 class="fs-3 mb-3">Location</h1>
             <div class="ratio ratio-16x9">
-                <iframe src="https://maps.google.com/maps?q=jalgaon&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://maps.google.com/maps?q=jalgaon&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" allowfullscreen id="Company_location"></iframe>
             </div>
         </section>
 
@@ -69,8 +79,8 @@
                 <div class="carousel-item active">
                     <img src="img/p1.jpeg" class="d-block w-100" alt="...">
                     <div class="m-4">
-                        <h5  class="test_name">Jayesh Sawant</h5>
-                        <p  class="test_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, minus.</p>
+                        <h5  class="test_name" id="testimonialName">Jayesh Sawant</h5>
+                        <p  class="test_desc" id="testimonialDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, minus.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -207,7 +217,7 @@
               <h2 id="video_heading">Video</h2>
               <p id="video_desc">Description</p>
                   <div class="embed-responsive embed-responsive-16by9">
-                    <iframe height="200px" width="90%" src="https://www.youtube.com/embed/ESnrn1kAD4E?si=dFbP6A_tJYkn9C-v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe height="200px" width="90%" src="https://www.youtube.com/embed/ESnrn1kAD4E?si=dFbP6A_tJYkn9C-v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id="YoutubeVideo"></iframe>
                   </div>
         
             </div>
@@ -313,64 +323,59 @@
             </div>
           </div>
 
-          <div class="futter">
+          <div class="futter" style="height:auto">
             <div class="style">
-              <h2>Web Links</h2>
-              <p>@ Sitesoch LLP</p>
-        
+              <h2 id="WebLink">Web Links</h2>
+              <p id="LinkDescription">@ Sitesoch LLP</p>
             </div>
-            <!-- <hr> -->
-        
             <div class="link">
-        
-        
               <div class="img">
-        
                 <img src="img/Chain_link_icon_slanted.png" alt="Link Icon">
               </div>
-        
               <div class="link-info">
-                <h3>Profile</h3>
-                <a href="https://www.sitesoch.com/">Link</a>
-        
+                <h3 id="Link_Profile">Profile</h3>
+                <a href="https://www.sitesoch.com/" id="Link_Hyperlink" target="_blank">Link</a>
               </div>
-        
             </div>
-        
-            <div class="link">
-        
-        
-              <div class="img">
-        
-                <img src="img/Chain_link_icon_slanted.png" alt="Link Icon">
-              </div>
-        
-              <div class="link-info">
-                <h3>Profile</h3>
-                <a href="https://www.sitesoch.com/">Link</a>
-        
-              </div>
-        
-            </div>
-        
-            <div class="link">
-        
-        
-              <div class="img">
-        
-                <img src="img/Chain_link_icon_slanted.png" alt="Link Icon">
-              </div>
-        
-              <div class="link-info">
-                <h3>Profile</h3>
-                <a href="https://www.sitesoch.com/">Link</a>
-        
-              </div>
-        
-            </div>
-        
           </div>
+    
+    <!-- social links starts -->
+
+    <div class="futter">
+      <div class="style">
+        <h2 id="Social_heading">Social Links</h2>
+        <p id="Social_description">Description</p>
+      </div>
+      <div class="link">
+        <div class="img">
+          <img src="../images/facebook png.png" alt="Link Icon">
+        </div>
+        <div class="link-info">
+          <h3 id="Social_Facebook">Facebook</h3>
+          <a href="https://www.facebook.com/" id="Social_fblink" target="_blank">Follow us on Facebook</a>
+        </div>
+      </div>
+      <div class="link">
+        <div class="img">
+          <img src="../images/insta png.png" alt="Link Icon">
+        </div>
+        <div class="link-info">
+          <h3 id="Social_Instagram">Instagram</h3>
+          <a href="https://www.instagram.com/" id="Social_instalink" target="_blank">Follow us on Instagram</a>
+        </div>
+      </div>
+      <div class="link">
+        <div class="img">
+          <img src="../images/twitter png.png" alt="Link Icon">
+        </div>
+        <div class="link-info">
+          <h3 id="Social_Twitter">Twitter</h3>
+          <a href="https://www.x.com/" id="Social_Xlink" target="_blank">Follow us on Twitter</a>
+        </div>
+      </div>
     </div>
+  </div>
+
 
     <footer class="text-center mt-4">
         <p>© Sitesoch.in All rights reserved</p>

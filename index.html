@@ -393,7 +393,7 @@
   
                   <div class="col-sm-12 col-md-12 col-lg-6">
                     <label for="company-field" class="form-label">Company</label>
-                    <input type="text" class="form-control" id="company-field" value="company" placeholder="Company" onfocusout="changeDVCText(this,'company')"/>
+                    <input type="text" class="form-control" id="company-field" value="company" placeholder="Company" onfocusout="changeDVCText(this,'companyName')"/>
                   </div>
                 </div>
   
@@ -420,8 +420,8 @@
                           <option value="3">Telephone</option>
                         </select>
                       </span>
-                      <input type="text" class="form-control" placeholder="Mobile Number" id="mobile-field" value="0000000000" aria-label="Username"
-                        aria-describedby="basic-addon1" onfocusout="changeDVCText(this,'')"/>
+                      <input type="text" class="form-control" placeholder="Mobile Number" id="mobile-field" value="tel:+910000000000" aria-label="Username"
+                        aria-describedby="basic-addon1" onfocusout="changeDVC_URL(this,'profile_Mobile')"/>
                         <span onclick="deleteContact('imobile')" class="position-absolute   translate-middle badge badge-center rounded-pill"><svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
                           <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
                         </svg></span>
@@ -436,8 +436,8 @@
                           <option value="3">Mobile</option>
                         </select>
                       </span>
-                      <input type="text" class="form-control" placeholder="Email ID" id="email-field" value="name@email.com" aria-label="Username"
-                        aria-describedby="basic-addon1" />
+                      <input type="text" class="form-control" placeholder="Email ID" id="email-field" value="mailto:yourname@example.com" aria-label="Username"
+                        aria-describedby="basic-addon1" onfocusout="changeDVC_URL(this,'profile_Email')"/>
                         <span onclick="deleteContact('iemail')" class="position-absolute   translate-middle badge badge-center rounded-pill  text-"><svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
                           <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
                         </svg></span>
@@ -452,8 +452,8 @@
                           <option value="3">Mobile</option>
                         </select>
                       </span>
-                      <input type="text" class="form-control" placeholder="Contact Number" id="sms-field" value="0000000000" aria-label="Username"
-                        aria-describedby="basic-addon1" />
+                      <input type="text" class="form-control" placeholder="Contact Number" id="sms-field" value="sms:+910000000000" aria-label="Username"
+                        aria-describedby="basic-addon1" onfocusout="changeDVC_URL(this,'profile_SMS')"/>
                         <span onclick="deleteContact('isms')" class="position-absolute translate-middle badge badge-center rounded-pill  text-"><svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
                           <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
                         </svg></span>
@@ -498,12 +498,12 @@
                 <div class="accordion-body py-3">
                   <div class="mb-3">
                     <label for="heading_title-field" class="form-label">Title</label>
-                    <input type="text" class="form-control" value="About Me" id="heading_title-field" onfocusout="changeDVCText(this,'about_title')" placeholder="About me" />
+                    <input type="text" class="form-control" value="About Me" id="heading_title-field" onfocusout="changeDVCText(this,'AboutHeading')" placeholder="About me" />
                   </div>
                   <div class="mb-3">
                     <label for="head_disc-field" class="form-label">Description</label>
                     <textarea class="form-control" id="head_desc-field" rows="3"
-                      placeholder="Description" onfocusout="changeDVCText(this,'about_desc')">Description</textarea>
+                      placeholder="Description" onfocusout="changeDVCText(this,'AboutDescription')">Description</textarea>
                   </div>
                 </div>
               </div>
@@ -617,11 +617,11 @@
                   <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-6">
                       <label for="address_direction-field" class="form-label">Direction</label>
-                      <input type="text" class="form-control" placeholder="Direction" id="address_direction-field" value="Direction" aria-label="First name" onfocusout="changeDVCText(this,'address_direction')">
+                      <input type="text" class="form-control" placeholder="Direction" id="address_direction-field" value="Direction" aria-label="First name" onfocusout="changeDVCText(this,'Direction_Btn')">
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-6">
                       <label for="address_map_url-field" class="form-label">Google Map</label>
-                      <input type="text" class="form-control" placeholder="Map URL" id="address_map_url-field" value="Map URL" aria-label="Last name" onfocusout="changeDVCText(this,'address_google_map')">
+                      <input type="text" class="form-control" placeholder="Put Embed URL of Map" id="address_map_url-field" aria-label="Last name" onfocusout="changeDVC_URL(this,'Company_location')">
                     </div>
                   </div>
                   <br>
@@ -688,13 +688,13 @@
                   <div id="my_social_link">
                   <div class="mb-3">
                     <label for="social_link_heading-field" class="form-label">Title</label>
-                    <input type="text" class="form-control" id="social_link_title-field" value="Social Link" placeholder="Social Link" />
+                    <input type="text" class="form-control" id="social_link_title-field" value="Social Link" placeholder="Social Link" onfocusout="changeDVCText(this,'Social_heading')"/>
                   </div>
-                  <!-- <div class="mb-3">
+                  <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Description</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                      placeholder="Description"></textarea>
-                  </div> -->
+                      placeholder="Description" onfocusout="changeDVCText(this,'Social_description')"></textarea>
+                  </div>
 
                 <div class="py-2">
                   <div class="py-3">
@@ -708,7 +708,7 @@
                         </select>
                       </span>
                       <input type="text" class="form-control social_link_url-field" placeholder="URL" value="https://www.facebook.com/username" aria-label="Username"
-                        aria-describedby="basic-addon1" onfocusout="changeDVCText(this,'facebook_url')"/>
+                        aria-describedby="basic-addon1" onfocusout="changeDVC_URL(this,'Social_fblink')"/>
                     </div>
                     <span class="image-profile-photo" for="profile_upload">
                       <div class="image-photo">
@@ -725,7 +725,7 @@
                    <div class="input-group py-2">
                     <div class="me-3 col-sm-12 col-md-12 col-lg-5">
                       <label for="exampleFormControlInput2" class="form-label">Title</label>
-                      <input type="text" class="form-control social_link_title-field" id="exampleFormControlInput2" value="Facebook" placeholder="Facebook" onfocusout="changeDVCText(this,'facebook_title')">
+                      <input type="text" class="form-control social_link_title-field" id="exampleFormControlInput2" value="Facebook" placeholder="Facebook" onfocusout="changeDVCText(this,'Social_Facebook')">
                     </div>
     
                     <div class="col-sm-12 col-md-12 col-lg-6">
@@ -738,7 +738,7 @@
                         </div>
                      </div>
                       
-                      <input type="text" class="form-control social_link_subtitle-field" id="exampleFormControlInput2" placeholder="" value="Follow us on Facebook" onfocusout="changeDVCText(this,'facebook_subtitle')">
+                      <input type="text" class="form-control social_link_subtitle-field" id="exampleFormControlInput2" placeholder="" value="Follow us on Facebook" onfocusout="changeDVCText(this,'Social_fblink')">
                     </div>
                   </div>
                   </div>
@@ -753,7 +753,7 @@
                         </select>
                       </span>
                       <input type="text" class="form-control social_link_url-field" placeholder="URL" value="https://www.instagram.com/username" aria-label="Username"
-                        aria-describedby="basic-addon1" onfocusout="changeDVCText(this,'insta_url')"/>
+                        aria-describedby="basic-addon1" onfocusout="changeDVC_URL(this,'Social_instalink')"/>
                     </div>
                     <span class="image-profile-photo">
                       <div class="image-photo">
@@ -769,7 +769,7 @@
                    <div class="input-group py-2">
                     <div class="me-3 col-sm-12 col-md-12 col-lg-5">
                       <label for="exampleFormControlInput2" class="form-label">Title</label>
-                      <input type="text" class="form-control social_link_title-field" id="exampleFormControlInput2" placeholder="Instagram" value="Instagram" onfocusout="changeDVCText(this,'insta_title')">
+                      <input type="text" class="form-control social_link_title-field" id="exampleFormControlInput2" placeholder="Instagram" value="Instagram" onfocusout="changeDVCText(this,'Social_Instagram')">
                     </div>
     
                     <div class="col-sm-12 col-md-12 col-lg-6">
@@ -782,7 +782,7 @@
                         </div>
                      </div>
                       
-                      <input type="text" class="form-control social_link_subtitle-field" id="exampleFormControlInput2" placeholder="" value="Follow us on Instagram" onfocusout="changeDVCText(this,'insta_subtitle')">
+                      <input type="text" class="form-control social_link_subtitle-field" id="exampleFormControlInput2" placeholder="" value="Follow us on Instagram" onfocusout="changeDVCText(this,'Social_instalink')">
                     </div>
                   </div>
                   </div>
@@ -797,7 +797,7 @@
                         </select>
                       </span>
                       <input type="text" class="form-control social_link_url-field" placeholder="URL" value="https://www.twitter.com/username" aria-label="Username"
-                        aria-describedby="basic-addon1" onfocusout="changeDVCText(this,'twitter_url')"/>
+                        aria-describedby="basic-addon1" onfocusout="changeDVC_URL(this,'Social_Xlink')"/>
                     </div>
                     <span class="image-profile-photo">
                       <div class="image-photo">
@@ -813,10 +813,10 @@
                    <div class="input-group py-2">
                     <div class="me-3 col-sm-12 col-md-12 col-lg-5">
                       <label for="exampleFormControlInput2" class="form-label">Title</label>
-                      <input type="text" class="form-control social_link_title-field" id="exampleFormControlInput2" placeholder="Twitter" value="Twitter" onfocusout="changeDVCText(this,'twitter_title')">
+                      <input type="text" class="form-control social_link_title-field" id="exampleFormControlInput2" placeholder="Twitter" value="Twitter" onfocusout="changeDVCText(this,'Social_Twitter')">
                     </div>
     
-                  f  <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="col-sm-12 col-md-12 col-lg-6">
                       <!-- <label for="exampleFormControlInput2" class="form-label">Subtitle</label> -->
                       <div class="profile-photo d-flex align-items-center">
                         <label for="exampleFormControlInput2" class="form-label">SUBTITLE</label>
@@ -826,7 +826,7 @@
                         </div>
                      </div>
                       
-                      <input type="text" class="form-control social_link_subtitle-field" id="exampleFormControlInput2" placeholder="" value="Follow us on Twitter" onfocusout="changeDVCText(this,'twitter_subtitle')">
+                      <input type="text" class="form-control social_link_subtitle-field" id="exampleFormControlInput2" placeholder="" value="Follow us on Twitter" onfocusout="changeDVCText(this,'Social_Xlink')">
                     </div>
                   </div>
                   </div>
@@ -871,17 +871,17 @@
                 <div class="accordion-body py-3">
                   <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Title</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Web Links" />
+                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Web Links" onfocusout="changeDVCText(this,'WebLink')"/>
                   </div>
                   <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Description</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                      placeholder="Description"></textarea>
+                      placeholder="Description" onfocusout="changeDVCText(this,'LinkDescription')"></textarea>
                   </div>
   
                   <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Links</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Link" />
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Link" onfocusout="changeDVC_URL(this,'Link_Hyperlink')"/>
                   </div>
   
                   <span class="image-profile-photo">
@@ -899,11 +899,11 @@
                     <div class="row  mt-10 last-container">
                       <div class="col-sm-12 col-md-12 col-lg-6">
                         <label for="" class="form-label">Title</label>
-                        <input type="text" class="form-control" placeholder="Title" aria-label="First name">
+                        <input type="text" class="form-control" placeholder="Title" aria-label="First name" onfocusout="changeDVCText(this,'Link_Profile')">
                       </div>
                       <div class="col-sm-12 col-md-12 col-lg-6">
                         <label for="" class="form-label">Subtitle</label>
-                        <input type="text" class="form-control" placeholder="Subtitle" aria-label="Last name">
+                        <input type="text" class="form-control" placeholder="Subtitle" aria-label="Last name" onfocusout="changeDVCText(this,'Link_Hyperlink')">
                       </div>
                     </div>
   
