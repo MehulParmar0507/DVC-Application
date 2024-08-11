@@ -931,6 +931,4 @@ function addProductAtDVC(pname, pdetails){
                       </div>`;
                       console.log(div);
   iframeDocument.getElementById("new_products").appendChild(div);
-
-  
 }
