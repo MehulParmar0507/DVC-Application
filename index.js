@@ -731,7 +731,7 @@ productAccordianDiv.innerHTML = `<div class="accordion-item">
                         <box-icon name='upload'></box-icon>
                       </div>
                     </label>
-                    <input type="file" name="" id="prod_uplaod" style="display: none;">
+                    <input type="file" name="" id="product_upload" style="display: none;">
                   </span>
                 </div>
 
@@ -764,7 +764,7 @@ productAccordianDiv.innerHTML = `<div class="accordion-item">
                   </div>
                 </div>
                 </div>  
-                <button type="button" class="btn btn-primary" onclick="addProduct(${count})">Add New Product</button>
+                <button type="button" class="btn btn-primary" onclick="addProductAtDVC('','')">Add New Product</button>
 
               </div>
             </div>
@@ -912,10 +912,25 @@ function addTestimonialAtDVC(tname, review){
                         <h5 class="test_name">${tname}</h5>
                         <p  class="test_desc">${review}</p>
                     </div>`;
-
-                    console.log(div);
                     
   iframeDocument.getElementById("test_btn").appendChild(btn);
   iframeDocument.getElementById("new_testimonials").appendChild(div);
+  
+}
+
+function addProductAtDVC(pname, pdetails){
+  let div = document.createElement("div");
+
+  // let imgURL = URL.createObjectURL(document.getElementById("product_upload").files[0]);
+
+  div.className = "product-slide";
+  div.innerHTML = `<img src="https://www.oneplus.com/content/dam/oasis/page/2023/nav/nav-larry-black.png" alt="#">
+                      <div class="product-btn">
+                        <span>buy now</span>
+                        <span>add cart</span>
+                      </div>`;
+                      console.log(div);
+  iframeDocument.getElementById("new_products").appendChild(div);
+
   
 }

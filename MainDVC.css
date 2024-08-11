@@ -85,6 +85,8 @@
     height: 40rem;
     overflow: hidden;
     margin-top: 20px;
+    position: sticky;
+    top: 10px;
   }
 
   iframe {

@@ -131,12 +131,12 @@ a {
 
  /* product-section */
  .product-section{
-    animation: slideFromTop 2s ease-in-out forwards;
+    /* animation: slideFromTop 2s ease-in-out forwards; */
     box-shadow: 2px 2px 5px var(--title-color);
     width: 100%;
     border-radius: 0.5rem;
     margin-bottom: 2rem;
-    box-shadow: 2px 2px 10px var(--bs-box-shadow)
+    box-shadow: 2px 2px 10px var(--bs-box-shadow);
     background-color: var(--bs-card-bg);
     color: var(--bs-card-color);
   }
