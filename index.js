@@ -857,23 +857,41 @@ function changeDVC_URL(r,f_id)
   
 }
 
+function deleteDVCImg(img){
+  iframeDocument.getElementById(img).remove();
+}
+
 function changeDVCImg(r, siblingimg, dvcimg){
   document.getElementById(siblingimg).src = URL.createObjectURL(r.files[0]);
   iframeDocument.getElementById(dvcimg).src=URL.createObjectURL(r.files[0]);
 }
 
+imgId=0;
 function addMultipleImg(r, siblingDiv, dvcimg){
+  imgId++;
   let span = document.createElement("span");
   span.style.float='left';
-  span.className="mx-2"
+  span.className="mx-2";
 
   // span.className = "image-profile-photo";
   span.innerHTML = ` <span class="image-photo">
                 <img src="${URL.createObjectURL(r.files[0])}" height="64px" width="64px" id="images_preview">
               </span>
-              <span class="delete-box" onclick="deleteImage(this)">
+              <span class="delete-box" onclick="(deleteImage(this), deleteDVCImg('${"delImg"+imgId}'))">
                 <i class="bi bi-trash3" style="color:red"></i>
               </span>`;
 
+  let div = document.createElement("div");
+  // span.style.float='left';
+  div.className="col";
+  div.id = 'delImg'+imgId;
+
   document.getElementById("images_grp").appendChild(span);
+
+  // span.className = "image-profile-photo";
+  div.innerHTML = ` <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="img/image1.png">
+                        <img src="${URL.createObjectURL(r.files[0])}" class="img-fluid" alt="...">
+                    </a>`;
+
+  iframeDocument.getElementById("gallery_images").appendChild(div);
 }
