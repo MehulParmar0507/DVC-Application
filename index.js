@@ -281,33 +281,30 @@ testimonialAccordionDiv.innerHTML = `<div class="accordion-item">
                   <div class="mb-3">
                     <span class="image-profile-photo" for="images_upload">
                       <div class="image-photo">
-                        <img src="./images/pexels-italo-melo-881954-2379004.jpg" height="64px" width="64px">
+                        <img src="./images/pexels-italo-melo-881954-2379004.jpg" height="64px" width="64px" id="test_preview">
                       </div>
-                      <div class="delete-box" onclick="deleteImage(this)">
-                        <i class="bi bi-trash3" style="color:red"></i>
-                      </div>
-                      <label for="test_upload">
+                      <label for="mytest_upload">
                         <div class="download-photo">
                           <box-icon name='upload'></box-icon>
                         </div>
                       </label>
-                      <input type="file" name="" id="test_upload" style="display: none;">
+                      <input type="file" name="" id="mytest_upload" style="display: none;" onchange="changeDVCImg(this, 'test_preview', '')">
                     </span>
                   </div>
 
                   <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Testimonial Name:</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Testimonial Name" />
+                    <input type="text" class="form-control" id="tname" placeholder="Enter Testimonial Name" />
                   </div>
 
                   <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Review:</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                    <textarea class="form-control" id="treview" rows="3"
                       placeholder="Add Their Review"></textarea>
                 </div>
 
               </div>
-              <button type="button" class="btn btn-primary" onclick="addTestimonial(${count})">Add New Testimonial</button>
+              <button type="button" class="btn btn-primary" onclick="addTestimonialAtDVC(document.getElementById('tname').value, document.getElementById('treview').value)">Add New Testimonial</button>
               </div>
 
 
@@ -894,4 +891,31 @@ function addMultipleImg(r, siblingDiv, dvcimg){
                     </a>`;
 
   iframeDocument.getElementById("gallery_images").appendChild(div);
+}
+
+i=3;
+function addTestimonialAtDVC(tname, review){
+  i++;
+  let div = document.createElement("div");
+
+  let btn = document.createElement("button");
+  btn.setAttribute("data-bs-target","#carouselExampleCaptions")
+  btn.setAttribute("data-bs-slide-to",`${i-1}`);
+  btn.setAttribute("aria-label",`Slide ${i}`);
+  btn.setAttribute("type","btn");
+
+  let imgURL = URL.createObjectURL(document.getElementById("mytest_upload").files[0]);
+
+  div.className = "carousel-item";
+  div.innerHTML = `<img src="${imgURL}" class="d-block w-100" alt="...">
+                    <div class="m-4">
+                        <h5 class="test_name">${tname}</h5>
+                        <p  class="test_desc">${review}</p>
+                    </div>`;
+
+                    console.log(div);
+                    
+  iframeDocument.getElementById("test_btn").appendChild(btn);
+  iframeDocument.getElementById("new_testimonials").appendChild(div);
+  
 }
