@@ -659,7 +659,7 @@
                             </div>
                           </div>
                           <div class="flex-grow-1">
-                            <span class="fw-medium d-block">John Doe</span>
+                            <span class="fw-medium d-block" id="Profile_Username">John Doe</span>
                             <small class="text-muted">Admin</small>
                           </div>
                         </div>
@@ -994,4 +994,9 @@
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
   </body>
+
+  <script>
+    let username = document.getElementById('Profile_Username');
+    username.innerHTML = localStorage.getItem("Email");
+  </script>
 </html>

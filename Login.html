@@ -119,6 +119,9 @@
                     id="email"
                     name="email-username"
                     placeholder="Enter your email or username"
+                    onchange="GetFormData()"
+                    required
+                    value=""
                     autofocus />
                 </div>
                 <div class="mb-3 form-password-toggle">
@@ -135,7 +138,10 @@
                       class="form-control"
                       name="password"
                       placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                      aria-describedby="password" />
+                      aria-describedby="password" 
+                      onchange="GetFormData()"
+                      required
+                      value=""/>
                     <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
                   </div>
                 </div>
@@ -185,5 +191,35 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+
   </body>
+  <script>
+  function GetFormData()
+  {
+    let email = document.getElementById('email');
+    let FormEmail = email.value; 
+    let password = document.getElementById('password');
+    let FormPassword = password.value;
+
+    let obj1 = {
+      email : FormEmail,
+      password:FormPassword,
+    }
+ 
+    console.log(obj1);
+    return obj1;
+  }
+
+
+  let LoginForm = document.getElementById('formAuthentication');
+  LoginForm.addEventListener('submit',function PrintFormData(event){
+    console.log(event);
+    //event.preventDefault();
+    let FormData = GetFormData();
+    console.log("FormData:-",FormData);
+    console.log(localStorage);
+    localStorage.setItem("Email",FormData.email);
+    localStorage.setItem("Password",FormData.password);
+  })
+  </script>
 </html>

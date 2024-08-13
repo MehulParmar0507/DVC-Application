@@ -843,20 +843,12 @@ console.log(testimonialAccordionBody);
 testimonialAccordionBody.appendChild(testimonialContainer);
 }
 
-
 let dvc = {}
-  
-  var iframe = document.querySelector("iframe");
-  var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+var iframe = document.querySelector("iframe");
+var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
 
-  
+
 function changeDVCText(r, f_id){
-// let jobtitle = iframeDocument.getElementById("jobtitle");
-  // let company = iframeDocument.getElementById("company");
-  
-  // dvc.name = document.getElementById("name-field").value;
-  // dvc.jobtitle = document.getElementById("jobtitle-field").value;
-  // dvc.company = document.getElementById("company-field").value;
   
   iframeDocument.getElementById(f_id).innerHTML = r.value;
   
@@ -957,3 +949,10 @@ function addProductAtDVC(pname, pdetails){
                       console.log(div);
   iframeDocument.getElementById("new_products").appendChild(div);
 }
+
+let username = document.getElementById('Profile_Username');
+username.innerHTML = localStorage.getItem("Email");
+
+
+console.log(localStorage);
+
