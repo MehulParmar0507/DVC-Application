@@ -518,4 +518,11 @@ a {
 .link img:hover{
     cursor: pointer;
 }
+
+
+/* Rating Tag CSS*/
+  .rating span
+  {
+    font-size: 30px;
+  }
   

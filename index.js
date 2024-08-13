@@ -714,6 +714,24 @@ productAccordianDiv.innerHTML = `<div class="accordion-item">
               data-bs-parent="#accordionExample">
               <div class="accordion-body py-3">
                 <div id="Product-accordian-body${count}">
+                
+                <div class="profile-photo">
+                  <span>Heading, Description</span>
+                  <div class="form-check form-switch mb-2">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked="">
+                    <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                  </div>
+               </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">Heading</label>
+                  <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="About me" onfocusout="changeDVCText(this,'Product_Heading')"/>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                    placeholder="Description" onfocusout="changeDVCText(this,'productDescription')"></textarea>
+                </div>
+
                 <div class="mb-3">
                   <label for="exampleFormControlInput1" class="form-label">Upload Product Image:</label>
                 </div>
@@ -735,36 +753,43 @@ productAccordianDiv.innerHTML = `<div class="accordion-item">
                   </span>
                 </div>
 
-                <div class="mb-3 col-lg-6 col-md-12 col-sm-12">
+                <div class="mb-3 col-lg-12 col-md-12 col-sm-12">
                   <label for="exampleFormControlInput1" class="form-label">Product Name:</label>
                   <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Name" />
                 </div>
 
-                <label class="form-label text-secondary">Product Information:</label>
-
-                <div class="mb-3">
-                  <label for="exampleFormControlInput1" class="form-label">Product Feature 1:</label>
-                  <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Features" />
-                </div>
-
-                <div class="mb-3">
-                  <label for="exampleFormControlInput1" class="form-label">Product Feature 2:</label>
-                  <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Features(Place it Empty if you have Not Enough Features)" />
-                </div>
-
-                <div class="mb-3">
-                  <label for="exampleFormControlInput1" class="form-label">Product Feature 3:</label>
-                  <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Enter Product Features(Place it Empty if you have Not Enough Features)" />
-                </div>
-
-                <div class="mb-4 row">
-                  <label for="html5-number-input" class="col-md-0 col-form-label">Product Price:</label>
-                  <div class="col-md-4">
-                    <input class="form-control" type="number" value="" placeholder="Enter only Numbers" id="html5-number-input" />
+                <div class="profile-photo">
+                  <span>Ratings</span>
+                  <div class="form-check form-switch mb-2">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked="">
+                    <label class="form-check-label" for="flexSwitchCheckChecked"></label>
                   </div>
-                </div>
-                </div>  
-                <button type="button" class="btn btn-primary" onclick="addProductAtDVC('','')">Add New Product</button>
+               </div>
+
+                <div class="row  mt-10 last-container">
+                      <div class="col-sm-12 col-md-12 col-lg-6">
+                        <label for="" class="form-label">Ratings</label>
+                        <input type="text" class="form-control" placeholder="Enter Number From 1 to 5" aria-label="Product Rating" onfocusout="changeDVCText(this,'')">
+                      </div>
+                      <div class="col-sm-12 col-md-12 col-lg-6">
+                        <label for="" class="form-label">Product Price</label>
+                        <input type="text" class="form-control" placeholder="Enter Product Price" aria-label="Product Price" onfocusout="changeDVCText(this,'')">
+                      </div>
+                    </div>
+                    <br>
+
+                    <div class="row  mt-10 last-container">
+                      <div class="col-sm-12 col-md-12 col-lg-6">
+                        <label for="" class="form-label">Button Label</label>
+                        <input type="text" class="form-control" placeholder="Enter Number From 1 to 5" aria-label="button label" onfocusout="changeDVCText(this,'')" value="Buy Online">
+                      </div>
+                      <div class="col-sm-12 col-md-12 col-lg-6">
+                        <label for="" class="form-label">Product Link</label>
+                        <input type="text" class="form-control" placeholder="Enter Product link" aria-label="Product link" onfocusout="changeDVCText(this,'')">
+                      </div>
+                    </div>
+                
+                <button type="button" class="btn btn-primary mt-3" onclick="addProductAtDVC('','')">Add New Product</button>
 
               </div>
             </div>

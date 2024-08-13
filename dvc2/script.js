@@ -23,3 +23,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
     document.body.classList.add(savedTheme + '-mode');
     updateThemeIcon(savedTheme);
 });
+
+//  rating css
+function setRating(rating) {
+    let stars = document.querySelectorAll('.rating span');
+    stars.forEach((star, index) => {
+        star.style.color = index < rating ? 'gold' : 'gray';
+    });
+}
