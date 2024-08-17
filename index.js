@@ -379,242 +379,254 @@ count++;
 
 let bussinessAccordionDiv = document.createElement("div");
 bussinessAccordionDiv.innerHTML = `<div class="accordion-item">
-            <h2 class="accordion-header" id="ba${count}">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#ba${count}" aria-expanded="false" aria-controls="collapseNine">
-                <div class="btn-container">
-                  <span class="d-flex align-items-center"> <i class="bx bx-video me-1"></i>Bussiness Hours</span>
-                  <div class="form-check form-switch mb-2">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
-                        <label class="form-check-label" for="flexSwitchCheckChecked"
-                          ></label
-                        >
-                  </div>
+    <h2 class="accordion-header" id="ba${count}">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#ba${count}" aria-expanded="false" aria-controls="collapseNine">
+            <div class="btn-container">
+                <span class="d-flex align-items-center"> 
+                    <i class="bx bx-video me-1"></i>Bussiness Hours
+                </span>
+                <div class="form-check form-switch mb-2">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
+                    <label class="form-check-label" for="flexSwitchCheckChecked"></label>
                 </div>
-              </button>
-            </h2>
-            <div id="ba${count}" class="accordion-collapse collapse" aria-labelledby="ba${count}"
-              data-bs-parent="#accordionExample">
-              <div class="accordion-body py-3">
-                <div class="mb-3">
-                  <label for="exampleFormControlInput1" class="form-label">Title</label>
-                  <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Bussiness Hours" />
-                </div>
+            </div>
+        </button>
+    </h2>
+    <div id="ba${count}" class="accordion-collapse collapse" aria-labelledby="ba${count}" data-bs-parent="#accordionExample">
+        <div class="accordion-body py-3">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Title</label>
+                <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Bussiness Hours" />
+            </div>
 
-                <div class="mb-3">
-                  <span class="image-profile-photo">
+            <div class="mb-3">
+                <span class="image-profile-photo">
                     <div class="image-photo">
-                      <img src="./images/oneplus9-1-500x500.webp" height="64px" width="64px">
+                        <img src="./images/oneplus9-1-500x500.webp" height="64px" width="64px">
                     </div>
                     <div class="delete-box" onclick="deleteImage(this)">
-                      <i class="bi bi-trash3" style="color:red"></i>
+                        <i class="bi bi-trash3" style="color:red"></i>
                     </div>
                     <label for="buss_upload">
-                      <div class="download-photo">
-                        <box-icon name='upload'></box-icon>
-                      </div>
+                        <div class="download-photo">
+                            <box-icon name='upload'></box-icon>
+                        </div>
                     </label>
                     <input type="file" name="" id="images_upload" style="display: none;">
-                  </span>
-                </div>
-
-                <div class="form-check form-switch mb-3">
-                  Open 24 hours
-                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
-                  <label class="form-check-label" for="flexSwitchCheckChecked"
-                    ></label
-                  >
-                </div>
-
-                <div class="row mb-3">
-                  <div class="col-lg-6 col-md-12 col-sm-12">
-                      <label for="exampleFormControlInput1" class="form-label">Open Status</label>
-                      <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Opened" />
-                  </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12">
-                        <label for="exampleFormControlInput1" class="form-label">Closing Status</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Closed" />
-                  </div>
-                </div>
-
-                <div class="my-4">
-                  <div class="mb-2">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-                    <label class="form-check-label" for="defaultCheck1">
-                      Monday
-                    </label>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-4 col-md-12 col-sm-12"><input type="text" class="form-control" id="exampleFormControlInput3" value="Monday" /></div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                      <div class="input-group">
-                        <input class="form-control" type="time"/>
-                      </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                      <div class="input-group">
-                        <input class="form-control" type="time"/>
-                      </div>
-                    </div>
-                    <div class="col-lg-2 col-md-12 col-sm-12">
-                      <button class="btn btn-outline-primary"><i class="bi bi-plus-lg"></i></button>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="my-4">
-                  <div class="mb-2">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-                    <label class="form-check-label" for="defaultCheck1">
-                      Tuesday
-                    </label>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-4 col-md-12 col-sm-12"><input type="text" class="form-control" id="exampleFormControlInput3" value="Tuesday" /></div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                      <div class="input-group">
-                        <input class="form-control" type="time"/>
-                      </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                      <div class="input-group">
-                        <input class="form-control" type="time"/>
-                      </div>
-                    </div>
-                    <div class="col-lg-2 col-md-12 col-sm-12">
-                      <button class="btn btn-outline-primary"><i class="bi bi-plus-lg"></i></button>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="my-4">
-                  <div class="mb-2">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-                    <label class="form-check-label" for="defaultCheck1">
-                      Wednesday
-                    </label>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-4 col-md-12 col-sm-12"><input type="text" class="form-control" id="exampleFormControlInput3" value="Wednesday" /></div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                      <div class="input-group">
-                        <input class="form-control" type="time"/>
-                      </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                      <div class="input-group">
-                        <input class="form-control" type="time"/>
-                      </div>
-                    </div>
-                    <div class="col-lg-2 col-md-12 col-sm-12">
-                      <button class="btn btn-outline-primary"><i class="bi bi-plus-lg"></i></button>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="my-4">
-                  <div class="mb-2">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-                    <label class="form-check-label" for="defaultCheck1">
-                      Thursday
-                    </label>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-4 col-md-12 col-sm-12"><input type="text" class="form-control" id="exampleFormControlInput3" value="Thursday" /></div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                      <div class="input-group">
-                        <input class="form-control" type="time"/>
-                      </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                      <div class="input-group">
-                        <input class="form-control" type="time"/>
-                      </div>
-                    </div>
-                    <div class="col-lg-2 col-md-12 col-sm-12">
-                      <button class="btn btn-outline-primary"><i class="bi bi-plus-lg"></i></button>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="my-4">
-                  <div class="mb-2">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-                    <label class="form-check-label" for="defaultCheck1">
-                      Friday
-                    </label>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-4 col-md-12 col-sm-12"><input type="text" class="form-control" id="exampleFormControlInput3" value="Friday" /></div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                      <div class="input-group">
-                        <input class="form-control" type="time"/>
-                      </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                      <div class="input-group">
-                        <input class="form-control" type="time"/>
-                      </div>
-                    </div>
-                    <div class="col-lg-2 col-md-12 col-sm-12">
-                      <button class="btn btn-outline-primary"><i class="bi bi-plus-lg"></i></button>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="my-4">
-                  <div class="mb-2">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-                    <label class="form-check-label" for="defaultCheck1">
-                      Saturday
-                    </label>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-4 col-md-12 col-sm-12"><input type="text" class="form-control" id="exampleFormControlInput3" value="Saturday" /></div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                      <div class="input-group">
-                        <input class="form-control" type="time"/>
-                      </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                      <div class="input-group">
-                        <input class="form-control" type="time"/>
-                      </div>
-                    </div>
-                    <div class="col-lg-2 col-md-12 col-sm-12">
-                      <button class="btn btn-outline-primary"><i class="bi bi-plus-lg"></i></button>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="my-4">
-                  <div class="mb-2">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-                    <label class="form-check-label" for="defaultCheck1">
-                      Sunday
-                    </label>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-4 col-md-12 col-sm-12"><input type="text" class="form-control" id="exampleFormControlInput3" value="Sunday" /></div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                      <div class="input-group">
-                        <input class="form-control" type="time"/>
-                      </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                      <div class="input-group">
-                        <input class="form-control" type="time"/>
-                      </div>
-                    </div>
-                    <div class="col-lg-2 col-md-12 col-sm-12">
-                      <button class="btn btn-outline-primary"><i class="bi bi-plus-lg"></i></button>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
+                </span>
             </div>
-          </div>`;
+
+            <div class="form-check form-switch mb-3">
+                Open 24 hours
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
+                <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <label for="exampleFormControlInput1" class="form-label">Open Status</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Opened" />
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <label for="exampleFormControlInput1" class="form-label">Closing Status</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Closed" />
+                </div>
+            </div>
+
+            <!-- Monday Section -->
+            <div class="my-4">
+                <div class="mb-2">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                    <label class="form-check-label" for="defaultCheck1">Monday</label>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <input type="text" class="form-control" id="exampleFormControlInput3" value="Monday" />
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="input-group">
+                            <input class="form-control" type="time"/>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="input-group">
+                            <input class="form-control" type="time"/>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-12 col-sm-12">
+                        <button class="btn btn-outline-primary bussinessHourButton" onclick="SetBussinessHours(this,'Monday','MondayStartTime','MondayEndTime')">
+                            <i class="bi bi-plus-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tuesday Section -->
+            <div class="my-4">
+                <div class="mb-2">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                    <label class="form-check-label" for="defaultCheck1">Tuesday</label>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <input type="text" class="form-control" id="exampleFormControlInput3" value="Tuesday" />
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="input-group">
+                            <input class="form-control" type="time"/>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="input-group">
+                            <input class="form-control" type="time"/>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-12 col-sm-12">
+                        <button class="btn btn-outline-primary bussinessHourButton" onclick="SetBussinessHours(this,'Tuesday','TuesdayStartTime','TuesdayEndTime')">
+                            <i class="bi bi-plus-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wednesday Section -->
+            <div class="my-4">
+                <div class="mb-2">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                    <label class="form-check-label" for="defaultCheck1">Wednesday</label>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <input type="text" class="form-control" id="exampleFormControlInput3" value="Wednesday" />
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="input-group">
+                            <input class="form-control" type="time"/>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="input-group">
+                            <input class="form-control" type="time"/>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-12 col-sm-12">
+                        <button class="btn btn-outline-primary bussinessHourButton" onclick="SetBussinessHours(this,'Wednesday','WednesdayStartTime','WednesdayEndTime')">
+                            <i class="bi bi-plus-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thursday Section -->
+            <div class="my-4">
+                <div class="mb-2">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                    <label class="form-check-label" for="defaultCheck1">Thursday</label>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <input type="text" class="form-control" id="exampleFormControlInput3" value="Thursday" />
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="input-group">
+                            <input class="form-control" type="time"/>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="input-group">
+                            <input class="form-control" type="time"/>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-12 col-sm-12">
+                        <button class="btn btn-outline-primary bussinessHourButton" onclick="SetBussinessHours(this,'Thursday','ThursdayStartTime','ThursdayEndTime')">
+                            <i class="bi bi-plus-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Friday Section -->
+            <div class="my-4">
+                <div class="mb-2">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                    <label class="form-check-label" for="defaultCheck1">Friday</label>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <input type="text" class="form-control" id="exampleFormControlInput3" value="Friday" />
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="input-group">
+                            <input class="form-control" type="time"/>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="input-group">
+                            <input class="form-control" type="time"/>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-12 col-sm-12">
+                        <button class="btn btn-outline-primary bussinessHourButton" onclick="SetBussinessHours(this,'Friday','FridayStartTime','FridayEndTime')">
+                            <i class="bi bi-plus-lg"></i>
+                        </button>
+                    </div>
+                </div>
+              </div>
+              
+              <div class="my-4">
+                <div class="mb-2">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                    <label class="form-check-label" for="defaultCheck1">Saturday</label>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <input type="text" class="form-control" id="exampleFormControlInput3" value="Saturday" />
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="input-group">
+                            <input class="form-control" type="time"/>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="input-group">
+                            <input class="form-control" type="time"/>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-12 col-sm-12">
+                        <button class="btn btn-outline-primary bussinessHourButton" onclick="SetBussinessHours(this,'Saturday','SaturdayStartTime','SaturdayEndTime')">
+                            <i class="bi bi-plus-lg"></i>
+                        </button>
+                    </div>
+                </div>
+              </div>
+              
+              <div class="my-4">
+                <div class="mb-2">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                    <label class="form-check-label" for="defaultCheck1">Sunday</label>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <input type="text" class="form-control" id="exampleFormControlInput3" value="Sunday" />
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="input-group">
+                            <input class="form-control" type="time"/>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="input-group">
+                            <input class="form-control" type="time"/>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-12 col-sm-12">
+                        <button class="btn btn-outline-primary bussinessHourButton" onclick="SetBussinessHours(this,'Sunday','SundayStartTime','SundayEndTime')">
+                            <i class="bi bi-plus-lg"></i>
+                        </button>
+                    </div>
+                </div>
+              </div>`;
 homeAccordion.appendChild(bussinessAccordionDiv);
 }
 
@@ -1002,3 +1014,29 @@ function addTeamAtDVC(tname, tdesign){
                     `;
   iframeDocument.getElementById("newTeam").appendChild(div);
 }
+
+
+function SetBussinessHours(buttonELement,d_id,st_id,et_id)
+{
+   console.log("Button is Clicked");
+
+   const parentDiv = buttonELement.closest('.my-4');
+        const checkbox = parentDiv.querySelector('input[type="checkbox"]').checked;
+        const day = parentDiv.querySelector('input[type="text"]').value;
+        const startTime = parentDiv.querySelectorAll('input[type="time"]')[0].value;
+        const endTime = parentDiv.querySelectorAll('input[type="time"]')[1].value;
+
+        if (checkbox && day && startTime && endTime) {
+        
+        iframeDocument.getElementById(d_id).innerHTML = day;
+        iframeDocument.getElementById(st_id).innerHTML = startTime;
+        iframeDocument.getElementById(et_id).innerHTML = endTime;
+
+        }
+}
+
+
+// user profile functionalities
+let userProfile = document.getElementById('Profile_Username');
+userProfile.innerHTML = localStorage.getItem("Email");
+
