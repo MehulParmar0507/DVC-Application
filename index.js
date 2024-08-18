@@ -377,41 +377,14 @@ bussinessAccordionDiv.innerHTML = `<div class="accordion-item">
         <div class="accordion-body py-3">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Title</label>
-                <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Bussiness Hours" />
+                <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Bussiness Hours" onfocusout="changeDVCText(this,'TimeHeading')" />
             </div>
 
-            <div class="mb-3">
-                <span class="image-profile-photo">
-                    <div class="image-photo">
-                        <img src="./images/oneplus9-1-500x500.webp" height="64px" width="64px">
-                    </div>
-                    <div class="delete-box" onclick="deleteImage(this)">
-                        <i class="bi bi-trash3" style="color:red"></i>
-                    </div>
-                    <label for="buss_upload">
-                        <div class="download-photo">
-                            <box-icon name='upload'></box-icon>
-                        </div>
-                    </label>
-                    <input type="file" name="" id="images_upload" style="display: none;">
-                </span>
-            </div>
-
+            
             <div class="form-check form-switch mb-3">
                 Open 24 hours
                 <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
                 <label class="form-check-label" for="flexSwitchCheckChecked"></label>
-            </div>
-
-            <div class="row mb-3">
-                <div class="col-lg-6 col-md-12 col-sm-12">
-                    <label for="exampleFormControlInput1" class="form-label">Open Status</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Opened" />
-                </div>
-                <div class="col-lg-6 col-md-12 col-sm-12">
-                    <label for="exampleFormControlInput1" class="form-label">Closing Status</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Closed" />
-                </div>
             </div>
 
             <!-- Monday Section -->
