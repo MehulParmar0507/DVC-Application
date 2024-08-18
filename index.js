@@ -6,10 +6,6 @@ function generateQRCode() {
   qrcodeContainer.innerHTML = ""; // Clear previous QR code
   new QRCode(qrcodeContainer, {text:text, width:200, height:200});
 
-  if(text==""){
-    alert("Enter URL please!", "danger");
-    return;
-  }
 
   document.getElementById("downloadbtn").style.display="";
 }
@@ -23,20 +19,6 @@ function downloadQRCode() {
   link.click();
 }
 
-// bootstrap alert
-const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-
-const alert = (message, type) => {
-const wrapper = document.createElement('div')
-wrapper.innerHTML = [
-  `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-  `   <div>${message}</div>`,
-  '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-  '</div>'
-].join('')
-
-alertPlaceholder.append(wrapper)
-}
 
 
 function addContact(type){
@@ -102,12 +84,12 @@ productContainer.innerHTML = `<hr/>
                       <div class="delete-box" onclick="deleteImage(this)">
                         <i class="bi bi-trash3" style="color:red"></i>
                       </div>
-                      <label for="prod_uplaod">
+                      <label for="product_upload0">
                         <div class="download-photo">
                           <box-icon name='upload'></box-icon>
                         </div>
                       </label>
-                      <input type="file" name="" id="prod_uplaod" style="display: none;">
+                      <input type="file" name="" id="product_uplaod0" style="display: none;">
                     </span>
                   </div>
 
@@ -253,12 +235,11 @@ count = 0;
 let homeAccordion = document.getElementById("home_accordion");
 
 function addTestimonialAccordion(){
-count++;
 let testimonialAccordionDiv = document.createElement("div");
 testimonialAccordionDiv.innerHTML = `<div class="accordion-item">
-            <h2 class="accordion-header" id="ta${count}">
+            <h2 class="accordion-header" id="ta">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#tac${count}" aria-expanded="false" aria-controls="tac${count}">
+                data-bs-target="#tac" aria-expanded="false" aria-controls="tac">
                 <div class="btn-container">
                   <span class="d-flex align-items-center"><i class="bi bi-people-fill"></i>&nbsp;Testimonials</span>
                   <div class="form-check form-switch mb-2">
@@ -270,10 +251,10 @@ testimonialAccordionDiv.innerHTML = `<div class="accordion-item">
                 </div>
               </button>
             </h2>
-            <div id="tac${count}" class="accordion-collapse collapse" aria-labelledby="ta${count}"
+            <div id="tac" class="accordion-collapse collapse" aria-labelledby="ta"
               data-bs-parent="#accordionExample">
               <div class="accordion-body py-3">
-                <div id="testimonial-accordion-body${count}">
+                <div id="testimonial-accordion-body">
                   <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Upload Testimonial Image:</label>
                   </div>
@@ -283,12 +264,12 @@ testimonialAccordionDiv.innerHTML = `<div class="accordion-item">
                       <div class="image-photo">
                         <img src="./images/pexels-italo-melo-881954-2379004.jpg" height="64px" width="64px" id="test_preview">
                       </div>
-                      <label for="mytest_upload">
+                      <label for="mytest_upload0">
                         <div class="download-photo">
                           <box-icon name='upload'></box-icon>
                         </div>
                       </label>
-                      <input type="file" name="" id="mytest_upload" style="display: none;" onchange="changeDVCImg(this, 'test_preview', '')">
+                      <input type="file" name="" id="mytest_upload0" style="display: none;" onchange="changeDVCImg(this, 'test_preview', '')">
                     </span>
                   </div>
 
@@ -301,11 +282,10 @@ testimonialAccordionDiv.innerHTML = `<div class="accordion-item">
                     <label for="exampleFormControlTextarea1" class="form-label">Review:</label>
                     <textarea class="form-control" id="treview" rows="3"
                       placeholder="Add Their Review"></textarea>
+                      </div>
+              <button type="button" class="btn btn-primary" onclick="addTestimonialAtDVC(this, document.getElementById('tname').value, document.getElementById('treview').value, 'mytest_upload0')">Add New Testimonial</button>
+              </div>
                 </div>
-
-              </div>
-              <button type="button" class="btn btn-primary" onclick="addTestimonialAtDVC(document.getElementById('tname').value, document.getElementById('treview').value)">Add New Testimonial</button>
-              </div>
 
 
               
@@ -652,7 +632,7 @@ teamAccordianDiv.innerHTML = `<div class="accordion-item">
             <div id="tma${count}" class="accordion-collapse collapse" aria-labelledby="headingten"
               data-bs-parent="#accordionExample">
               <div class="accordion-body py-3">
-                <div id="team-accordian-body${count}">
+                <div id="team-accordian-body">
                 <div class="mb-3">
                   <label for="exampleFormControlInput1" class="form-label">Title</label>
                   <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Title" onfocusout="changeDVCText(this,'team_heading')" />
@@ -668,12 +648,12 @@ teamAccordianDiv.innerHTML = `<div class="accordion-item">
                   <div class="image-photo">
                         <img src="./images/pexels-italo-melo-881954-2379004.jpg" height="64px" width="64px" id="team_preview">
                       </div>
-                  <label for="team_upload">
+                  <label for="team_upload0">
                   <div class="download-photo">
                     <box-icon name='upload'></box-icon>
                   </div>
                   </label>
-                  <input type="file" id="team_upload" style="display: none;" onchange="changeDVCImg(this, 'team_preview','')">
+                  <input type="file" id="team_upload0" style="display: none;" onchange="changeDVCImg(this, 'team_preview','')">
                 </span>
                    <br>
                   <div class="row  mt-10 last-container">
@@ -691,8 +671,8 @@ teamAccordianDiv.innerHTML = `<div class="accordion-item">
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
                       placeholder="Description"></textarea>
                   </div>
+                  <button class="btn btn-primary" onclick="addTeamAtDVC(document.getElementById('team_name').value, document.getElementById('team_design').value)">Add Team Member</button>
                 </div>
-                <button class="btn btn-primary" onclick="addTeamAtDVC(document.getElementById('team_name').value, document.getElementById('team_design').value)">Add Team Member</button>
               </div>
             </div>
           </div>`;
@@ -722,7 +702,7 @@ productAccordianDiv.innerHTML = `<div class="accordion-item">
             <div id="pac${count}" class="accordion-collapse collapse" aria-labelledby="pa${count}"
               data-bs-parent="#accordionExample">
               <div class="accordion-body py-3">
-                <div id="Product-accordian-body${count}">
+                <div id="Product-accordian-body">
                 
                 <div class="profile-photo">
                   <span>Heading, Description</span>
@@ -753,18 +733,18 @@ productAccordianDiv.innerHTML = `<div class="accordion-item">
                     <div class="delete-box" onclick="deleteImage(this)">
                       <i class="bi bi-trash3" style="color:red"></i>
                     </div>
-                    <label for="product_upload">
+                    <label for="product_upload0">
                       <div class="download-photo">
                         <box-icon name='upload'></box-icon>
                       </div>
                     </label>
-                    <input type="file" name="" id="product_upload" style="display: none;" onchange="changeDVCImg(this, 'prod_preview', '')">
+                    <input type="file" name="" id="product_upload0" style="display: none;" onchange="changeDVCImg(this, 'prod_preview', '')">
                   </span>
                 </div>
 
                 <div class="mb-3 col-lg-12 col-md-12 col-sm-12">
-                  <label for="prod_name" class="form-label">Product Name:</label>
-                  <input type="text" class="form-control" id="prod_name" placeholder="Enter Product Name" />
+                  <label for="prod_name0" class="form-label">Product Name:</label>
+                  <input type="text" class="form-control" id="prod_name0" placeholder="Enter Product Name" />
                 </div>
 
                 <div class="profile-photo">
@@ -782,7 +762,7 @@ productAccordianDiv.innerHTML = `<div class="accordion-item">
                       </div>
                       <div class="col-sm-12 col-md-12 col-lg-6">
                         <label for="" class="form-label">Product Price</label>
-                        <input type="text" class="form-control" placeholder="Enter Product Price" aria-label="Product Price" id="prod_price">
+                        <input type="text" class="form-control" placeholder="Enter Product Price" aria-label="Product Price" id="prod_price0">
                       </div>
                     </div>
                     <br>
@@ -790,7 +770,7 @@ productAccordianDiv.innerHTML = `<div class="accordion-item">
                     <div class="row  mt-10 last-container">
                       <div class="col-sm-12 col-md-12 col-lg-6">
                         <label for="" class="form-label">Button Label</label>
-                        <input type="text" class="form-control" placeholder="" id="prod_btn" aria-label="button label" value="Buy Online">
+                        <input type="text" class="form-control" placeholder="" id="prod_btn0" aria-label="button label" value="Buy Online">
                       </div>
                       <div class="col-sm-12 col-md-12 col-lg-6">
                         <label for="" class="form-label">Product Link</label>
@@ -810,9 +790,9 @@ productAccordianDiv.innerHTML = `<div class="accordion-item">
 
 // testimonial sections
 
-function addTestimonial(c)
+function addTestimonial()
 {
-let testimonialAccordionBody = document.getElementById(`testimonial-accordion-body${c}`);
+let testimonialAccordionBody = document.getElementById(`testimonial-accordion-body`);
 let testimonialContainer = document.createElement('div');
 testimonialContainer.innerHTML = `
                     <hr/>
@@ -919,18 +899,19 @@ function addMultipleImg(r, siblingDiv, dvcimg){
   iframeDocument.getElementById("gallery_images").appendChild(div);
 }
 
-i=3;
-function addTestimonialAtDVC(tname, review){
+i=0;
+function addTestimonialAtDVC(b, tname, review){
   i++;
   let div = document.createElement("div");
+  div.id="tstdvc"+i;
 
-  let btn = document.createElement("button");
-  btn.setAttribute("data-bs-target","#carouselExampleCaptions")
-  btn.setAttribute("data-bs-slide-to",`${i-1}`);
-  btn.setAttribute("aria-label",`Slide ${i}`);
-  btn.setAttribute("type","btn");
+  // let btn = document.createElement("button");
+  // btn.setAttribute("data-bs-target","#carouselExampleCaptions")
+  // btn.setAttribute("data-bs-slide-to",`${i-1}`);
+  // btn.setAttribute("aria-label",`Slide ${i}`);
+  // btn.setAttribute("type","btn");
 
-  let imgURL = URL.createObjectURL(document.getElementById("mytest_upload").files[0]);
+  let imgURL = URL.createObjectURL(document.getElementById("mytest_upload"+(i-1)).files[0]);
 
   div.className = "carousel-item";
   div.innerHTML = `<img src="${imgURL}" class="d-block w-100" alt="...">
@@ -939,28 +920,89 @@ function addTestimonialAtDVC(tname, review){
                         <p  class="test_desc">${review}</p>
                     </div>`;
                     
-  iframeDocument.getElementById("test_btn").appendChild(btn);
+  // iframeDocument.getElementById("test_btn").appendChild(btn);
   iframeDocument.getElementById("new_testimonials").appendChild(div);
   
+  let testimonialAccordionBody = document.getElementById(`testimonial-accordion-body`);
+  let testimonialContainer = document.createElement('div');
+  testimonialContainer.id="tstmain"+i;
+  testimonialContainer.innerHTML = `
+                    
+                    <div class="delete-box" onclick="removeTestimonial('tstmain${i}', 'tstdvc${i}')">
+                      <i class="bi bi-trash3" style="color:red"></i>
+                    </div>
+                    <hr/>
+                  <div class="mb-3">
+                    <span class="image-profile-photo" for="images_upload">
+                      <div class="image-photo">
+                        <img src="./images/pexels-italo-melo-881954-2379004.jpg" height="64px" width="64px" id="test_preview${i}">
+                      </div>
+                      <label for="mytest_upload${i}">
+                        <div class="download-photo">
+                          <box-icon name='upload'></box-icon>
+                        </div>
+                      </label>
+                      <input type="file" name="" id="mytest_upload${i}" style="display: none;" onchange="changeDVCImg(this, 'test_preview${i}', '')">
+                    </span>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Testimonial Name:</label>
+                    <input type="text" class="form-control" id="tname${i}" placeholder="Enter Testimonial Name" />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Review:</label>
+                    <textarea class="form-control" id="treview${i}" rows="3"
+                      placeholder="Add Their Review"></textarea>
+                </div>
+
+              </div>
+              <button type="button" class="btn btn-primary" onclick="addTestimonialAtDVC(this, document.getElementById('tname${i}').value, document.getElementById('treview${i}').value)">Add New Testimonial</button>
+              </div>`;
+console.log(testimonialContainer);
+console.log(testimonialAccordionBody);
+testimonialAccordionBody.appendChild(testimonialContainer);
+
+// b.remove();
+alert("New Testimonial added");
+}
+
+function removeTestimonial(tstmain, tstdvc){
+  document.getElementById(tstmain).remove();
+  let item = iframeDocument.getElementById(tstdvc);
+
+   // If the item being deleted is active, determine the next item to activate
+   if (item.classList.contains('active')) {
+    if (item.nextElementSibling) {
+        item.nextElementSibling.classList.add('active');
+    } else if (item.previousElementSibling) {
+        item.previousElementSibling.classList.add('active');
+    }
+}
+
+// Remove the item from the DOM
+item.remove();
 }
 
 
-j=3;
-function addProductAtDVC(pname, pdetails){
+j=0;
+function addProductAtDVC(){
   j++;
   let div = document.createElement("div");
+  div.id="proddvc"+j;
 
-  let btn = document.createElement("button");
-  btn.setAttribute("data-bs-target","#carouselExampleCaptions")
-  btn.setAttribute("data-bs-slide-to",`${j-1}`);
-  btn.setAttribute("aria-label",`Slide ${j}`);
-  btn.setAttribute("type","btn");
+  // let btn = document.createElement("button");
+  // btn.setAttribute("data-bs-target","#carouselExampleCaptions")
+  // btn.setAttribute("data-bs-slide-to",`${j-1}`);
+  // btn.setAttribute("aria-label",`Slide ${j}`);
+  // btn.setAttribute("type","btn");
 
-  let imgURL = URL.createObjectURL(document.getElementById("product_upload").files[0]);
+  let imgURL = URL.createObjectURL(document.getElementById("product_upload"+(j-1)).files[0]);
 
-  let prod_name = document.getElementById("prod_name").value;
-  let prod_price = document.getElementById("prod_price").value;
-  let prod_btn = document.getElementById("prod_btn").value;
+  let prod_name = document.getElementById("prod_name"+(j-1)).value;
+  let prod_price = document.getElementById("prod_price"+(j-1)).value;
+  let prod_btn = document.getElementById("prod_btn"+(j-1)).value;
 
   div.className = "carousel-item";
   div.innerHTML = `
@@ -983,8 +1025,105 @@ function addProductAtDVC(pname, pdetails){
                     </div>
                     `;
                      console.log(div);
-  iframeDocument.getElementById("prod_btn").appendChild(btn);
+  // iframeDocument.getElementById("prod_btn").appendChild(btn);
   iframeDocument.getElementById("NewProducts").appendChild(div);
+
+
+let ProductAccordianBody = document.getElementById(`Product-accordian-body`);
+let productContainer = document.createElement('div');
+productContainer.id="prodmain"+j;
+productContainer.innerHTML = `
+                    <div class="delete-box" onclick="removeProduct('prodmain${j}', 'proddvc${j}')">
+                      <i class="bi bi-trash3" style="color:red"></i>
+                    </div>
+                    <hr/>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Upload Product Image:</label>
+                  </div>
+
+                  <div class="mb-3">
+                  <span class="image-profile-photo">
+                    <div class="image-photo">
+                      <img src="./images/oneplus9-1-500x500.webp" height="64px" width="64px" id="prod_preview${j}">
+                    </div>
+                    <div class="delete-box" onclick="deleteImage(this)">
+                      <i class="bi bi-trash3" style="color:red"></i>
+                    </div>
+                    <label for="product_upload${j}">
+                      <div class="download-photo">
+                        <box-icon name='upload'></box-icon>
+                      </div>
+                    </label>
+                    <input type="file" name="" id="product_upload${j}" style="display: none;" onchange="changeDVCImg(this, 'prod_preview${j}', '')">
+                  </span>
+                </div>
+
+                  <div class="mb-3 col-lg-12 col-md-12 col-sm-12">
+                  <label for="prod_name" class="form-label">Product Name:</label>
+                  <input type="text" class="form-control" id="prod_name${j}" placeholder="Enter Product Name" />
+                </div>
+
+                <div class="profile-photo">
+                  <span>Ratings</span>
+                  <div class="form-check form-switch mb-2">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked="">
+                    <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                  </div>
+               </div>
+
+                <div class="row  mt-10 last-container">
+                      <div class="col-sm-12 col-md-12 col-lg-6">
+                        <label for="prod_rating" class="form-label">Ratings</label>
+                        <input type="text" class="form-control" placeholder="Enter Number From 1 to 5" aria-label="Product Rating" id="prod_rating${j}">
+                      </div>
+                      <div class="col-sm-12 col-md-12 col-lg-6">
+                        <label for="" class="form-label">Product Price</label>
+                        <input type="text" class="form-control" placeholder="Enter Product Price" aria-label="Product Price" id="prod_price${j}">
+                      </div>
+                    </div>
+                    <br>
+
+                    <div class="row  mt-10 last-container">
+                      <div class="col-sm-12 col-md-12 col-lg-6">
+                        <label for="" class="form-label">Button Label</label>
+                        <input type="text" class="form-control" placeholder="" id="prod_btn${j}" aria-label="button label" value="Buy Online">
+                      </div>
+                      <div class="col-sm-12 col-md-12 col-lg-6">
+                        <label for="" class="form-label">Product Link</label>
+                        <input type="text" class="form-control" placeholder="Enter Product link" aria-label="Product link" id="prod_link${j}">
+                      </div>
+                    </div>
+                
+                <button type="button" class="btn btn-primary mt-3" onclick="addProductAtDVC()">Add New Product</button>
+`;
+
+console.log(ProductAccordianBody);
+console.log(productContainer);
+ProductAccordianBody.appendChild(productContainer);
+
+alert("New Product added!");
+}
+
+function removeProduct(pmain, pdvc){
+  document.getElementById(pmain).remove();
+  let item = iframeDocument.getElementById(pdvc);
+
+  console.log(document.getElementById(pmain));
+  console.log(iframeDocument.getElementById(pdvc));
+
+
+    // If the item being deleted is active, determine the next item to activate
+    if (item.classList.contains('active')) {
+        if (item.nextElementSibling) {
+            item.nextElementSibling.classList.add('active');
+        } else if (item.previousElementSibling) {
+            item.previousElementSibling.classList.add('active');
+        }
+    }
+
+    // Remove the item from the DOM
+    item.remove();
+
 }
 
 // let username = document.getElementById('Profile_Username');
@@ -993,12 +1132,13 @@ function addProductAtDVC(pname, pdetails){
 
 // console.log(localStorage);
 
-
+k=0;
 function addTeamAtDVC(tname, tdesign){
-
+  k++;
   let div = document.createElement("div");
+  div.id="teamdvc"+k;
 
-  let imgURL = URL.createObjectURL(document.getElementById("team_upload").files[0]);
+  let imgURL = URL.createObjectURL(document.getElementById("team_upload"+(k-1)).files[0]);
 
 
   div.className = "team";
@@ -1013,8 +1153,55 @@ function addTeamAtDVC(tname, tdesign){
               </div>
                     `;
   iframeDocument.getElementById("newTeam").appendChild(div);
+
+  let teamAccordianBody = document.getElementById(`team-accordian-body`);
+  let teamContainer = document.createElement('div');
+  teamContainer.id="teammain"+k;
+  teamContainer.innerHTML = `<div class="delete-box" onclick="removeTeam('teammain${k}', 'teamdvc${k}')">
+                        <i class="bi bi-trash3" style="color:red"></i>
+                      </div>
+                      <hr/>
+
+                <p>Profile (250x250px, 1:1 Ratio)</p>
+                <span class="image-profile-photo">
+                  <div class="image-photo">
+                        <img src="./images/pexels-italo-melo-881954-2379004.jpg" height="64px" width="64px" id="team_preview${k}">
+                      </div>
+                  <label for="team_upload${k}">
+                  <div class="download-photo">
+                    <box-icon name='upload'></box-icon>
+                  </div>
+                  </label>
+                  <input type="file" id="team_upload${k}" style="display: none;" onchange="changeDVCImg(this, 'team_preview${k}','')">
+                </span>
+                   <br>
+                  <div class="row  mt-10 last-container">
+                    <div class="col-sm-12 col-md-12 col-lg-6">
+                      <label for="" class="form-label">Name</label>
+                      <input type="text" class="form-control" placeholder="Name" aria-label="First name" id="team_name${k}">
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-6">
+                      <label for="" class="form-label">Designation</label>
+                      <input type="text" class="form-control" placeholder="Designation" aria-label="Last name" id="team_design${k}">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                    <textarea class="form-control" id="desc${k}" rows="3"
+                      placeholder="Description"></textarea>
+                  </div>
+                  <button class="btn btn-primary" onclick="addTeamAtDVC(document.getElementById('team_name${k}').value, document.getElementById('team_design${k}').value)">Add Team Member</button>
+                </div>
+ `;
+  console.log(teamAccordianBody);
+  console.log(teamContainer);
+  teamAccordianBody.appendChild(teamContainer);
 }
 
+function removeTeam(teammain, teamdvc){
+  document.getElementById(teammain).remove();
+  iframeDocument.getElementById(teamdvc).remove();
+}
 
 function SetBussinessHours(buttonELement,d_id,st_id,et_id)
 {
@@ -1028,9 +1215,9 @@ function SetBussinessHours(buttonELement,d_id,st_id,et_id)
 
         if (checkbox && day && startTime && endTime) {
         
-        iframeDocument.getElementById(d_id).innerHTML = day;
-        iframeDocument.getElementById(st_id).innerHTML = startTime;
-        iframeDocument.getElementById(et_id).innerHTML = endTime;
+            iframeDocument.getElementById(d_id).innerHTML = day;
+            iframeDocument.getElementById(st_id).innerHTML = startTime;
+            iframeDocument.getElementById(et_id).innerHTML = endTime;
 
         }
 }
